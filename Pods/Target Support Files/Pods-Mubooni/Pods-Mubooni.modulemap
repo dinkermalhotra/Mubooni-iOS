@@ -1,0 +1,6 @@
+framework module Pods_Mubooni {
+  umbrella header "Pods-Mubooni-umbrella.h"
+
+  export *
+  module * { export * }
+}
