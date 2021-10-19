@@ -33,6 +33,7 @@
 		199720C626D640D30044BE8D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 199720C426D640D30044BE8D /* Poppins-Bold.ttf */; };
 		19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E2F271E94E0007639F1 /* WSConstants.swift */; };
 		19AD9E32271E9560007639F1 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E31271E9560007639F1 /* WSManager.swift */; };
+		19AD9E34271E98EF007639F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19AD9E33271E98EF007639F1 /* GoogleService-Info.plist */; };
 		8BBA3AD926D7B2AC000E1F6F /* f5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3AD826D7B2AC000E1F6F /* f5.png */; };
 		8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */; };
 		8BBA3ADE26D7B8D7000E1F6F /* f6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADC26D7B8D6000E1F6F /* f6.png */; };
@@ -88,6 +89,7 @@
 		199720C426D640D30044BE8D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		19AD9E2F271E94E0007639F1 /* WSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSConstants.swift; sourceTree = "<group>"; };
 		19AD9E31271E9560007639F1 /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
+		19AD9E33271E98EF007639F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
 		8BBA3AD826D7B2AC000E1F6F /* f5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f5.png; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		19925B7A26D3E03200FC574F /* Mubooni */ = {
 			isa = PBXGroup;
 			children = (
+				19AD9E33271E98EF007639F1 /* GoogleService-Info.plist */,
 				191B480226D4AADF00552A2D /* SceneDelegate */,
 				191B480126D4AAD500552A2D /* AppDelegate */,
 				191B480A26D4AC8C00552A2D /* OtherClasses */,
@@ -448,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AD9E34271E98EF007639F1 /* GoogleService-Info.plist in Resources */,
 				8BBA3AD926D7B2AC000E1F6F /* f5.png in Resources */,
 				191B481526D4BE5900552A2D /* Roboto-Bold.ttf in Resources */,
 				199720C626D640D30044BE8D /* Poppins-Bold.ttf in Resources */,
@@ -727,7 +731,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Mubooni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mubooni.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -749,7 +753,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Mubooni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Mubooni.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
