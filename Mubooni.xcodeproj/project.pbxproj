@@ -31,6 +31,8 @@
 		199720C126D63E360044BE8D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199720C026D63E360044BE8D /* AppConstants.swift */; };
 		199720C526D640D30044BE8D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 199720C326D640D30044BE8D /* Poppins-Regular.ttf */; };
 		199720C626D640D30044BE8D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 199720C426D640D30044BE8D /* Poppins-Bold.ttf */; };
+		19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E2F271E94E0007639F1 /* WSConstants.swift */; };
+		19AD9E32271E9560007639F1 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E31271E9560007639F1 /* WSManager.swift */; };
 		8BBA3AD926D7B2AC000E1F6F /* f5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3AD826D7B2AC000E1F6F /* f5.png */; };
 		8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */; };
 		8BBA3ADE26D7B8D7000E1F6F /* f6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADC26D7B8D6000E1F6F /* f6.png */; };
@@ -84,6 +86,8 @@
 		199720C026D63E360044BE8D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		199720C326D640D30044BE8D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		199720C426D640D30044BE8D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		19AD9E2F271E94E0007639F1 /* WSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSConstants.swift; sourceTree = "<group>"; };
+		19AD9E31271E9560007639F1 /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
 		8BBA3AD826D7B2AC000E1F6F /* f5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f5.png; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				199720BC26D63CFD0044BE8D /* CollectionViewCells */,
 				199720B226D5F0F20044BE8D /* Extensions */,
 				191B480E26D4BE2300552A2D /* Font */,
+				19AD9E2C271E949B007639F1 /* Utils */,
 				19925B8926D3E03300FC574F /* Info.plist */,
 				19925B8426D3E03300FC574F /* Assets.xcassets */,
 			);
@@ -294,6 +299,31 @@
 				199720C326D640D30044BE8D /* Poppins-Regular.ttf */,
 			);
 			path = Poppins;
+			sourceTree = "<group>";
+		};
+		19AD9E2C271E949B007639F1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				19AD9E2D271E94AA007639F1 /* WSConstants */,
+				19AD9E2E271E94B5007639F1 /* WSManager */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		19AD9E2D271E94AA007639F1 /* WSConstants */ = {
+			isa = PBXGroup;
+			children = (
+				19AD9E2F271E94E0007639F1 /* WSConstants.swift */,
+			);
+			path = WSConstants;
+			sourceTree = "<group>";
+		};
+		19AD9E2E271E94B5007639F1 /* WSManager */ = {
+			isa = PBXGroup;
+			children = (
+				19AD9E31271E9560007639F1 /* WSManager.swift */,
+			);
+			path = WSManager;
 			sourceTree = "<group>";
 		};
 		5858775D1F742423B8EF0FCB /* Frameworks */ = {
@@ -501,10 +531,12 @@
 				191B481926D4C01500552A2D /* LoginViewController.swift in Sources */,
 				199720BB26D63B9D0044BE8D /* IntroScreensViewController.swift in Sources */,
 				199720B526D5F11C0044BE8D /* UIView+Extension.swift in Sources */,
+				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
 				191B480D26D4ACB400552A2D /* ViewControllerHelper.swift in Sources */,
 				199720B726D5F1910044BE8D /* UIColorExtension.swift in Sources */,
 				199720C126D63E360044BE8D /* AppConstants.swift in Sources */,
 				19925B7C26D3E03200FC574F /* AppDelegate.swift in Sources */,
+				19AD9E32271E9560007639F1 /* WSManager.swift in Sources */,
 				8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */,
 				19925B7E26D3E03200FC574F /* SceneDelegate.swift in Sources */,
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
