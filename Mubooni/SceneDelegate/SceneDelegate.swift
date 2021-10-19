@@ -1,5 +1,6 @@
 import UIKit
 import Firebase
+import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -52,6 +53,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         for urlContext in URLContexts {
             let url = urlContext.url
             Auth.auth().canHandle(url)
+            
+            ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
         }
     }
 }

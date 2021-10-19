@@ -12,8 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
-        //GIDSignIn.sharedInstance.clientID = FirebaseApp.app()?.options.clientID
-        //ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         // Manage IQKeyboardManager
         IQKeyboardManager.shared.enable = true
