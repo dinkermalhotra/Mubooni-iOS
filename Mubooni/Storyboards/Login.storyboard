@@ -772,6 +772,11 @@ home/rental accomodation Journey</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="Wbv-e2-HYZ" id="Dbl-hv-fLF"/>
                                         </connections>
@@ -809,6 +814,11 @@ home/rental accomodation Journey</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="delegate" destination="Wbv-e2-HYZ" id="cnv-6I-90l"/>
                                         </connections>
@@ -940,7 +950,7 @@ home/rental accomodation Journey</string>
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2AM-bb-fmx">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="849.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="915.5"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xo-m7-HgK">
                                                 <rect key="frame" x="16" y="20" width="40" height="40"/>
@@ -971,6 +981,14 @@ home/rental accomodation Journey</string>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="YBJ-l5-3bv" id="3RD-BS-j3H"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -996,6 +1014,14 @@ home/rental accomodation Journey</string>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="YBJ-l5-3bv" id="0RK-Bc-Z6g"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1021,6 +1047,14 @@ home/rental accomodation Journey</string>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="YBJ-l5-3bv" id="xzi-HV-xAa"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1323,8 +1357,41 @@ home/rental accomodation Journey</string>
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2x-b8-k17">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5I-G4-yds">
                                                 <rect key="frame" x="32" y="603.5" width="311" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Specialization" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JIa-5S-WHk">
+                                                        <rect key="frame" x="8" y="8" width="295" height="34"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="YBJ-l5-3bv" id="FHW-JO-Ajw"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="74u-ww-sTc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JIa-5S-WHk" secondAttribute="bottom" constant="8" id="DJf-4L-0lC"/>
+                                                    <constraint firstItem="JIa-5S-WHk" firstAttribute="top" secondItem="V5I-G4-yds" secondAttribute="top" constant="8" id="J30-vi-CJR"/>
+                                                    <constraint firstItem="JIa-5S-WHk" firstAttribute="leading" secondItem="V5I-G4-yds" secondAttribute="leading" constant="8" id="Ndl-ZG-t2U"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JIa-5S-WHk" secondAttribute="trailing" constant="8" id="XAI-eo-LeO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2x-b8-k17">
+                                                <rect key="frame" x="32" y="669.5" width="311" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZe-AX-aCC">
                                                         <rect key="frame" x="8" y="8" width="295" height="34"/>
@@ -1332,6 +1399,14 @@ home/rental accomodation Journey</string>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="YBJ-l5-3bv" id="mIk-MM-Lzd"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1349,7 +1424,7 @@ home/rental accomodation Journey</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbV-in-Hk3">
-                                                <rect key="frame" x="32" y="669.5" width="311" height="50"/>
+                                                <rect key="frame" x="32" y="735.5" width="311" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G70-0N-trX">
                                                         <rect key="frame" x="8" y="8" width="295" height="34"/>
@@ -1357,6 +1432,14 @@ home/rental accomodation Journey</string>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="YBJ-l5-3bv" id="CHa-Eg-n2A"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1374,7 +1457,7 @@ home/rental accomodation Journey</string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMy-GW-lJh">
-                                                <rect key="frame" x="32" y="779.5" width="311" height="50"/>
+                                                <rect key="frame" x="32" y="845.5" width="311" height="50"/>
                                                 <color key="backgroundColor" red="0.92941176469999998" green="0.1215686275" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ACT-MH-PRE"/>
@@ -1407,6 +1490,7 @@ home/rental accomodation Journey</string>
                                             <constraint firstAttribute="trailing" secondItem="Xpg-rx-QJO" secondAttribute="trailing" constant="32" id="I0B-Qh-3Fr"/>
                                             <constraint firstItem="ZBb-eM-7Sq" firstAttribute="top" secondItem="PqQ-3Z-ih5" secondAttribute="bottom" constant="16" id="MwJ-rN-jWB"/>
                                             <constraint firstItem="Kq7-nd-dyE" firstAttribute="top" secondItem="ZBb-eM-7Sq" secondAttribute="bottom" constant="16" id="Mzg-Au-ZYm"/>
+                                            <constraint firstItem="H2x-b8-k17" firstAttribute="top" secondItem="V5I-G4-yds" secondAttribute="bottom" priority="250" constant="16" id="PRm-Js-dJq"/>
                                             <constraint firstAttribute="trailing" secondItem="yMy-GW-lJh" secondAttribute="trailing" constant="32" id="Q6I-q9-RDL"/>
                                             <constraint firstItem="3pV-TN-e9m" firstAttribute="centerX" secondItem="2AM-bb-fmx" secondAttribute="centerX" id="Rlk-lB-7my"/>
                                             <constraint firstItem="3pV-TN-e9m" firstAttribute="top" secondItem="2AM-bb-fmx" secondAttribute="top" constant="100" id="UCR-6p-wFm"/>
@@ -1416,16 +1500,19 @@ home/rental accomodation Journey</string>
                                             <constraint firstItem="0Xo-m7-HgK" firstAttribute="top" secondItem="2AM-bb-fmx" secondAttribute="top" constant="20" symbolic="YES" id="a0E-Kt-TGt"/>
                                             <constraint firstItem="yMy-GW-lJh" firstAttribute="top" secondItem="xbV-in-Hk3" secondAttribute="bottom" constant="60" id="b3g-56-fDw"/>
                                             <constraint firstItem="xQq-Fw-Os4" firstAttribute="top" secondItem="4K9-pb-LRq" secondAttribute="bottom" constant="16" id="cad-x9-jhO"/>
-                                            <constraint firstItem="H2x-b8-k17" firstAttribute="top" secondItem="Xpg-rx-QJO" secondAttribute="bottom" constant="16" id="clj-Fd-4bF"/>
+                                            <constraint firstItem="H2x-b8-k17" firstAttribute="top" secondItem="Xpg-rx-QJO" secondAttribute="bottom" priority="250" constant="82" id="clj-Fd-4bF"/>
+                                            <constraint firstItem="V5I-G4-yds" firstAttribute="top" secondItem="Xpg-rx-QJO" secondAttribute="bottom" priority="250" constant="16" id="dLb-0A-h6S"/>
                                             <constraint firstItem="PqQ-3Z-ih5" firstAttribute="top" secondItem="xQq-Fw-Os4" secondAttribute="bottom" constant="16" id="fFl-VS-5cp"/>
                                             <constraint firstItem="xQq-Fw-Os4" firstAttribute="leading" secondItem="2AM-bb-fmx" secondAttribute="leading" constant="32" id="hDR-pd-YbB"/>
                                             <constraint firstAttribute="trailing" secondItem="Kq7-nd-dyE" secondAttribute="trailing" constant="32" id="kaY-pf-EvL"/>
                                             <constraint firstItem="xbV-in-Hk3" firstAttribute="leading" secondItem="2AM-bb-fmx" secondAttribute="leading" constant="32" id="nDe-We-YtP"/>
+                                            <constraint firstAttribute="trailing" secondItem="V5I-G4-yds" secondAttribute="trailing" constant="32" id="oEQ-kv-oyc"/>
                                             <constraint firstAttribute="trailing" secondItem="4K9-pb-LRq" secondAttribute="trailing" constant="32" id="qpj-qJ-XSy"/>
                                             <constraint firstItem="xbV-in-Hk3" firstAttribute="top" secondItem="H2x-b8-k17" secondAttribute="bottom" constant="16" id="stD-V6-zmO"/>
                                             <constraint firstAttribute="trailing" secondItem="xQq-Fw-Os4" secondAttribute="trailing" constant="32" id="ufU-ne-KpX"/>
                                             <constraint firstItem="0Xo-m7-HgK" firstAttribute="leading" secondItem="2AM-bb-fmx" secondAttribute="leading" constant="16" id="v5v-2m-Iok"/>
                                             <constraint firstItem="4K9-pb-LRq" firstAttribute="top" secondItem="3pV-TN-e9m" secondAttribute="bottom" constant="40" id="vBm-AY-9kW"/>
+                                            <constraint firstItem="V5I-G4-yds" firstAttribute="leading" secondItem="2AM-bb-fmx" secondAttribute="leading" constant="32" id="vis-Pb-xT0"/>
                                             <constraint firstAttribute="trailing" secondItem="ZBb-eM-7Sq" secondAttribute="trailing" constant="32" id="yYn-Wd-XbQ"/>
                                         </constraints>
                                     </view>
@@ -1466,6 +1553,16 @@ home/rental accomodation Journey</string>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="G70-0N-trX" id="eS8-UG-M06"/>
+                        <outlet property="txtEmail" destination="6Lg-Wh-mio" id="axU-Y8-Lq6"/>
+                        <outlet property="txtName" destination="0fB-ya-rbY" id="DdT-9D-NRq"/>
+                        <outlet property="txtPassword" destination="tZe-AX-aCC" id="dqH-eQ-wur"/>
+                        <outlet property="txtPhone" destination="X4T-Ma-Y2S" id="TgA-tG-xAd"/>
+                        <outlet property="txtSpecilization" destination="JIa-5S-WHk" id="jLn-ig-8O9"/>
+                        <outlet property="viewPasswordTopConstraint" destination="clj-Fd-4bF" id="J2Q-1c-lXI"/>
+                        <outlet property="viewSpecilization" destination="V5I-G4-yds" id="VEk-Kz-hyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HC8-ds-3Vh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

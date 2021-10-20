@@ -34,6 +34,7 @@
 		19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E2F271E94E0007639F1 /* WSConstants.swift */; };
 		19AD9E32271E9560007639F1 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E31271E9560007639F1 /* WSManager.swift */; };
 		19AD9E34271E98EF007639F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19AD9E33271E98EF007639F1 /* GoogleService-Info.plist */; };
+		8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */; };
 		8BBA3AD926D7B2AC000E1F6F /* f5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3AD826D7B2AC000E1F6F /* f5.png */; };
 		8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */; };
 		8BBA3ADE26D7B8D7000E1F6F /* f6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADC26D7B8D6000E1F6F /* f6.png */; };
@@ -92,6 +93,7 @@
 		19AD9E33271E98EF007639F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
+		8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		8BBA3AD826D7B2AC000E1F6F /* f5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f5.png; sourceTree = "<group>"; };
 		8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeaturedCell.swift; sourceTree = "<group>"; };
 		8BBA3ADC26D7B8D6000E1F6F /* f6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f6.png; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				199720B626D5F1910044BE8D /* UIColorExtension.swift */,
+				8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */,
 				199720B426D5F11C0044BE8D /* UIView+Extension.swift */,
 			);
 			path = Extensions;
@@ -535,6 +538,7 @@
 				191B481926D4C01500552A2D /* LoginViewController.swift in Sources */,
 				199720BB26D63B9D0044BE8D /* IntroScreensViewController.swift in Sources */,
 				199720B526D5F11C0044BE8D /* UIView+Extension.swift in Sources */,
+				8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */,
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
 				191B480D26D4ACB400552A2D /* ViewControllerHelper.swift in Sources */,
 				199720B726D5F1910044BE8D /* UIColorExtension.swift in Sources */,
