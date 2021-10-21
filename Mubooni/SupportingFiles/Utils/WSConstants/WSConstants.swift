@@ -9,6 +9,15 @@ struct WSRequestParams {
 }
 
 struct WSResponseParams {
+    static let WS_RESP_PARAM_DATA                    = "data"
+    static let WS_RESP_PARAM_ID                      = "id"
+    static let WS_RESP_PARAM_MESSAGE                 = "message"
+    static let WS_RESP_PARAM_ROLE                    = "role"
+    static let WS_RESP_PARAM_ROLE_ID                 = "roleId"
+    static let WS_RESP_PARAM_ROLE_DES                = "role_des"
+    static let WS_RESP_PARAM_ROLE_IMAGE              = "role_image"
+    static let WS_RESP_PARAM_SPEC_NAME               = "spec_name"
     static let WS_RESP_PARAM_STATUS                  = "status"
+    static let WS_RESP_PARAM_TRUE                    = "true"
 }
 
