@@ -20,35 +20,26 @@ class LoginViewController: UIViewController {
                     
                     if let result = result as? [String: AnyObject] {
                         if let name = result["name"] as? String {
-                            let completeName = name.split(separator: " ")
-                            //UserData.firstName = String(completeName[0])
-                            //UserData.lastName = (completeName.count > 1 ? String(completeName[1]) : nil) ?? ""
+                            UserData.name = name
                         }
                         
-                        if let _fbId = result["id"] as? String {
-                            //UserData.facebookId = _fbId
+                        if let fbId = result["id"] as? String {
+                            UserData.facebookId = fbId
                         }
                         
-                        if let _email = result["email"] as? String {
-                            //UserData.email = _email
+                        if let email = result["email"] as? String {
+                            UserData.email = email
                         }
                         
-                        if let _picture = result["picture"] as? [String: AnyObject] {
-                            if let _data = _picture["data"] as? [String: AnyObject] {
-                                if let _url = _data["url"] as? String {
-                                    //UserData.imageUrl = URL.init(string: _url)
-                                }
-                            }
-                        }
-                        
-                        //Helper.showLoader(onVC: self)
-                        //self.socialLogin()
+                        Helper.showLoader(onVC: self)
+                        self.checkFacebookIdExist()
                     }
                 }
             }
         }
     }
 }
+
 // MARK: - UIBUTTON ACTIONS
 extension LoginViewController {
     @IBAction func backClicked(_ sender: UIButton) {
@@ -59,13 +50,16 @@ extension LoginViewController {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         let config = GIDConfiguration(clientID: clientID)
         
+        Helper.showLoader(onVC: self)
         GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
             if let error = error {
+                Helper.hideLoader(onVC: self)
                 print(error.localizedDescription)
                 return
             }
             
             guard let authentication = user?.authentication, let idToken = authentication.idToken else {
+                Helper.hideLoader(onVC: self)
                 return
             }
             
@@ -73,18 +67,16 @@ extension LoginViewController {
             
             Auth.auth().signIn(with: credential) { (authResult, error) in
                 if let error = error {
-                    //Helper.hideLoader(onVC: self)
-                    //Helper.showOKAlert(onVC: self, title: Alert.ERROR, message: error.localizedDescription)
+                    Helper.hideLoader(onVC: self)
+                    print(error.localizedDescription)
                     return
                 }
                 
-                let userName = authResult?.user.displayName
-//                UserData.gmailId = authResult?.user.uid
-//                UserData.imageUrl = authResult?.user.photoURL
-//                UserData.email = authResult?.user.email
-//                UserData.phoneNumber = authResult?.user.phoneNumber
-//
-//                self.socialLogin()
+                UserData.name = authResult?.user.displayName
+                UserData.googleId = authResult?.user.uid
+                UserData.email = authResult?.user.email
+                
+                self.checkGoogleIdExist()
             }
         }
     }
@@ -116,6 +108,66 @@ extension LoginViewController {
     @IBAction func loginByEmailClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .SignInViewController) as? SignInViewController {
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+// MARK: - API CALL
+extension LoginViewController {
+    func checkGoogleIdExist() {
+        let params = [WSRequestParams.WS_REQS_PARAM_GOOGLE_EMAIL: UserData.email as AnyObject,
+                      WSRequestParams.WS_REQS_PARAM_GOOGLE_ID: UserData.googleId as AnyObject]
+        WSManager.wsCallCheckGoogleAccountExist(params) { isSuccess, userid in
+            if isSuccess {
+                Helper.hideLoader(onVC: self)
+                if let vc = ViewControllerHelper.getViewController(ofType: .SignupViewController) as? SignupViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+            else {
+                self.loginUser()
+            }
+        }
+    }
+    
+    func checkFacebookIdExist() {
+        let params = [WSRequestParams.WS_REQS_PARAM_FACEBOOK_EMAIL: UserData.email as AnyObject,
+                      WSRequestParams.WS_REQS_PARAM_FACEBOOK_ID: UserData.facebookId as AnyObject]
+        WSManager.wsCallCheckFacebookAccountExist(params) { isSuccess, userid in
+            if isSuccess {
+                Helper.hideLoader(onVC: self)
+                if let vc = ViewControllerHelper.getViewController(ofType: .SignupViewController) as? SignupViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+            else {
+                self.loginUser()
+            }
+        }
+    }
+    
+    func loginUser() {
+        var params: [String: AnyObject]?
+        if UserData.facebookId != nil {
+            params = [WSRequestParams.WS_REQS_PARAM_EMAIL: UserData.email as AnyObject,
+                      WSRequestParams.WS_REQS_PARAM_FACEBOOK_ID: UserData.facebookId as AnyObject]
+        }
+        else {
+            params = [WSRequestParams.WS_REQS_PARAM_EMAIL: UserData.email as AnyObject,
+                      WSRequestParams.WS_REQS_PARAM_GOOGLE_ID: UserData.googleId as AnyObject]
+        }
+        
+        WSManager.wsCallLogin(params ?? [:]) { isSuccess, message, userProfile in
+            Helper.hideLoader(onVC: self)
+            if isSuccess {
+                if let vc = ViewControllerHelper.getViewController(ofType: .AgentDashboardViewController) as? AgentDashboardViewController {
+                    vc.userProfile = userProfile
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+            else {
+                Helper.showOKAlert(onVC: self, title: Alert.ERROR, message: message)
+            }
         }
     }
 }

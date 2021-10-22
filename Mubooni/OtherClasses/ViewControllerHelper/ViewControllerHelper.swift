@@ -1,15 +1,19 @@
 struct ViewControllerIdentifiers {
     
-    static let IntroScreensViewController   = "IntroScreensViewController"
-    static let LoginViewController          = "LoginViewController"
-    static let MainViewController           = "MainViewController"
-    static let SignInViewController         = "SignInViewController"
-    static let SignupViewController         = "SignupViewController"
+    static let AgentDashboardViewController      = "AgentDashboardViewController"
+    static let FindServiceProviderViewController = "FindServiceProviderViewController"
+    static let IntroScreensViewController        = "IntroScreensViewController"
+    static let LoginViewController               = "LoginViewController"
+    static let MainViewController                = "MainViewController"
+    static let SignInViewController              = "SignInViewController"
+    static let SignupViewController              = "SignupViewController"
 }
 
 import UIKit
 
 enum ViewControllerType {
+    case AgentDashboardViewController
+    case FindServiceProviderViewController
     case IntroScreensViewController
     case LoginViewController
     case MainViewController
@@ -23,6 +27,7 @@ class ViewControllerHelper: NSObject {
     
     class func getViewController(ofType viewControllerType: ViewControllerType) -> UIViewController {
         var viewController: UIViewController?
+        let agentStoryboard = UIStoryboard(name: "Agent", bundle: nil)
         let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -41,6 +46,12 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .SignupViewController {
             viewController = loginStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.SignupViewController) as! SignupViewController
+        }// Agent Storyboard
+        else if viewControllerType == .AgentDashboardViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AgentDashboardViewController) as! AgentDashboardViewController
+        }
+        else if viewControllerType == .FindServiceProviderViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FindServiceProviderViewController) as! FindServiceProviderViewController
         }
         // Main Storyboard
 //        else if viewControllerType == .LabelChangeViewController {

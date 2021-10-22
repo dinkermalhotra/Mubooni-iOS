@@ -227,7 +227,7 @@
                                 <state key="normal" image="ic_m"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYO-Xh-g6A">
-                                <rect key="frame" x="317" y="24.5" width="42" height="31"/>
+                                <rect key="frame" x="316" y="24.5" width="43" height="31"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                 <state key="normal" title="Guest">
                                     <color key="titleColor" red="0.85882352941176465" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -240,22 +240,22 @@
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcV-nR-bEe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="658"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find affordable residential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-3Q-adv">
-                                                <rect key="frame" x="16" y="8" width="343" height="28.5"/>
+                                                <rect key="frame" x="16" y="8" width="343" height="28"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Properties instantly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4Y-Dd-oNJ">
-                                                <rect key="frame" x="16" y="44.5" width="343" height="28.5"/>
+                                                <rect key="frame" x="16" y="44" width="343" height="28"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                                 <color key="textColor" red="0.035294117649999998" green="0.41960784309999999" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8C-B6-GaX">
-                                                <rect key="frame" x="16" y="97" width="343" height="50"/>
+                                                <rect key="frame" x="16" y="96" width="343" height="50"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="vKF-QP-wDd">
                                                         <rect key="frame" x="8" y="15" width="20" height="20"/>
@@ -265,7 +265,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkd-To-iFy">
-                                                        <rect key="frame" x="36" y="16" width="106" height="18"/>
+                                                        <rect key="frame" x="36" y="16" width="108" height="18"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -308,13 +308,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="031-Q4-nYR">
-                                                <rect key="frame" x="16" y="181" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="180" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PQG-cJ-zRi">
-                                                <rect key="frame" x="0.0" y="208" width="375" height="190"/>
+                                                <rect key="frame" x="0.0" y="207" width="375" height="190"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="Caq-XM-JYf"/>
@@ -357,13 +357,13 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-QQ-WZW">
-                                                <rect key="frame" x="16" y="422" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="421" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Qt-VE-K5A">
-                                                <rect key="frame" x="0.0" y="449" width="375" height="190"/>
+                                                <rect key="frame" x="0.0" y="448" width="375" height="190"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="Yq0-ex-PoH"/>
@@ -1365,7 +1365,7 @@ home/rental accomodation Journey</string>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1497,8 +1497,9 @@ home/rental accomodation Journey</string>
                                             <constraint firstItem="ZBb-eM-7Sq" firstAttribute="leading" secondItem="2AM-bb-fmx" secondAttribute="leading" constant="32" id="WyM-uJ-VOG"/>
                                             <constraint firstAttribute="trailing" secondItem="xbV-in-Hk3" secondAttribute="trailing" constant="32" id="Z98-Wr-mc9"/>
                                             <constraint firstItem="yMy-GW-lJh" firstAttribute="leading" secondItem="2AM-bb-fmx" secondAttribute="leading" constant="32" id="ZKM-7j-5Cd"/>
+                                            <constraint firstItem="yMy-GW-lJh" firstAttribute="top" secondItem="V5I-G4-yds" secondAttribute="bottom" priority="250" constant="192" id="Zbo-g9-1zf"/>
                                             <constraint firstItem="0Xo-m7-HgK" firstAttribute="top" secondItem="2AM-bb-fmx" secondAttribute="top" constant="20" symbolic="YES" id="a0E-Kt-TGt"/>
-                                            <constraint firstItem="yMy-GW-lJh" firstAttribute="top" secondItem="xbV-in-Hk3" secondAttribute="bottom" constant="60" id="b3g-56-fDw"/>
+                                            <constraint firstItem="yMy-GW-lJh" firstAttribute="top" secondItem="xbV-in-Hk3" secondAttribute="bottom" priority="250" constant="60" id="b3g-56-fDw"/>
                                             <constraint firstItem="xQq-Fw-Os4" firstAttribute="top" secondItem="4K9-pb-LRq" secondAttribute="bottom" constant="16" id="cad-x9-jhO"/>
                                             <constraint firstItem="H2x-b8-k17" firstAttribute="top" secondItem="Xpg-rx-QJO" secondAttribute="bottom" priority="250" constant="82" id="clj-Fd-4bF"/>
                                             <constraint firstItem="V5I-G4-yds" firstAttribute="top" secondItem="Xpg-rx-QJO" secondAttribute="bottom" priority="250" constant="16" id="dLb-0A-h6S"/>
@@ -1554,12 +1555,15 @@ home/rental accomodation Journey</string>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="btnRegisterTopConstraint" destination="Zbo-g9-1zf" id="jmT-0x-9Fe"/>
                         <outlet property="txtConfirmPassword" destination="G70-0N-trX" id="eS8-UG-M06"/>
                         <outlet property="txtEmail" destination="6Lg-Wh-mio" id="axU-Y8-Lq6"/>
                         <outlet property="txtName" destination="0fB-ya-rbY" id="DdT-9D-NRq"/>
                         <outlet property="txtPassword" destination="tZe-AX-aCC" id="dqH-eQ-wur"/>
                         <outlet property="txtPhone" destination="X4T-Ma-Y2S" id="TgA-tG-xAd"/>
                         <outlet property="txtSpecilization" destination="JIa-5S-WHk" id="jLn-ig-8O9"/>
+                        <outlet property="viewConfirmPassword" destination="xbV-in-Hk3" id="YM5-ck-1qv"/>
+                        <outlet property="viewPassword" destination="H2x-b8-k17" id="vhY-Sx-8Bx"/>
                         <outlet property="viewPasswordTopConstraint" destination="clj-Fd-4bF" id="J2Q-1c-lXI"/>
                         <outlet property="viewSpecilization" destination="V5I-G4-yds" id="VEk-Kz-hyl"/>
                     </connections>
