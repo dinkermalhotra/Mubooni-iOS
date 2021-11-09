@@ -2,6 +2,8 @@ import UIKit
 
 class FindServiceProviderViewController: UIViewController {
 
+    @IBOutlet weak var txtSearch: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

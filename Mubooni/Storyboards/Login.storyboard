@@ -54,19 +54,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Contact With" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab9-V5-4eI">
-                                                    <rect key="frame" x="16" y="356" width="343" height="28"/>
+                                                    <rect key="frame" x="16" y="356" width="343" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                     <color key="textColor" red="0.035294117647058823" green="0.41960784313725491" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Provider" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5d-kz-kIh">
-                                                    <rect key="frame" x="16" y="388" width="343" height="28"/>
+                                                    <rect key="frame" x="16" y="383.5" width="343" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                                     <color key="textColor" red="0.92941176470588238" green="0.12941176470588234" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE9-jB-zhE">
-                                                    <rect key="frame" x="16" y="424" width="343" height="75"/>
+                                                    <rect key="frame" x="16" y="415" width="343" height="84"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -494,7 +494,7 @@
                                 <rect key="frame" x="85" y="100" width="205.5" height="41.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewZ-bL-W3u">
-                                <rect key="frame" x="16" y="165.5" width="343" height="35.5"/>
+                                <rect key="frame" x="16" y="165.5" width="343" height="35"/>
                                 <string key="text">Login to personalise your
 home/rental accomodation Journey</string>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
@@ -502,34 +502,34 @@ home/rental accomodation Journey</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_login" translatesAutoresizingMaskIntoConstraints="NO" id="0ho-G9-OC7">
-                                <rect key="frame" x="32" y="225" width="311" height="164"/>
+                                <rect key="frame" x="32" y="224.5" width="311" height="164"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYq-cM-hFp">
-                                <rect key="frame" x="0.0" y="397" width="375" height="12"/>
+                                <rect key="frame" x="0.0" y="396.5" width="375" height="12"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="qxW-E3-k6t"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-lK-NCs">
-                                <rect key="frame" x="32" y="417" width="311" height="16"/>
+                                <rect key="frame" x="32" y="416.5" width="311" height="16"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hw1-pU-g9M">
-                                        <rect key="frame" x="0.0" y="8" width="109" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="8" width="108" height="0.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="i0U-PM-obv"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect With" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fef-Sa-U3m">
-                                        <rect key="frame" x="117" y="0.5" width="77.5" height="15.5"/>
+                                        <rect key="frame" x="116" y="0.5" width="79.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGo-Bx-vX6">
-                                        <rect key="frame" x="202.5" y="8" width="108.5" height="0.5"/>
+                                        <rect key="frame" x="203.5" y="8" width="107.5" height="0.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="IxN-3a-DNc"/>
@@ -551,7 +551,7 @@ home/rental accomodation Journey</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COf-Z5-y6Z">
-                                <rect key="frame" x="0.0" y="441" width="375" height="12"/>
+                                <rect key="frame" x="0.0" y="440.5" width="375" height="12.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PqX-a3-wH7">
@@ -594,20 +594,20 @@ home/rental accomodation Journey</string>
                                 <rect key="frame" x="32" y="532.5" width="311" height="16"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5P-1g-kQ5">
-                                        <rect key="frame" x="0.0" y="8" width="141" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="8" width="140.5" height="0.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="jGF-eb-Pg4"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKj-YC-Gs2">
-                                        <rect key="frame" x="149" y="0.5" width="13.5" height="15.5"/>
+                                        <rect key="frame" x="148.5" y="0.5" width="14.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLh-ck-Pw6">
-                                        <rect key="frame" x="170.5" y="8" width="140.5" height="0.5"/>
+                                        <rect key="frame" x="171" y="8" width="140" height="0.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="6Ww-dh-deJ"/>
@@ -841,7 +841,7 @@ home/rental accomodation Journey</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lQ-Kg-eX6">
-                                <rect key="frame" x="267" y="392.5" width="76" height="24"/>
+                                <rect key="frame" x="266" y="392.5" width="77" height="24"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -870,16 +870,16 @@ home/rental accomodation Journey</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dSe-oV-9sb">
-                                <rect key="frame" x="103" y="538.5" width="169.5" height="27"/>
+                                <rect key="frame" x="101" y="538.5" width="173" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New to Mubooni?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAt-AN-Gs9">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="26"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3J-Gc-M2v">
-                                        <rect key="frame" x="97.5" y="0.0" width="72" height="27"/>
+                                        <rect key="frame" x="100" y="0.0" width="73" height="26"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                         <state key="normal" title="Register Now">
                                             <color key="titleColor" red="0.83529411760000005" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1082,13 +1082,13 @@ home/rental accomodation Journey</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XM2-ly-EI0">
-                                                        <rect key="frame" x="125" y="0.5" width="61" height="15.5"/>
+                                                        <rect key="frame" x="125" y="0.5" width="61.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                         <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hy7-ZH-ymt">
-                                                        <rect key="frame" x="194" y="8" width="117" height="0.5"/>
+                                                        <rect key="frame" x="194.5" y="8" width="116.5" height="0.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="0.5" id="nUH-qe-h5C"/>
@@ -1123,7 +1123,7 @@ home/rental accomodation Journey</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TENANT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKm-A8-Zx8">
-                                                                <rect key="frame" x="8" y="49.5" width="131.5" height="14.5"/>
+                                                                <rect key="frame" x="8" y="50" width="131.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1183,7 +1183,7 @@ home/rental accomodation Journey</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-nB-hZq">
-                                                                <rect key="frame" x="8" y="49.5" width="131.5" height="14.5"/>
+                                                                <rect key="frame" x="8" y="50" width="131.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1240,7 +1240,7 @@ home/rental accomodation Journey</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LANDLORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot0-Nm-ceM">
-                                                                <rect key="frame" x="8" y="49.5" width="131.5" height="14.5"/>
+                                                                <rect key="frame" x="8" y="50" width="131.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -1300,7 +1300,7 @@ home/rental accomodation Journey</string>
                                                         <rect key="frame" x="163.5" y="0.0" width="147.5" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERVICE PROVIDER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTc-yb-2WV">
-                                                                <rect key="frame" x="8" y="49.5" width="131.5" height="14.5"/>
+                                                                <rect key="frame" x="8" y="50" width="131.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>

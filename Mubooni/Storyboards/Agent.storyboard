@@ -257,7 +257,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.91764705882352937" green="0.95686274509803915" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                 <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="0.65224109050000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -296,7 +296,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.91764705879999997" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                 <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="0.65224109050000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -395,7 +395,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.91764705879999997" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                 <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="0.65224109050000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -434,7 +434,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.91764705879999997" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                 <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="0.65224109050000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -533,7 +533,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.91764705879999997" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                 <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="0.65224109050000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -563,7 +563,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="0.91764705879999997" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                 <color key="value" red="0.83529411760000005" green="0.87450980389999999" blue="0.96078431369999995" alpha="0.65224109050000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -756,27 +756,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGq-mJ-xTV">
                                 <rect key="frame" x="16" y="165" width="343" height="50"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="xSe-QS-gKw">
-                                        <rect key="frame" x="8" y="15" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="gv5-29-FU8"/>
-                                            <constraint firstAttribute="height" constant="20" id="iTg-Pz-sJt"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thl-Ra-iWb">
-                                        <rect key="frame" x="36" y="16" width="105.5" height="18"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search by service like Plumber, Electrician etc" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lmO-uV-MMa">
+                                        <rect key="frame" x="8" y="8" width="327" height="34"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="c0T-A1-SP8" id="EyJ-WG-fXT"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="thl-Ra-iWb" firstAttribute="centerY" secondItem="IGq-mJ-xTV" secondAttribute="centerY" id="0Fc-1A-Xx3"/>
-                                    <constraint firstItem="xSe-QS-gKw" firstAttribute="centerY" secondItem="IGq-mJ-xTV" secondAttribute="centerY" id="K4O-Ex-Lk4"/>
-                                    <constraint firstItem="xSe-QS-gKw" firstAttribute="leading" secondItem="IGq-mJ-xTV" secondAttribute="leading" constant="8" id="Rhj-fi-Gvy"/>
+                                    <constraint firstItem="lmO-uV-MMa" firstAttribute="top" secondItem="IGq-mJ-xTV" secondAttribute="top" constant="8" id="AZt-Np-OVo"/>
+                                    <constraint firstAttribute="trailing" secondItem="lmO-uV-MMa" secondAttribute="trailing" constant="8" id="Hg6-G1-Ipt"/>
                                     <constraint firstAttribute="height" constant="50" id="bB1-Cd-L1U"/>
-                                    <constraint firstItem="thl-Ra-iWb" firstAttribute="leading" secondItem="xSe-QS-gKw" secondAttribute="trailing" constant="8" id="z5Q-5m-NFF"/>
+                                    <constraint firstItem="lmO-uV-MMa" firstAttribute="leading" secondItem="IGq-mJ-xTV" secondAttribute="leading" constant="8" id="i7x-X5-2Sf"/>
+                                    <constraint firstAttribute="bottom" secondItem="lmO-uV-MMa" secondAttribute="bottom" constant="8" id="irb-JM-ynG"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -834,6 +830,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="txtSearch" destination="lmO-uV-MMa" id="dZh-Nj-GKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OB-Qj-z74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -851,7 +850,6 @@
         <image name="ic_my_properties" width="64.5" height="64.5"/>
         <image name="ic_notification" width="15" height="18"/>
         <image name="ic_reports" width="54" height="64.5"/>
-        <image name="ic_search" width="16" height="16"/>
         <image name="ic_shuffle_profile" width="68" height="42.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
