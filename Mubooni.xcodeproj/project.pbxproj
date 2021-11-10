@@ -43,10 +43,10 @@
 		19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE022272187E900BD307F /* AgentDashboardViewController.swift */; };
 		19EBE025272187FD00BD307F /* Agent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EBE024272187FD00BD307F /* Agent.storyboard */; };
 		8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */; };
-		8BBA3AD926D7B2AC000E1F6F /* f5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3AD826D7B2AC000E1F6F /* f5.png */; };
 		8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */; };
-		8BBA3ADE26D7B8D7000E1F6F /* f6.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADC26D7B8D6000E1F6F /* f6.png */; };
-		8BBA3ADF26D7B8D7000E1F6F /* f8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADD26D7B8D6000E1F6F /* f8.png */; };
+		8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42F6273BA773002BC5BD /* AlertMessages.swift */; };
+		8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42F8273BAE29002BC5BD /* Properties.swift */; };
+		8BCA42FB273BC230002BC5BD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FA273BC230002BC5BD /* Units.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,10 +110,10 @@
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
 		8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
-		8BBA3AD826D7B2AC000E1F6F /* f5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f5.png; sourceTree = "<group>"; };
 		8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeaturedCell.swift; sourceTree = "<group>"; };
-		8BBA3ADC26D7B8D6000E1F6F /* f6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f6.png; sourceTree = "<group>"; };
-		8BBA3ADD26D7B8D6000E1F6F /* f8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f8.png; sourceTree = "<group>"; };
+		8BCA42F6273BA773002BC5BD /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		8BCA42F8273BAE29002BC5BD /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
+		8BCA42FA273BC230002BC5BD /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		9AF3E744092B8C4D06D80BC6 /* Pods_Mubooni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mubooni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,9 +187,6 @@
 		191B480526D4AB0D00552A2D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				8BBA3ADC26D7B8D6000E1F6F /* f6.png */,
-				8BBA3ADD26D7B8D6000E1F6F /* f8.png */,
-				8BBA3AD826D7B2AC000E1F6F /* f5.png */,
 				199720BC26D63CFD0044BE8D /* CollectionViewCells */,
 				199720B226D5F0F20044BE8D /* Extensions */,
 				191B480E26D4BE2300552A2D /* Font */,
@@ -205,6 +202,7 @@
 		191B480A26D4AC8C00552A2D /* OtherClasses */ = {
 			isa = PBXGroup;
 			children = (
+				8BCA42F5273BA760002BC5BD /* AlertMessages */,
 				19EBE01C27214B8D00BD307F /* Helper */,
 				199720BF26D63D410044BE8D /* AppConstant */,
 				191B480B26D4AC9D00552A2D /* ViewControllerHelper */,
@@ -357,7 +355,9 @@
 		19EBE01327213A1E00BD307F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8BCA42F8273BAE29002BC5BD /* Properties.swift */,
 				19EBE01627213D5900BD307F /* Specilizations.swift */,
+				8BCA42FA273BC230002BC5BD /* Units.swift */,
 				19A262B02722BDC100EDF5CE /* UserProfile.swift */,
 				19EBE01427213A3100BD307F /* UserRoles.swift */,
 			);
@@ -395,6 +395,14 @@
 				4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8BCA42F5273BA760002BC5BD /* AlertMessages */ = {
+			isa = PBXGroup;
+			children = (
+				8BCA42F6273BA773002BC5BD /* AlertMessages.swift */,
+			);
+			path = AlertMessages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,7 +511,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19AD9E34271E98EF007639F1 /* GoogleService-Info.plist in Resources */,
-				8BBA3AD926D7B2AC000E1F6F /* f5.png in Resources */,
 				191B481526D4BE5900552A2D /* Roboto-Bold.ttf in Resources */,
 				199720C626D640D30044BE8D /* Poppins-Bold.ttf in Resources */,
 				191B480926D4AC3400552A2D /* Login.storyboard in Resources */,
@@ -513,9 +520,7 @@
 				191B481326D4BE5900552A2D /* Roboto-Regular.ttf in Resources */,
 				19925B8526D3E03300FC574F /* Assets.xcassets in Resources */,
 				19925B8326D3E03200FC574F /* Main.storyboard in Resources */,
-				8BBA3ADE26D7B8D7000E1F6F /* f6.png in Resources */,
 				199720C526D640D30044BE8D /* Poppins-Regular.ttf in Resources */,
-				8BBA3ADF26D7B8D7000E1F6F /* f8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				199720B926D617D00044BE8D /* SignupViewController.swift in Sources */,
+				8BCA42FB273BC230002BC5BD /* Units.swift in Sources */,
 				199720BE26D63D330044BE8D /* IntroScreensCell.swift in Sources */,
 				19EBE01727213D5900BD307F /* Specilizations.swift in Sources */,
 				191B481926D4C01500552A2D /* LoginViewController.swift in Sources */,
@@ -590,6 +596,7 @@
 				199720BB26D63B9D0044BE8D /* IntroScreensViewController.swift in Sources */,
 				199720B526D5F11C0044BE8D /* UIView+Extension.swift in Sources */,
 				8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */,
+				8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */,
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
 				191B480D26D4ACB400552A2D /* ViewControllerHelper.swift in Sources */,
@@ -604,6 +611,7 @@
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
 				19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */,
 				191B481726D4BEC900552A2D /* MainViewController.swift in Sources */,
+				8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */,
 				19EBE01527213A3100BD307F /* UserRoles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

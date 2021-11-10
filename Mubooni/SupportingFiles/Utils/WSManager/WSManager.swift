@@ -158,4 +158,33 @@ class WSManager {
             
         }
     }
+    
+    // MARK: FEATURED PROPERTIES FOR GUEST
+    class func wsCallFeaturedProperties(_ requestParams: [String: AnyObject], completion:@escaping (_ isSuccess: Bool, _ message: String, _ properties: [Properties]?)->()) {
+        if WSManager.isConnectedToInternet() {
+            AF.request(WebService.getFeaturedProperties, method: .post, parameters: requestParams, encoding: URLEncoding.default, headers: nil, interceptor: nil).responseJSON(completionHandler: { (responseData) -> Void in
+                        switch responseData.result {
+                        case .success(let data):
+                            if let responseValue = data as? [String: AnyObject] {
+                                if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
+                                    if let data = responseValue[WSResponseParams.WS_RESP_PARAM_DATA] as? [[String: Any]], let properties = Mapper<Properties>().mapArray(JSONArray: data) as [Properties]? {
+                                        completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", properties)
+                                    }
+                                }
+                                else {
+                                    completion(false, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", nil)
+                                }
+                            }
+                            else {
+                                completion(false, responseData.error?.localizedDescription ?? "", nil)
+                            }
+                        case .failure(let error):
+                            completion(false, error.localizedDescription, nil)
+                        }
+                    })
+        }
+        else {
+            
+        }
+    }
 }

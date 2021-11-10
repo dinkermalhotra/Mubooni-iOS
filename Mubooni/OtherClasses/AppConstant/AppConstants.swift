@@ -40,6 +40,10 @@ struct CellIds {
 struct Strings {
     static let BOOKING_INFO = "BOOKING DETAILS"
     static let BOOK_YOUR_SLOT = "BOOK YOUR SLOT"
+    static let KES = "KES"
+    static let MONTHLY_RENT = "Monthly Rent"
+    static let SELLING_PRICE = "Selling Price"
+    static let UNIT_STATUS_SALE = "SALE"
 }
 
 struct Alert {
