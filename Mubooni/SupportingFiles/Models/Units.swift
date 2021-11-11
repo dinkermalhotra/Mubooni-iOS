@@ -12,6 +12,7 @@ class Units: Mappable, CustomStringConvertible {
         id <- map[WSResponseParams.WS_RESP_PARAM_ID]
         monthlyRent <- map[WSResponseParams.WS_RESP_PARAM_MONTHLY_RENT]
         unitStatus <- map[WSResponseParams.WS_RESP_PARAM_UNIT_STATUS]
+        unitType <- map[WSResponseParams.WS_RESP_PARAM_UNIT_TYPE]
     }
     
     var description: String {
@@ -34,4 +35,5 @@ class Units: Mappable, CustomStringConvertible {
     lazy var id = String()
     lazy var monthlyRent = String()
     lazy var unitStatus = String()
+    lazy var unitType = String()
 }

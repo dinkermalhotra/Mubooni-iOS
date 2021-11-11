@@ -4,6 +4,7 @@ struct WebService {
     static let checkFacebookIdExist                  = "\(baseUrl)/checkFacebookId/app"
     static let checkGoogleIdExist                    = "\(baseUrl)/checkGoogleId/app"
     static let getFeaturedProperties                 = "\(baseUrl)/get_all_FeaturedProperties/app/"
+    static let getUserProperties                     = "\(baseUrl)/get_all_user_properties/app/"
     static let getUserRoles                          = "\(baseUrl)/get_user_roles/app"
     static let getUserSpecialisations                = "\(baseUrl)/get_user_specialisations/app"
     static let loginUser                             = "\(baseUrl)/loginMe/app"
@@ -16,6 +17,7 @@ struct WSRequestParams {
     static let WS_REQS_PARAM_FEATURED_STATUS         = "featured_status"
     static let WS_REQS_PARAM_GOOGLE_EMAIL            = "google_email"
     static let WS_REQS_PARAM_GOOGLE_ID               = "google_id"
+    static let WS_REQS_PARAM_LOG_USERID              = "log_userId"
     static let WS_REQS_PARAM_PASSWORD                = "password"
 }
 
@@ -24,6 +26,7 @@ struct WSResponseParams {
     static let WS_RESP_PARAM_APP_ATTACHMENTS         = "app_attachments"
     static let WS_RESP_PARAM_DATA                    = "data"
     static let WS_RESP_PARAM_EMAIL                   = "email"
+    static let WS_RESP_PARAM_FEATURED_STATUS         = "featured_status"
     static let WS_RESP_PARAM_ID                      = "id"
     static let WS_RESP_PARAM_IMG                     = "img"
     static let WS_RESP_PARAM_MESSAGE                 = "message"
@@ -36,7 +39,9 @@ struct WSResponseParams {
     static let WS_RESP_PARAM_SPEC_NAME               = "spec_name"
     static let WS_RESP_PARAM_STATUS                  = "status"
     static let WS_RESP_PARAM_TRUE                    = "true"
+    static let WS_RESP_PARAM_TYPE_NAME               = "type_name"
     static let WS_RESP_PARAM_UNIT_STATUS             = "unit_status"
+    static let WS_RESP_PARAM_UNIT_TYPE               = "unit_type"
     static let WS_RESP_PARAM_UNITS                   = "units"
     static let WS_RESP_PARAM_USER_ID                 = "userId"
 }

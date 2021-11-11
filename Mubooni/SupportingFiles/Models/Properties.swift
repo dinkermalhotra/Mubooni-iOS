@@ -11,7 +11,9 @@ class Properties: Mappable, CustomStringConvertible {
     func mapping(map: Map) {
         address <- map[WSResponseParams.WS_RESP_PARAM_ADDRESS]
         app_Attachments <- map[WSResponseParams.WS_RESP_PARAM_APP_ATTACHMENTS]
+        featuredStatus <- map[WSResponseParams.WS_RESP_PARAM_FEATURED_STATUS]
         id <- map[WSResponseParams.WS_RESP_PARAM_ID]
+        typeName <- map[WSResponseParams.WS_RESP_PARAM_TYPE_NAME]
         units <- map[WSResponseParams.WS_RESP_PARAM_UNITS]
     }
     
@@ -34,7 +36,9 @@ class Properties: Mappable, CustomStringConvertible {
     
     lazy var address = String()
     lazy var app_Attachments = [AppAttachments]()
+    lazy var featuredStatus = String()
     lazy var id = String()
+    lazy var typeName = String()
     lazy var units = [Units]()
 }
 

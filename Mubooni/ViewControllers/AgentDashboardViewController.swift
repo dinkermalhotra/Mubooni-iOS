@@ -40,7 +40,10 @@ extension AgentDashboardViewController {
     }
     
     @IBAction func myPropertiesClicked(_ sender: UIButton) {
-        
+        if let vc = ViewControllerHelper.getViewController(ofType: .MyPropertiesViewController) as? MyPropertiesViewController {
+            vc.userProfile = userProfile
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func reportsClicked(_ sender: UIButton) {

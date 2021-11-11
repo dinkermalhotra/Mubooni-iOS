@@ -35,12 +35,18 @@ struct MubooniFonts {
 struct CellIds {
     static let IntroScreensCell = "IntroScreensCell"
     static let MainFeaturedCell = "MainFeaturedCell"
+    static let MyPropertiesCell = "MyPropertiesCell"
 }
 
 struct Strings {
+    static let BATH = "Bath"
+    static let BATHS = "Baths"
+    static let BEDROOM = "Bedroom"
+    static let BEDROOMS = "Bedrooms"
     static let BOOKING_INFO = "BOOKING DETAILS"
     static let BOOK_YOUR_SLOT = "BOOK YOUR SLOT"
     static let KES = "KES"
+    static let LAND = "LAND"
     static let MONTHLY_RENT = "Monthly Rent"
     static let SELLING_PRICE = "Selling Price"
     static let UNIT_STATUS_SALE = "SALE"

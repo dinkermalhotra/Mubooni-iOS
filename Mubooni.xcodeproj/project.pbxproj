@@ -47,6 +47,8 @@
 		8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42F6273BA773002BC5BD /* AlertMessages.swift */; };
 		8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42F8273BAE29002BC5BD /* Properties.swift */; };
 		8BCA42FB273BC230002BC5BD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FA273BC230002BC5BD /* Units.swift */; };
+		8BCA42FD273D1346002BC5BD /* MyPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */; };
+		8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		8BCA42F6273BA773002BC5BD /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
 		8BCA42F8273BAE29002BC5BD /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		8BCA42FA273BC230002BC5BD /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertiesViewController.swift; sourceTree = "<group>"; };
+		8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertiesCell.swift; sourceTree = "<group>"; };
 		9AF3E744092B8C4D06D80BC6 /* Pods_Mubooni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mubooni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +171,7 @@
 				199720BA26D63B9D0044BE8D /* IntroScreensViewController.swift */,
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
 				191B481626D4BEC900552A2D /* MainViewController.swift */,
+				8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */,
 				191B480626D4AC1F00552A2D /* SignInViewController.swift */,
 				199720B826D617D00044BE8D /* SignupViewController.swift */,
 			);
@@ -203,8 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				8BCA42F5273BA760002BC5BD /* AlertMessages */,
-				19EBE01C27214B8D00BD307F /* Helper */,
 				199720BF26D63D410044BE8D /* AppConstant */,
+				19EBE01C27214B8D00BD307F /* Helper */,
 				191B480B26D4AC9D00552A2D /* ViewControllerHelper */,
 			);
 			path = OtherClasses;
@@ -306,6 +311,7 @@
 			children = (
 				199720BD26D63D330044BE8D /* IntroScreensCell.swift */,
 				8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */,
+				8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				199720B726D5F1910044BE8D /* UIColorExtension.swift in Sources */,
 				199720C126D63E360044BE8D /* AppConstants.swift in Sources */,
 				19925B7C26D3E03200FC574F /* AppDelegate.swift in Sources */,
+				8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */,
 				19EBE02127216A6B00BD307F /* Singleton.swift in Sources */,
 				19AD9E32271E9560007639F1 /* WSManager.swift in Sources */,
 				8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */,
@@ -611,6 +618,7 @@
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
 				19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */,
 				191B481726D4BEC900552A2D /* MainViewController.swift in Sources */,
+				8BCA42FD273D1346002BC5BD /* MyPropertiesViewController.swift in Sources */,
 				8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */,
 				19EBE01527213A3100BD307F /* UserRoles.swift in Sources */,
 			);

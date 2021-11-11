@@ -5,6 +5,7 @@ struct ViewControllerIdentifiers {
     static let IntroScreensViewController        = "IntroScreensViewController"
     static let LoginViewController               = "LoginViewController"
     static let MainViewController                = "MainViewController"
+    static let MyPropertiesViewController        = "MyPropertiesViewController"
     static let SignInViewController              = "SignInViewController"
     static let SignupViewController              = "SignupViewController"
 }
@@ -17,6 +18,7 @@ enum ViewControllerType {
     case IntroScreensViewController
     case LoginViewController
     case MainViewController
+    case MyPropertiesViewController
     case SignInViewController
     case SignupViewController
 }
@@ -52,6 +54,9 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .FindServiceProviderViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FindServiceProviderViewController) as! FindServiceProviderViewController
+        }
+        else if viewControllerType == .MyPropertiesViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.MyPropertiesViewController) as! MyPropertiesViewController
         }
         // Main Storyboard
 //        else if viewControllerType == .LabelChangeViewController {
