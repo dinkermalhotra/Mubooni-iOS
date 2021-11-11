@@ -56,8 +56,19 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.MainFeaturedCell, for: indexPath) as! MainFeaturedCell
         
+        let block: SDExternalCompletionBlock? = {(image: UIImage?, error: Error?, cacheType: SDImageCacheType, imageURL: URL?) -> Void in
+            //print(image)
+            if (image == nil) {
+                return
+            }
+        }
+
         if collectionView == featuredPropertiesCollectionView {
             let dict = featuredProperties[indexPath.row]
+            
+            if let url = URL(string: dict.app_Attachments.count > 0 ? "\(WebService.baseImageUrl)\(dict.app_Attachments[0].img)" : "") {
+                cell.imgProperty.sd_setImage(with: url, completed: block)
+            }
             
             cell.lblLocation.text = dict.address
             
@@ -66,6 +77,10 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
         else {
             let dict = properties[indexPath.row]
+            
+            if let url = URL(string: dict.app_Attachments.count > 0 ? "\(WebService.baseImageUrl)\(dict.app_Attachments[0].img)" : "") {
+                cell.imgProperty.sd_setImage(with: url, completed: block)
+            }
             
             cell.lblLocation.text = dict.address
             
@@ -82,10 +97,11 @@ extension MainViewController {
     func fetchFeaturedProperties() {
         let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_FEATURED_STATUS: "1" as AnyObject]
         WSManager.wsCallFeaturedProperties(params) { isSuccess, message, response in
-            Helper.hideLoader(onVC: self)
             
-            self.featuredProperties = response ?? []
-            self.featuredPropertiesCollectionView.reloadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                self.featuredProperties = response ?? []
+                self.featuredPropertiesCollectionView.reloadData()
+            })
         }
     }
     

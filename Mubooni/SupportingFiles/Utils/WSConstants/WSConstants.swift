@@ -1,5 +1,6 @@
 struct WebService {
     static let baseUrl                               = "https://ddfintech.in/mubooni/JSON"
+    static let baseImageUrl                          = "https://ddfintech.in/mubooni/"
     static let checkFacebookIdExist                  = "\(baseUrl)/checkFacebookId/app"
     static let checkGoogleIdExist                    = "\(baseUrl)/checkGoogleId/app"
     static let getFeaturedProperties                 = "\(baseUrl)/get_all_FeaturedProperties/app/"
@@ -20,10 +21,11 @@ struct WSRequestParams {
 
 struct WSResponseParams {
     static let WS_RESP_PARAM_ADDRESS                 = "address"
-    static let WS_RESP_PARAM_ATTACHMENTS             = "attachments"
+    static let WS_RESP_PARAM_APP_ATTACHMENTS         = "app_attachments"
     static let WS_RESP_PARAM_DATA                    = "data"
     static let WS_RESP_PARAM_EMAIL                   = "email"
     static let WS_RESP_PARAM_ID                      = "id"
+    static let WS_RESP_PARAM_IMG                     = "img"
     static let WS_RESP_PARAM_MESSAGE                 = "message"
     static let WS_RESP_PARAM_MONTHLY_RENT            = "monthly_rent"
     static let WS_RESP_PARAM_NAME                    = "name"
