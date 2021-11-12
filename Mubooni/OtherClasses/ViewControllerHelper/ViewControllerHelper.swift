@@ -1,6 +1,7 @@
 struct ViewControllerIdentifiers {
     
     static let AgentDashboardViewController      = "AgentDashboardViewController"
+    static let AgentPropertyDetailViewController = "AgentPropertyDetailViewController"
     static let FindServiceProviderViewController = "FindServiceProviderViewController"
     static let IntroScreensViewController        = "IntroScreensViewController"
     static let LoginViewController               = "LoginViewController"
@@ -14,6 +15,7 @@ import UIKit
 
 enum ViewControllerType {
     case AgentDashboardViewController
+    case AgentPropertyDetailViewController
     case FindServiceProviderViewController
     case IntroScreensViewController
     case LoginViewController
@@ -51,6 +53,9 @@ class ViewControllerHelper: NSObject {
         }// Agent Storyboard
         else if viewControllerType == .AgentDashboardViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AgentDashboardViewController) as! AgentDashboardViewController
+        }
+        else if viewControllerType == . AgentPropertyDetailViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AgentPropertyDetailViewController) as! AgentPropertyDetailViewController
         }
         else if viewControllerType == .FindServiceProviderViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FindServiceProviderViewController) as! FindServiceProviderViewController

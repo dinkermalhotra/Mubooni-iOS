@@ -49,6 +49,7 @@
 		8BCA42FB273BC230002BC5BD /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FA273BC230002BC5BD /* Units.swift */; };
 		8BCA42FD273D1346002BC5BD /* MyPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */; };
 		8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */; };
+		8BCA4301273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		8BCA42FA273BC230002BC5BD /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertiesViewController.swift; sourceTree = "<group>"; };
 		8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertiesCell.swift; sourceTree = "<group>"; };
+		8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentPropertyDetailViewController.swift; sourceTree = "<group>"; };
 		9AF3E744092B8C4D06D80BC6 /* Pods_Mubooni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mubooni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				19EBE022272187E900BD307F /* AgentDashboardViewController.swift */,
+				8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */,
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
 				199720BA26D63B9D0044BE8D /* IntroScreensViewController.swift */,
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
@@ -600,6 +603,7 @@
 				191B481926D4C01500552A2D /* LoginViewController.swift in Sources */,
 				19A262B32722C72000EDF5CE /* FindServiceProviderViewController.swift in Sources */,
 				199720BB26D63B9D0044BE8D /* IntroScreensViewController.swift in Sources */,
+				8BCA4301273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift in Sources */,
 				199720B526D5F11C0044BE8D /* UIView+Extension.swift in Sources */,
 				8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */,
 				8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */,

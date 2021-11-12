@@ -26,6 +26,7 @@ struct WSResponseParams {
     static let WS_RESP_PARAM_APP_ATTACHMENTS         = "app_attachments"
     static let WS_RESP_PARAM_DATA                    = "data"
     static let WS_RESP_PARAM_EMAIL                   = "email"
+    static let WS_RESP_PARAM_ESTATE_NAME             = "estate_name"
     static let WS_RESP_PARAM_FEATURED_STATUS         = "featured_status"
     static let WS_RESP_PARAM_ID                      = "id"
     static let WS_RESP_PARAM_IMG                     = "img"
