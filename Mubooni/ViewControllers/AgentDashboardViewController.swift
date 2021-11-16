@@ -2,7 +2,7 @@ import UIKit
 
 class AgentDashboardViewController: UIViewController {
 
-    @IBOutlet weak var btnUserRole: UIButton!
+    @IBOutlet weak var btnProfile: UIButton!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
     
@@ -21,8 +21,10 @@ class AgentDashboardViewController: UIViewController {
 
 // MARK: - UIBUTTON ACTIONS
 extension AgentDashboardViewController {
-    @IBAction func userRoleClicked(_ sender: UIButton) {
-        
+    @IBAction func profileClicked(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func notificationClicked(_ sender: UIButton) {

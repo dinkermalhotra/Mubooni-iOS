@@ -7,6 +7,7 @@ struct ViewControllerIdentifiers {
     static let LoginViewController               = "LoginViewController"
     static let MainViewController                = "MainViewController"
     static let MyPropertiesViewController        = "MyPropertiesViewController"
+    static let ProfileViewController             = "ProfileViewController"
     static let SignInViewController              = "SignInViewController"
     static let SignupViewController              = "SignupViewController"
 }
@@ -21,6 +22,7 @@ enum ViewControllerType {
     case LoginViewController
     case MainViewController
     case MyPropertiesViewController
+    case ProfileViewController
     case SignInViewController
     case SignupViewController
 }
@@ -50,7 +52,7 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .SignupViewController {
             viewController = loginStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.SignupViewController) as! SignupViewController
-        }// Agent Storyboard
+        } // Agent Storyboard
         else if viewControllerType == .AgentDashboardViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AgentDashboardViewController) as! AgentDashboardViewController
         }
@@ -62,11 +64,10 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .MyPropertiesViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.MyPropertiesViewController) as! MyPropertiesViewController
+        } // Main Storyboard
+        else if viewControllerType == .ProfileViewController {
+            viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ProfileViewController) as! ProfileViewController
         }
-        // Main Storyboard
-//        else if viewControllerType == .LabelChangeViewController {
-//            viewController = dashboardStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.LabelChangeViewController) as! LabelChangeViewController
-//        }
         else {
             print("Unknown view controller type")
         }

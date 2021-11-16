@@ -3,6 +3,7 @@ import SDWebImage
 
 class MyPropertiesViewController: UIViewController {
 
+    @IBOutlet weak var btnProfile: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var properties = [Properties]()
@@ -29,6 +30,12 @@ class MyPropertiesViewController: UIViewController {
 extension MyPropertiesViewController {
     @IBAction func backClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func profileClicked(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func notificationClicked(_ sender: UIButton) {

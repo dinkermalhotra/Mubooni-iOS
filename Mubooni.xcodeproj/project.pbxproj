@@ -42,6 +42,7 @@
 		19EBE02127216A6B00BD307F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE02027216A6A00BD307F /* Singleton.swift */; };
 		19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE022272187E900BD307F /* AgentDashboardViewController.swift */; };
 		19EBE025272187FD00BD307F /* Agent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EBE024272187FD00BD307F /* Agent.storyboard */; };
+		8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1BE166274386C7006D5005 /* ProfileViewController.swift */; };
 		8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */; };
 		8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */; };
 		8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42F6273BA773002BC5BD /* AlertMessages.swift */; };
@@ -112,6 +113,7 @@
 		19EBE024272187FD00BD307F /* Agent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Agent.storyboard; sourceTree = "<group>"; };
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
+		8B1BE166274386C7006D5005 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeaturedCell.swift; sourceTree = "<group>"; };
 		8BCA42F6273BA773002BC5BD /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
 				191B481626D4BEC900552A2D /* MainViewController.swift */,
 				8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */,
+				8B1BE166274386C7006D5005 /* ProfileViewController.swift */,
 				191B480626D4AC1F00552A2D /* SignInViewController.swift */,
 				199720B826D617D00044BE8D /* SignupViewController.swift */,
 			);
@@ -608,6 +611,7 @@
 				8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */,
 				8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */,
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
+				8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
 				191B480D26D4ACB400552A2D /* ViewControllerHelper.swift in Sources */,
 				199720B726D5F1910044BE8D /* UIColorExtension.swift in Sources */,
