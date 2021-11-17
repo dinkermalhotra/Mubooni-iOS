@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Manage IQKeyboardManager
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarTintColor = UIColor.black
         
         DispatchQueue.global(qos: .background).async {
             self.fetchUserRoles()

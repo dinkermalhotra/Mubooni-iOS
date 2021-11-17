@@ -5,6 +5,7 @@ target 'Mubooni' do
 
     pod 'Alamofire'
     pod 'AlamofireObjectMapper'
+    pod 'CountryPickerView'
     pod 'DropDown'
     pod 'FBSDKLoginKit'
     pod 'Firebase/Analytics'

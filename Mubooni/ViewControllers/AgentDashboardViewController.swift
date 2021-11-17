@@ -23,6 +23,7 @@ class AgentDashboardViewController: UIViewController {
 extension AgentDashboardViewController {
     @IBAction func profileClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
+            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -33,6 +34,7 @@ extension AgentDashboardViewController {
     
     @IBAction func findServiceProviderClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .FindServiceProviderViewController) as? FindServiceProviderViewController {
+            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

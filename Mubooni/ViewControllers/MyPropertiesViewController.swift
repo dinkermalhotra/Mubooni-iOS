@@ -34,6 +34,7 @@ extension MyPropertiesViewController {
     
     @IBAction func profileClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
+            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

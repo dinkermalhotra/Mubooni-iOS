@@ -5,6 +5,8 @@ class FindServiceProviderViewController: UIViewController {
     @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet weak var btnProfile: UIButton!
     
+    var userProfile: UserProfile?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,7 @@ extension FindServiceProviderViewController {
     
     @IBAction func profileClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
+            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

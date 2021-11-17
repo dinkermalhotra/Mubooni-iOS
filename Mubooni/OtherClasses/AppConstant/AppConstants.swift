@@ -26,9 +26,12 @@ struct AppConstants {
 struct MubooniColors {
     static let blackTransparentColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.5)
     static let darkGreenColor = UIColor.init(hex: "096B30")
+    static let greenColor = UIColor.init(hex: "00BF4B")
+    static let redColor = UIColor.init(hex: "ED1F23")
 }
 
 struct MubooniFonts {
+    static let FONT_ROBOTO_BOLD_16 = UIFont.init(name: "Roboto-Bold", size: 16)
     static let FONT_ROBOTO_REGULAR_14 = UIFont.init(name: "Roboto-Regular", size: 14)
 }
 
@@ -48,8 +51,11 @@ struct Strings {
     static let KES = "KES"
     static let LAND = "LAND"
     static let MONTHLY_RENT = "Monthly Rent"
+    static let ONE = "1"
     static let SELLING_PRICE = "Selling Price"
     static let UNIT_STATUS_SALE = "SALE"
+    static let UNVERIFIED = "Unverified"
+    static let VERIFIED = "Verified"
 }
 
 struct Alert {
