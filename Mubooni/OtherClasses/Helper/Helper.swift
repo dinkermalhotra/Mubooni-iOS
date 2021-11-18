@@ -169,40 +169,7 @@ class Helper: NSObject {
             alert.addAction(UIAlertAction(title: btnOkTitle, style:.default, handler: { (action:UIAlertAction) in
                 onOk()
             }))
-            alert.addAction(UIAlertAction(title: btnCancelTitle, style:.destructive, handler: { (action:UIAlertAction) in
-                
-            }))
-            alert.view.tintColor = MubooniColors.darkGreenColor
-            alert.view.setNeedsLayout()
-            viewController.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    class func showClientAlertWithCompletion(onVC viewController: UIViewController, title: String, message: String, btnOkTitle: String, btnCancelTitle: String, onOk: @escaping ()->(), onCancel: @escaping ()->()) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: btnOkTitle, style:.default, handler: { (action:UIAlertAction) in
-                onOk()
-            }))
             alert.addAction(UIAlertAction(title: btnCancelTitle, style:.default, handler: { (action:UIAlertAction) in
-                onCancel()
-            }))
-            alert.view.tintColor = UIColor.black
-            alert.view.setNeedsLayout()
-            viewController.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    class func showThreeButtonsAlertWithCompletion(onVC viewController: UIViewController, title: String?, message: String?, btnOneTitle: String, btnTwoTitle: String, btnThreeTitle: String, onBtnOneClick: @escaping ()->(), onBtnTwoClick: @escaping ()->()) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: btnOneTitle, style:.default, handler: { (action:UIAlertAction) in
-                onBtnOneClick()
-            }))
-            alert.addAction(UIAlertAction(title: btnTwoTitle, style:.default, handler: { (action:UIAlertAction) in
-                onBtnTwoClick()
-            }))
-            alert.addAction(UIAlertAction(title: btnThreeTitle, style:.default, handler: { (action:UIAlertAction) in
                 
             }))
             alert.view.tintColor = UIColor.black
@@ -211,38 +178,7 @@ class Helper: NSObject {
         }
     }
     
-    class func showSingleActionAlert(onVC viewController: UIViewController, title: String?, titleOne: String, actionOne:@escaping ()->(), actionCancel:@escaping ()->()) {
-        DispatchQueue.main.async {
-            let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
-            
-            let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
-                actionCancel()
-            }
-            actionSheetControllerIOS8.addAction(cancelActionButton)
-            
-            let saveActionButton: UIAlertAction = UIAlertAction(title: titleOne, style: .default) { action -> Void in
-                actionOne()
-            }
-            actionSheetControllerIOS8.addAction(saveActionButton)
-            
-            if let popoverPresentationController = actionSheetControllerIOS8.popoverPresentationController {
-                popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
-                
-                var rect = viewController.view.frame;
-                
-                rect.origin.x = viewController.view.frame.size.width / 20;
-                rect.origin.y = viewController.view.frame.size.height / 20;
-                
-                popoverPresentationController.sourceView = viewController.view
-                popoverPresentationController.sourceRect = rect
-            }
-            
-            actionSheetControllerIOS8.view.tintColor = UIColor.black
-            viewController.present(actionSheetControllerIOS8, animated: true, completion: nil)
-        }
-    }
-    
-    class func showThreeOptionActionAlert(onVC viewController: UIViewController, title: String?, titleOne: String, actionOne:@escaping ()->(), titleTwo: String, actionTwo:@escaping ()->(), titleThree: String, actionThree:@escaping ()->()) {
+    class func showActionAlert(onVC viewController: UIViewController, title: String?, titleOne: String, actionOne:@escaping ()->(), titleTwo: String, actionTwo:@escaping ()->()) {
         DispatchQueue.main.async {
             let actionSheetControllerIOS8: UIAlertController = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
             
@@ -251,20 +187,15 @@ class Helper: NSObject {
             }
             actionSheetControllerIOS8.addAction(cancelActionButton)
             
-            let oneActionButton: UIAlertAction = UIAlertAction(title: titleOne, style: .destructive) { action -> Void in
+            let saveActionButton: UIAlertAction = UIAlertAction(title: titleOne, style: .default) { action -> Void in
                 actionOne()
             }
-            actionSheetControllerIOS8.addAction(oneActionButton)
+            actionSheetControllerIOS8.addAction(saveActionButton)
             
-            let twoActionButton: UIAlertAction = UIAlertAction(title: titleTwo, style: .default) { action -> Void in
+            let deleteActionButton: UIAlertAction = UIAlertAction(title: titleTwo, style: .default) { action -> Void in
                 actionTwo()
             }
-            actionSheetControllerIOS8.addAction(twoActionButton)
-            
-            let threeActionButton: UIAlertAction = UIAlertAction(title: titleThree, style: .default) { action -> Void in
-                actionThree()
-            }
-            actionSheetControllerIOS8.addAction(threeActionButton)
+            actionSheetControllerIOS8.addAction(deleteActionButton)
             
             if let popoverPresentationController = actionSheetControllerIOS8.popoverPresentationController {
                 popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
@@ -280,57 +211,6 @@ class Helper: NSObject {
             
             actionSheetControllerIOS8.view.tintColor = UIColor.black
             viewController.present(actionSheetControllerIOS8, animated: true, completion: nil)
-        }
-    }
-    
-    class func showFiveOptionsActionAlert(onVC viewController: UIViewController, title: String, titleOne: String, actionOne:@escaping ()->(), titleTwo: String, actionTwo:@escaping ()->(), titleThree: String, actionThree:@escaping ()->(), titleFour: String, actionFour:@escaping ()->(), titleFive: String, actionFive:@escaping ()->()) {
-        DispatchQueue.main.async {
-            let actionSheetController: UIAlertController = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
-            
-            let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
-                
-            }
-            actionSheetController.addAction(cancelActionButton)
-            
-            let actionButtonOne: UIAlertAction = UIAlertAction(title: titleOne, style: .default) { action -> Void in
-                actionOne()
-            }
-            actionSheetController.addAction(actionButtonOne)
-            
-            let actionButtonTwo: UIAlertAction = UIAlertAction(title: titleTwo, style: .default) { action -> Void in
-                actionTwo()
-            }
-            actionSheetController.addAction(actionButtonTwo)
-            
-            let actionButtonThree: UIAlertAction = UIAlertAction(title: titleThree, style: .default) { action -> Void in
-                actionThree()
-            }
-            actionSheetController.addAction(actionButtonThree)
-            
-            let actionButtonFour: UIAlertAction = UIAlertAction(title: titleFour, style: .default) { action -> Void in
-                actionFour()
-            }
-            actionSheetController.addAction(actionButtonFour)
-            
-            let actionButtonFive: UIAlertAction = UIAlertAction(title: titleFive, style: .destructive) { action -> Void in
-                actionFive()
-            }
-            actionSheetController.addAction(actionButtonFive)
-            
-            if let popoverPresentationController = actionSheetController.popoverPresentationController {
-                popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
-                
-                var rect = viewController.view.frame;
-                
-                rect.origin.x = viewController.view.frame.size.width / 20;
-                rect.origin.y = viewController.view.frame.size.height / 20;
-                
-                popoverPresentationController.sourceView = viewController.view
-                popoverPresentationController.sourceRect = rect
-            }
-            
-            actionSheetController.view.tintColor = UIColor.black
-            viewController.present(actionSheetController, animated: true, completion: nil)
         }
     }
     

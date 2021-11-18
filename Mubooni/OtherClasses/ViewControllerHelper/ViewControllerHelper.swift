@@ -1,20 +1,28 @@
 struct ViewControllerIdentifiers {
     
-    static let AgentDashboardViewController      = "AgentDashboardViewController"
-    static let AgentPropertyDetailViewController = "AgentPropertyDetailViewController"
-    static let FindServiceProviderViewController = "FindServiceProviderViewController"
-    static let IntroScreensViewController        = "IntroScreensViewController"
-    static let LoginViewController               = "LoginViewController"
-    static let MainViewController                = "MainViewController"
-    static let MyPropertiesViewController        = "MyPropertiesViewController"
-    static let ProfileViewController             = "ProfileViewController"
-    static let SignInViewController              = "SignInViewController"
-    static let SignupViewController              = "SignupViewController"
+    static let AddPropertyAmenitiesViewController   = "AddPropertyAmenitiesViewController"
+    static let AddPropertyDescriptionViewController = "AddPropertyDescriptionViewController"
+    static let AddPropertyDetailsViewController     = "AddPropertyDetailsViewController"
+    static let AddPropertyMediaViewController       = "AddPropertyMediaViewController"
+    static let AgentDashboardViewController         = "AgentDashboardViewController"
+    static let AgentPropertyDetailViewController    = "AgentPropertyDetailViewController"
+    static let FindServiceProviderViewController    = "FindServiceProviderViewController"
+    static let IntroScreensViewController           = "IntroScreensViewController"
+    static let LoginViewController                  = "LoginViewController"
+    static let MainViewController                   = "MainViewController"
+    static let MyPropertiesViewController           = "MyPropertiesViewController"
+    static let ProfileViewController                = "ProfileViewController"
+    static let SignInViewController                 = "SignInViewController"
+    static let SignupViewController                 = "SignupViewController"
 }
 
 import UIKit
 
 enum ViewControllerType {
+    case AddPropertyAmenitiesViewController
+    case AddPropertyDescriptionViewController
+    case AddPropertyDetailsViewController
+    case AddPropertyMediaViewController
     case AgentDashboardViewController
     case AgentPropertyDetailViewController
     case FindServiceProviderViewController
@@ -53,6 +61,18 @@ class ViewControllerHelper: NSObject {
         else if viewControllerType == .SignupViewController {
             viewController = loginStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.SignupViewController) as! SignupViewController
         } // Agent Storyboard
+        else if viewControllerType == .AddPropertyAmenitiesViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AddPropertyAmenitiesViewController) as! AddPropertyAmenitiesViewController
+        }
+        else if viewControllerType == .AddPropertyDescriptionViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AddPropertyDescriptionViewController) as! AddPropertyDescriptionViewController
+        }
+        else if viewControllerType == .AddPropertyDetailsViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AddPropertyDetailsViewController) as! AddPropertyDetailsViewController
+        }
+        else if viewControllerType == .AddPropertyMediaViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AddPropertyMediaViewController) as! AddPropertyMediaViewController
+        }
         else if viewControllerType == .AgentDashboardViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AgentDashboardViewController) as! AgentDashboardViewController
         }

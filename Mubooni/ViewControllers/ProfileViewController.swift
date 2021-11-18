@@ -7,6 +7,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var imgIdProof: UIImageView!
     @IBOutlet weak var imgOtherDocument: UIImageView!
+    @IBOutlet weak var imgGoogleVerified: UIImageView!
+    @IBOutlet weak var imgAppleVerified: UIImageView!
+    @IBOutlet weak var imgFacebookVerified: UIImageView!
     @IBOutlet weak var countryPicker: CountryPickerView!
     @IBOutlet weak var lblProfileTag: UILabel!
     @IBOutlet weak var lblAbout: UILabel!
@@ -29,6 +32,7 @@ class ProfileViewController: UIViewController {
         countryPicker.showCountryCodeInView = false
         countryPicker.countryDetailsLabel.font = MubooniFonts.FONT_ROBOTO_BOLD_16
         
+        imgProfile.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(handleTapOnProfileImage)))
         viewUploadKenyaId.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(handleTapOnUploadKenyaId)))
         
         Helper.showLoader(onVC: self)
@@ -44,6 +48,10 @@ class ProfileViewController: UIViewController {
     @objc func handleTapOnUploadKenyaId() {
         print("Tapped")
     }
+    
+    @objc func handleTapOnProfileImage() {
+        Helper.showActionAlert(onVC: self, title: nil, titleOne: Strings.TAKE_PHOTO, actionOne: takeNewPhotoFromCamera, titleTwo: Strings.CHOOSE_PHOTO, actionTwo: choosePhotoFromExistingImages)
+    }
 }
 
 // MARK: - UIBUTTON ACTIONS
@@ -53,13 +61,47 @@ extension ProfileViewController {
     }
     
     @IBAction func editProfileClicked(_ sender: UIButton) {
-        txtName.isUserInteractionEnabled = true
-        txtPhone.isUserInteractionEnabled = true
-        txtEmail.isUserInteractionEnabled = true
-        txtAddress.isUserInteractionEnabled = true
-        txtKenyaId.isUserInteractionEnabled = true
-        viewUploadKenyaId.isUserInteractionEnabled = true
-        btnAddMoreDocument.isUserInteractionEnabled = true
+        sender.isSelected = !sender.isSelected
+        
+        if sender.isSelected {
+            countryPicker.isUserInteractionEnabled = true
+            imgProfile.isUserInteractionEnabled = true
+            txtName.isUserInteractionEnabled = true
+            txtPhone.isUserInteractionEnabled = true
+            txtEmail.isUserInteractionEnabled = true
+            txtAddress.isUserInteractionEnabled = true
+            btnAddMoreDocument.isUserInteractionEnabled = true
+            
+            countryPicker.backgroundColor = UIColor.white
+            txtName.backgroundColor = UIColor.white
+            txtPhone.backgroundColor = UIColor.white
+            txtEmail.backgroundColor = UIColor.white
+            txtAddress.backgroundColor = UIColor.white
+            
+            if userProfile?.kenyaId == "" {
+                txtKenyaId.backgroundColor = UIColor.white
+                txtKenyaId.isUserInteractionEnabled = true
+                viewUploadKenyaId.isUserInteractionEnabled = true
+            }
+        }
+        else {
+            countryPicker.isUserInteractionEnabled = false
+            imgProfile.isUserInteractionEnabled = false
+            txtName.isUserInteractionEnabled = false
+            txtPhone.isUserInteractionEnabled = false
+            txtEmail.isUserInteractionEnabled = false
+            txtAddress.isUserInteractionEnabled = false
+            txtKenyaId.isUserInteractionEnabled = false
+            viewUploadKenyaId.isUserInteractionEnabled = false
+            btnAddMoreDocument.isUserInteractionEnabled = false
+            
+            countryPicker.backgroundColor = UIColor.clear
+            txtName.backgroundColor = UIColor.clear
+            txtPhone.backgroundColor = UIColor.clear
+            txtEmail.backgroundColor = UIColor.clear
+            txtAddress.backgroundColor = UIColor.clear
+            txtKenyaId.backgroundColor = UIColor.clear
+        }
     }
     
     @IBAction func emailVerifyClicked(_ sender: UIButton) {
@@ -72,6 +114,49 @@ extension ProfileViewController {
     
     @IBAction func addMoreDocumentClicked(_ sender: UIButton) {
         
+    }
+    
+    @IBAction func googleClicked(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func appleClicked(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func facebookClicked(_ sender: UIButton) {
+        
+    }
+}
+
+// MARK: - UIIMAGEPICKERCONTROLLER DELEGAT
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func takeNewPhotoFromCamera() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerController.SourceType.camera
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    func choosePhotoFromExistingImages() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+        DispatchQueue.main.async {
+            self.imgProfile.image = editedImage
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -127,6 +212,9 @@ extension ProfileViewController {
         
         btnEmailVerify.isSelected = userProfile?.isVerify == Strings.ONE ? true : false
         btnPhoneVerify.isSelected = userProfile?.isPhoneVerify == Strings.ONE ? true : false
+        
+        imgFacebookVerified.isHidden = userProfile?.facebookId == "" ? true : false
+        imgGoogleVerified.isHidden = userProfile?.googleId == "" ? true : false
         
         if !(userProfile?.idProof.isEmpty ?? true) {
             imgIdProof.isHidden = false

@@ -43,6 +43,13 @@
 		19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE022272187E900BD307F /* AgentDashboardViewController.swift */; };
 		19EBE025272187FD00BD307F /* Agent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EBE024272187FD00BD307F /* Agent.storyboard */; };
 		8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1BE166274386C7006D5005 /* ProfileViewController.swift */; };
+		8B9A78FD2746158E0020753B /* layer46@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B9A78FC2746158E0020753B /* layer46@3x.png */; };
+		8B9A7901274625170020753B /* AddPropertyDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7900274625170020753B /* AddPropertyDescriptionViewController.swift */; };
+		8B9A7903274625430020753B /* AddPropertyMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7902274625430020753B /* AddPropertyMediaViewController.swift */; };
+		8B9A7905274625880020753B /* AddPropertyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7904274625880020753B /* AddPropertyDetailsViewController.swift */; };
+		8B9A7907274625CE0020753B /* AddPropertyAmenitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7906274625CE0020753B /* AddPropertyAmenitiesViewController.swift */; };
+		8B9A7909274628FD0020753B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B9A7908274628FD0020753B /* Roboto-Medium.ttf */; };
+		8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9BE98B2746564900A472AA /* PropertyType.swift */; };
 		8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */; };
 		8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */; };
 		8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42F6273BA773002BC5BD /* AlertMessages.swift */; };
@@ -114,6 +121,13 @@
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
 		8B1BE166274386C7006D5005 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8B9A78FC2746158E0020753B /* layer46@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layer46@3x.png"; sourceTree = "<group>"; };
+		8B9A7900274625170020753B /* AddPropertyDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyDescriptionViewController.swift; sourceTree = "<group>"; };
+		8B9A7902274625430020753B /* AddPropertyMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyMediaViewController.swift; sourceTree = "<group>"; };
+		8B9A7904274625880020753B /* AddPropertyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyDetailsViewController.swift; sourceTree = "<group>"; };
+		8B9A7906274625CE0020753B /* AddPropertyAmenitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyAmenitiesViewController.swift; sourceTree = "<group>"; };
+		8B9A7908274628FD0020753B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		8B9BE98B2746564900A472AA /* PropertyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyType.swift; sourceTree = "<group>"; };
 		8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeaturedCell.swift; sourceTree = "<group>"; };
 		8BCA42F6273BA773002BC5BD /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
@@ -170,6 +184,10 @@
 		191B480326D4AAED00552A2D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B9A7906274625CE0020753B /* AddPropertyAmenitiesViewController.swift */,
+				8B9A7900274625170020753B /* AddPropertyDescriptionViewController.swift */,
+				8B9A7904274625880020753B /* AddPropertyDetailsViewController.swift */,
+				8B9A7902274625430020753B /* AddPropertyMediaViewController.swift */,
 				19EBE022272187E900BD307F /* AgentDashboardViewController.swift */,
 				8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */,
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
@@ -198,6 +216,7 @@
 		191B480526D4AB0D00552A2D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8B9A78FC2746158E0020753B /* layer46@3x.png */,
 				199720BC26D63CFD0044BE8D /* CollectionViewCells */,
 				199720B226D5F0F20044BE8D /* Extensions */,
 				191B480E26D4BE2300552A2D /* Font */,
@@ -241,6 +260,7 @@
 		191B480F26D4BE4B00552A2D /* Roboto */ = {
 			isa = PBXGroup;
 			children = (
+				8B9A7908274628FD0020753B /* Roboto-Medium.ttf */,
 				191B481226D4BE5900552A2D /* Roboto-Bold.ttf */,
 				191B481126D4BE5900552A2D /* Roboto-Italic.ttf */,
 				191B481026D4BE5800552A2D /* Roboto-Regular.ttf */,
@@ -368,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				8BCA42F8273BAE29002BC5BD /* Properties.swift */,
+				8B9BE98B2746564900A472AA /* PropertyType.swift */,
 				19EBE01627213D5900BD307F /* Specilizations.swift */,
 				8BCA42FA273BC230002BC5BD /* Units.swift */,
 				19A262B02722BDC100EDF5CE /* UserProfile.swift */,
@@ -522,9 +543,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9A7909274628FD0020753B /* Roboto-Medium.ttf in Resources */,
 				19AD9E34271E98EF007639F1 /* GoogleService-Info.plist in Resources */,
 				191B481526D4BE5900552A2D /* Roboto-Bold.ttf in Resources */,
 				199720C626D640D30044BE8D /* Poppins-Bold.ttf in Resources */,
+				8B9A78FD2746158E0020753B /* layer46@3x.png in Resources */,
 				191B480926D4AC3400552A2D /* Login.storyboard in Resources */,
 				191B481426D4BE5900552A2D /* Roboto-Italic.ttf in Resources */,
 				19EBE025272187FD00BD307F /* Agent.storyboard in Resources */,
@@ -599,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9A7905274625880020753B /* AddPropertyDetailsViewController.swift in Sources */,
 				199720B926D617D00044BE8D /* SignupViewController.swift in Sources */,
 				8BCA42FB273BC230002BC5BD /* Units.swift in Sources */,
 				199720BE26D63D330044BE8D /* IntroScreensCell.swift in Sources */,
@@ -608,8 +632,10 @@
 				199720BB26D63B9D0044BE8D /* IntroScreensViewController.swift in Sources */,
 				8BCA4301273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift in Sources */,
 				199720B526D5F11C0044BE8D /* UIView+Extension.swift in Sources */,
+				8B9A7901274625170020753B /* AddPropertyDescriptionViewController.swift in Sources */,
 				8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */,
 				8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */,
+				8B9A7903274625430020753B /* AddPropertyMediaViewController.swift in Sources */,
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
 				8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
@@ -623,7 +649,9 @@
 				8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */,
 				19A262B12722BDC100EDF5CE /* UserProfile.swift in Sources */,
 				19925B7E26D3E03200FC574F /* SceneDelegate.swift in Sources */,
+				8B9A7907274625CE0020753B /* AddPropertyAmenitiesViewController.swift in Sources */,
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
+				8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */,
 				19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */,
 				191B481726D4BEC900552A2D /* MainViewController.swift in Sources */,
 				8BCA42FD273D1346002BC5BD /* MyPropertiesViewController.swift in Sources */,

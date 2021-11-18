@@ -14,6 +14,8 @@ class UserProfile: Mappable, CustomStringConvertible {
         attachedDoc <- map[WSResponseParams.WS_RESP_PARAM_ATTACHED_DOC]
         countryCode <- map[WSResponseParams.WS_RESP_PARAM_COUNTRY_CODE]
         email <- map[WSResponseParams.WS_RESP_PARAM_EMAIL]
+        facebookId <- map[WSResponseParams.WS_RESP_PARAM_FACEBOOK_ID]
+        googleId <- map[WSResponseParams.WS_RESP_PARAM_GOOGLE_ID]
         idProof <- map[WSResponseParams.WS_RESP_PARAM_ID_PROOF]
         isPhoneVerify <- map[WSResponseParams.WS_RESP_PARAM_IS_PHONE_VERIFY]
         isUserVerify <- map[WSResponseParams.WS_RESP_PARAM_IS_USER_VERIFY]
@@ -47,6 +49,8 @@ class UserProfile: Mappable, CustomStringConvertible {
     lazy var attachedDoc = String()
     lazy var countryCode = String()
     lazy var email = String()
+    lazy var facebookId = String()
+    lazy var googleId = String()
     lazy var idProof = String()
     lazy var isPhoneVerify = String()
     lazy var isUserVerify = String()
