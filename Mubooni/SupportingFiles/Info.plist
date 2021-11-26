@@ -105,6 +105,12 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Mubooni to fetch your location to help you find best properties</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow Mubooni to access your camera to upload images</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow Mubooni to access your photo library to fetch your photos</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

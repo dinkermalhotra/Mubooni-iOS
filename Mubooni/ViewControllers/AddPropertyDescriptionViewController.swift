@@ -17,6 +17,11 @@ class AddPropertyDescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        LocationManager.shared.requestLocation()
+        LocationManager.shared.onCompletion = { (latitude, longitude, address) in
+            self.txtCurrentLocation.text = address
+        }
+        
         fetchPropertyTypes()
     }
     

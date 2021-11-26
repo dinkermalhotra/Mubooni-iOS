@@ -44,6 +44,7 @@
 		19EBE025272187FD00BD307F /* Agent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EBE024272187FD00BD307F /* Agent.storyboard */; };
 		40A665A02750AA890047674C /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A6659F2750AA890047674C /* ImagesCell.swift */; };
 		40A665A22750B3D40047674C /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A12750B3D40047674C /* UIPageControl.swift */; };
+		40A665A42750C1D90047674C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A32750C1D90047674C /* LocationManager.swift */; };
 		8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1BE166274386C7006D5005 /* ProfileViewController.swift */; };
 		8B9A78FD2746158E0020753B /* layer46@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B9A78FC2746158E0020753B /* layer46@3x.png */; };
 		8B9A7901274625170020753B /* AddPropertyDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7900274625170020753B /* AddPropertyDescriptionViewController.swift */; };
@@ -123,6 +124,7 @@
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		40A6659F2750AA890047674C /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
 		40A665A12750B3D40047674C /* UIPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControl.swift; sourceTree = "<group>"; };
+		40A665A32750C1D90047674C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
 		8B1BE166274386C7006D5005 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8B9A78FC2746158E0020753B /* layer46@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layer46@3x.png"; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 		19EBE01F27216A5C00BD307F /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
+				40A665A32750C1D90047674C /* LocationManager.swift */,
 				19EBE02027216A6A00BD307F /* Singleton.swift */,
 			);
 			path = Singleton;
@@ -661,6 +664,7 @@
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
 				8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */,
 				19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */,
+				40A665A42750C1D90047674C /* LocationManager.swift in Sources */,
 				191B481726D4BEC900552A2D /* MainViewController.swift in Sources */,
 				8BCA42FD273D1346002BC5BD /* MyPropertiesViewController.swift in Sources */,
 				8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */,
