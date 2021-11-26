@@ -36,6 +36,7 @@ struct MubooniFonts {
 }
 
 struct CellIds {
+    static let ImagesCell       = "ImagesCell"
     static let IntroScreensCell = "IntroScreensCell"
     static let MainFeaturedCell = "MainFeaturedCell"
     static let MyPropertiesCell = "MyPropertiesCell"

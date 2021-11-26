@@ -57,7 +57,7 @@ extension SignInViewController: UITextFieldDelegate {
 // MARK: - API CALL
 extension SignInViewController {
     func loginUser() {
-        var params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_EMAIL: txtEmail.text as AnyObject,
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_EMAIL: txtEmail.text as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_PASSWORD: txtPassword.text as AnyObject]
         WSManager.wsCallLogin(params) { isSuccess, message, userProfile in
             Helper.hideLoader(onVC: self)

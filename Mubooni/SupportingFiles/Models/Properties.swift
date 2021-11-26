@@ -14,6 +14,8 @@ class Properties: Mappable, CustomStringConvertible {
         estateName <- map[WSResponseParams.WS_RESP_PARAM_ESTATE_NAME]
         featuredStatus <- map[WSResponseParams.WS_RESP_PARAM_FEATURED_STATUS]
         id <- map[WSResponseParams.WS_RESP_PARAM_ID]
+        ownerName <- map[WSResponseParams.WS_RESP_PARAM_OWNER_NAME]
+        ownerNotes <- map[WSResponseParams.WS_RESP_PARAM_OWNER_NOTES]
         typeName <- map[WSResponseParams.WS_RESP_PARAM_TYPE_NAME]
         units <- map[WSResponseParams.WS_RESP_PARAM_UNITS]
     }
@@ -40,6 +42,8 @@ class Properties: Mappable, CustomStringConvertible {
     lazy var estateName = String()
     lazy var featuredStatus = String()
     lazy var id = String()
+    lazy var ownerName = String()
+    lazy var ownerNotes = String()
     lazy var typeName = String()
     lazy var units = [Units]()
 }

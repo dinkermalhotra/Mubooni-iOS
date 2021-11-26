@@ -46,6 +46,8 @@ struct WSResponseParams {
     static let WS_RESP_PARAM_MOBILE                  = "mobile"
     static let WS_RESP_PARAM_MONTHLY_RENT            = "monthly_rent"
     static let WS_RESP_PARAM_NAME                    = "name"
+    static let WS_RESP_PARAM_OWNER_NAME              = "owner_name"
+    static let WS_RESP_PARAM_OWNER_NOTES             = "owner_notes"
     static let WS_RESP_PARAM_PROFILE                 = "profile"
     static let WS_RESP_PARAM_ROLE                    = "role"
     static let WS_RESP_PARAM_ROLE_ID                 = "roleId"
