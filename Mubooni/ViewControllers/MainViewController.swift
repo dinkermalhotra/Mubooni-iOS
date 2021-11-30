@@ -6,6 +6,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var btnUser: UIButton!
     @IBOutlet weak var featuredPropertiesCollectionView: UICollectionView!
     @IBOutlet weak var propertiesCollectionView: UICollectionView!
+    @IBOutlet weak var viewSearch: UIView!
     
     var featuredProperties = [Properties]()
     var properties = [Properties]()
@@ -22,11 +23,18 @@ class MainViewController: UIViewController {
         featuredPropertiesCollectionView.collectionViewLayout = layout
         propertiesCollectionView.collectionViewLayout = layout
         
+        viewSearch.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(searchClicked)))
+        
         Helper.showLoader(onVC: self)
         fetchFeaturedProperties()
         fetchProperties()
     }
 
+    @objc func searchClicked() {
+        if let vc = ViewControllerHelper.getViewController(ofType: .FiltersViewController) as? FiltersViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 // MARK: - UIBUTTON ACTIONS

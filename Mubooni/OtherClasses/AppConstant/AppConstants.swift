@@ -24,6 +24,7 @@ struct AppConstants {
 }
 
 struct MubooniColors {
+    static let backgroundGreenColor = UIColor.init(hex: "148E45")
     static let blackTransparentColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.5)
     static let darkGreenColor = UIColor.init(hex: "096B30")
     static let greenColor = UIColor.init(hex: "00BF4B")
@@ -32,14 +33,17 @@ struct MubooniColors {
 
 struct MubooniFonts {
     static let FONT_ROBOTO_BOLD_16 = UIFont.init(name: "Roboto-Bold", size: 16)
+    static let FONT_ROBOTO_REGULAR_10 = UIFont.init(name: "Roboto-Regular", size: 10)
     static let FONT_ROBOTO_REGULAR_14 = UIFont.init(name: "Roboto-Regular", size: 14)
 }
 
 struct CellIds {
-    static let ImagesCell       = "ImagesCell"
-    static let IntroScreensCell = "IntroScreensCell"
-    static let MainFeaturedCell = "MainFeaturedCell"
-    static let MyPropertiesCell = "MyPropertiesCell"
+    static let BedroomSelectionCell = "BedroomSelectionCell"
+    static let CheckboxCell         = "CheckboxCell"
+    static let ImagesCell           = "ImagesCell"
+    static let IntroScreensCell     = "IntroScreensCell"
+    static let MainFeaturedCell     = "MainFeaturedCell"
+    static let MyPropertiesCell     = "MyPropertiesCell"
 }
 
 struct Strings {
@@ -49,12 +53,18 @@ struct Strings {
     static let BEDROOMS = "Bedrooms"
     static let BOOKING_INFO = "BOOKING DETAILS"
     static let BOOK_YOUR_SLOT = "BOOK YOUR SLOT"
+    static let BUY = "Buy"
     static let CHOOSE_PHOTO = "Choose Photo"
+    static let FREEHOLD = "Freehold"
     static let KES = "KES"
     static let LAND = "LAND"
+    static let LEASE = "Lease"
+    static let LEASEHOLD = "Leasehold"
     static let MONTHLY_RENT = "Monthly Rent"
     static let ONE = "1"
+    static let RENT = "Rent"
     static let SELLING_PRICE = "Selling Price"
+    static let SHORT_STAY = "Short Stay"
     static let TAKE_PHOTO = "Take Photo"
     static let UNIT_STATUS_SALE = "SALE"
     static let UNVERIFIED = "Unverified"

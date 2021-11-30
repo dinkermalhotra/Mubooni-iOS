@@ -6,6 +6,7 @@ struct ViewControllerIdentifiers {
     static let AddPropertyMediaViewController       = "AddPropertyMediaViewController"
     static let AgentDashboardViewController         = "AgentDashboardViewController"
     static let AgentPropertyDetailViewController    = "AgentPropertyDetailViewController"
+    static let FiltersViewController                = "FiltersViewController"
     static let FindServiceProviderViewController    = "FindServiceProviderViewController"
     static let IntroScreensViewController           = "IntroScreensViewController"
     static let LoginViewController                  = "LoginViewController"
@@ -25,6 +26,7 @@ enum ViewControllerType {
     case AddPropertyMediaViewController
     case AgentDashboardViewController
     case AgentPropertyDetailViewController
+    case FiltersViewController
     case FindServiceProviderViewController
     case IntroScreensViewController
     case LoginViewController
@@ -85,6 +87,9 @@ class ViewControllerHelper: NSObject {
         else if viewControllerType == .MyPropertiesViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.MyPropertiesViewController) as! MyPropertiesViewController
         } // Main Storyboard
+        else if viewControllerType == .FiltersViewController {
+            viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FiltersViewController) as! FiltersViewController
+        }
         else if viewControllerType == .ProfileViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ProfileViewController) as! ProfileViewController
         }

@@ -42,6 +42,9 @@
 		19EBE02127216A6B00BD307F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE02027216A6A00BD307F /* Singleton.swift */; };
 		19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE022272187E900BD307F /* AgentDashboardViewController.swift */; };
 		19EBE025272187FD00BD307F /* Agent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EBE024272187FD00BD307F /* Agent.storyboard */; };
+		40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9642754ABA700B9622E /* FiltersViewController.swift */; };
+		40A4B9672754BF6900B9622E /* CheckboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9662754BF6900B9622E /* CheckboxCell.swift */; };
+		40A4B9692754E9C100B9622E /* BedroomSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9682754E9C100B9622E /* BedroomSelectionCell.swift */; };
 		40A665A02750AA890047674C /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A6659F2750AA890047674C /* ImagesCell.swift */; };
 		40A665A22750B3D40047674C /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A12750B3D40047674C /* UIPageControl.swift */; };
 		40A665A42750C1D90047674C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A32750C1D90047674C /* LocationManager.swift */; };
@@ -122,6 +125,9 @@
 		19EBE022272187E900BD307F /* AgentDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDashboardViewController.swift; sourceTree = "<group>"; };
 		19EBE024272187FD00BD307F /* Agent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Agent.storyboard; sourceTree = "<group>"; };
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
+		40A4B9642754ABA700B9622E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		40A4B9662754BF6900B9622E /* CheckboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxCell.swift; sourceTree = "<group>"; };
+		40A4B9682754E9C100B9622E /* BedroomSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedroomSelectionCell.swift; sourceTree = "<group>"; };
 		40A6659F2750AA890047674C /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
 		40A665A12750B3D40047674C /* UIPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControl.swift; sourceTree = "<group>"; };
 		40A665A32750C1D90047674C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 				8B9A7902274625430020753B /* AddPropertyMediaViewController.swift */,
 				19EBE022272187E900BD307F /* AgentDashboardViewController.swift */,
 				8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */,
+				40A4B9642754ABA700B9622E /* FiltersViewController.swift */,
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
 				199720BA26D63B9D0044BE8D /* IntroScreensViewController.swift */,
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
@@ -342,6 +349,8 @@
 		199720BC26D63CFD0044BE8D /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				40A4B9682754E9C100B9622E /* BedroomSelectionCell.swift */,
+				40A4B9662754BF6900B9622E /* CheckboxCell.swift */,
 				40A6659F2750AA890047674C /* ImagesCell.swift */,
 				199720BD26D63D330044BE8D /* IntroScreensCell.swift */,
 				8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */,
@@ -643,12 +652,14 @@
 				199720B526D5F11C0044BE8D /* UIView+Extension.swift in Sources */,
 				8B9A7901274625170020753B /* AddPropertyDescriptionViewController.swift in Sources */,
 				8BAE3C6E271FE982007C4400 /* UITextField+Extension.swift in Sources */,
+				40A4B9672754BF6900B9622E /* CheckboxCell.swift in Sources */,
 				8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */,
 				8B9A7903274625430020753B /* AddPropertyMediaViewController.swift in Sources */,
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
 				8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
 				191B480D26D4ACB400552A2D /* ViewControllerHelper.swift in Sources */,
+				40A4B9692754E9C100B9622E /* BedroomSelectionCell.swift in Sources */,
 				199720B726D5F1910044BE8D /* UIColorExtension.swift in Sources */,
 				199720C126D63E360044BE8D /* AppConstants.swift in Sources */,
 				19925B7C26D3E03200FC574F /* AppDelegate.swift in Sources */,
@@ -662,6 +673,7 @@
 				19925B7E26D3E03200FC574F /* SceneDelegate.swift in Sources */,
 				8B9A7907274625CE0020753B /* AddPropertyAmenitiesViewController.swift in Sources */,
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
+				40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */,
 				8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */,
 				19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */,
 				40A665A42750C1D90047674C /* LocationManager.swift in Sources */,
