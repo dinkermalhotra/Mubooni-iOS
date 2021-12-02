@@ -14,6 +14,7 @@ struct ViewControllerIdentifiers {
     static let MainViewController                   = "MainViewController"
     static let MyPropertiesViewController           = "MyPropertiesViewController"
     static let ProfileViewController                = "ProfileViewController"
+    static let ServiceProviderDetailViewController  = "ServiceProviderDetailViewController"
     static let SignInViewController                 = "SignInViewController"
     static let SignupViewController                 = "SignupViewController"
 }
@@ -35,6 +36,7 @@ enum ViewControllerType {
     case MainViewController
     case MyPropertiesViewController
     case ProfileViewController
+    case ServiceProviderDetailViewController
     case SignInViewController
     case SignupViewController
 }
@@ -80,7 +82,7 @@ class ViewControllerHelper: NSObject {
         else if viewControllerType == .AgentDashboardViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AgentDashboardViewController) as! AgentDashboardViewController
         }
-        else if viewControllerType == . AgentPropertyDetailViewController {
+        else if viewControllerType == .AgentPropertyDetailViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.AgentPropertyDetailViewController) as! AgentPropertyDetailViewController
         }
         else if viewControllerType == .FindServiceProviderViewController {
@@ -88,7 +90,10 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .MyPropertiesViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.MyPropertiesViewController) as! MyPropertiesViewController
-        } // Main Storyboard
+        }
+        else if viewControllerType == .ServiceProviderDetailViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ServiceProviderDetailViewController) as! ServiceProviderDetailViewController
+        }// Main Storyboard
         else if viewControllerType == .FilteredPropertiesViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FilteredPropertiesViewController) as! FilteredPropertiesViewController
         }

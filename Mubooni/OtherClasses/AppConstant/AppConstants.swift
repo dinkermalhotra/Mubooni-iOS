@@ -39,13 +39,14 @@ struct MubooniFonts {
 }
 
 struct CellIds {
-    static let BedroomSelectionCell = "BedroomSelectionCell"
-    static let CheckboxCell         = "CheckboxCell"
-    static let ImagesCell           = "ImagesCell"
-    static let IntroScreensCell     = "IntroScreensCell"
-    static let MainFeaturedCell     = "MainFeaturedCell"
-    static let MyPropertiesCell     = "MyPropertiesCell"
-    static let ServiceProviderCell  = "ServiceProviderCell"
+    static let BedroomSelectionCell     = "BedroomSelectionCell"
+    static let CheckboxCell             = "CheckboxCell"
+    static let FindServiceProviderCell  = "FindServiceProviderCell"
+    static let ImagesCell               = "ImagesCell"
+    static let IntroScreensCell         = "IntroScreensCell"
+    static let MainFeaturedCell         = "MainFeaturedCell"
+    static let MyPropertiesCell         = "MyPropertiesCell"
+    static let ServiceProviderCell      = "ServiceProviderCell"
 }
 
 struct Strings {

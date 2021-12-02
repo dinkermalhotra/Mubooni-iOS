@@ -11,6 +11,7 @@ struct WebService {
     static let getUserRoles                          = "\(baseUrl)/get_user_roles/app"
     static let getUserSpecialisations                = "\(baseUrl)/get_user_specialisations/app"
     static let loginUser                             = "\(baseUrl)/loginMe/app"
+    static let searchServiceProviders                = "\(baseUrl)/get_searched_ServicesProviders/app/"
 }
 
 struct WSRequestParams {
@@ -20,8 +21,12 @@ struct WSRequestParams {
     static let WS_REQS_PARAM_FEATURED_STATUS         = "featured_status"
     static let WS_REQS_PARAM_GOOGLE_EMAIL            = "google_email"
     static let WS_REQS_PARAM_GOOGLE_ID               = "google_id"
+    static let WS_REQS_PARAM_LAT                     = "lat"
+    static let WS_REQS_PARAM_LNG                     = "lng"
+    static let WS_REQS_PARAM_LOCATION_SPEC           = "location_spec"
     static let WS_REQS_PARAM_LOG_USERID              = "log_userId"
     static let WS_REQS_PARAM_PASSWORD                = "password"
+    static let WS_REQS_PARAM_SEARCHED_SPECS          = "searched_spec"
 }
 
 struct WSResponseParams {
