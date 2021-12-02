@@ -9,7 +9,8 @@ struct CurrentDevice {
     static let iPhone6      = isiPhone && UIScreen.main.bounds.size.height == 667.0
     static let iPhone6P     = isiPhone && UIScreen.main.bounds.size.height == 736.0
     static let iPhoneX      = isiPhone && UIScreen.main.bounds.size.height == 812.0
-    static let iPhoneXS_MAX = isiPhone && UIScreen.main.bounds.size.height == 896.0
+    static let iPhone12     = isiPhone && UIScreen.main.bounds.size.height == 844.0
+    static let iPhoneMAX    = isiPhone && UIScreen.main.bounds.size.height == 896.0
     
     static let isiPad       = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     static let iPadMini     = isiPad && UIScreen.main.bounds.size.height <= 1024

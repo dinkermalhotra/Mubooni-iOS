@@ -16,6 +16,7 @@
 		191B481526D4BE5900552A2D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 191B481226D4BE5900552A2D /* Roboto-Bold.ttf */; };
 		191B481726D4BEC900552A2D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B481626D4BEC900552A2D /* MainViewController.swift */; };
 		191B481926D4C01500552A2D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B481826D4C01500552A2D /* LoginViewController.swift */; };
+		198C400E27583F96008866F2 /* FilteredPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198C400D27583F96008866F2 /* FilteredPropertiesViewController.swift */; };
 		19925B7C26D3E03200FC574F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19925B7B26D3E03200FC574F /* AppDelegate.swift */; };
 		19925B7E26D3E03200FC574F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19925B7D26D3E03200FC574F /* SceneDelegate.swift */; };
 		19925B8326D3E03200FC574F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19925B8126D3E03200FC574F /* Main.storyboard */; };
@@ -92,6 +93,7 @@
 		191B481226D4BE5900552A2D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		191B481626D4BEC900552A2D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		191B481826D4C01500552A2D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		198C400D27583F96008866F2 /* FilteredPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredPropertiesViewController.swift; sourceTree = "<group>"; };
 		19925B7826D3E03200FC574F /* Mubooni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mubooni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19925B7B26D3E03200FC574F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19925B7D26D3E03200FC574F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				8B9A7902274625430020753B /* AddPropertyMediaViewController.swift */,
 				19EBE022272187E900BD307F /* AgentDashboardViewController.swift */,
 				8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */,
+				198C400D27583F96008866F2 /* FilteredPropertiesViewController.swift */,
 				40A4B9642754ABA700B9622E /* FiltersViewController.swift */,
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
 				199720BA26D63B9D0044BE8D /* IntroScreensViewController.swift */,
@@ -666,6 +669,7 @@
 				40A665A02750AA890047674C /* ImagesCell.swift in Sources */,
 				40A665A22750B3D40047674C /* UIPageControl.swift in Sources */,
 				8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */,
+				198C400E27583F96008866F2 /* FilteredPropertiesViewController.swift in Sources */,
 				19EBE02127216A6B00BD307F /* Singleton.swift in Sources */,
 				19AD9E32271E9560007639F1 /* WSManager.swift in Sources */,
 				8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */,

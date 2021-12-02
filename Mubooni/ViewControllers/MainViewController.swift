@@ -14,14 +14,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: AppConstants.PORTRAIT_SCREEN_WIDTH, height: featuredPropertiesCollectionView.frame.size.height)
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        layout.scrollDirection = .horizontal
-        featuredPropertiesCollectionView.collectionViewLayout = layout
-        propertiesCollectionView.collectionViewLayout = layout
+        setupCollectionViewLayout()
         
         viewSearch.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(searchClicked)))
         
@@ -30,6 +23,24 @@ class MainViewController: UIViewController {
         fetchProperties()
     }
 
+    func setupCollectionViewLayout() {
+        let featuredPropertiesLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        featuredPropertiesLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        featuredPropertiesLayout.itemSize = CGSize(width: AppConstants.PORTRAIT_SCREEN_WIDTH, height: featuredPropertiesCollectionView.frame.size.height)
+        featuredPropertiesLayout.minimumInteritemSpacing = 0
+        featuredPropertiesLayout.minimumLineSpacing = 0
+        featuredPropertiesLayout.scrollDirection = .horizontal
+        featuredPropertiesCollectionView.collectionViewLayout = featuredPropertiesLayout
+        
+        let propertiesLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        propertiesLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        propertiesLayout.itemSize = CGSize(width: AppConstants.PORTRAIT_SCREEN_WIDTH, height: propertiesCollectionView.frame.size.height)
+        propertiesLayout.minimumInteritemSpacing = 0
+        propertiesLayout.minimumLineSpacing = 0
+        propertiesLayout.scrollDirection = .horizontal
+        propertiesCollectionView.collectionViewLayout = propertiesLayout
+    }
+    
     @objc func searchClicked() {
         if let vc = ViewControllerHelper.getViewController(ofType: .FiltersViewController) as? FiltersViewController {
             self.navigationController?.pushViewController(vc, animated: true)
@@ -98,6 +109,18 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .AgentPropertyDetailViewController) as? AgentPropertyDetailViewController {
+            if collectionView == featuredPropertiesCollectionView {
+                vc.property = featuredProperties[indexPath.row]
+            }
+            else {
+                vc.property = properties[indexPath.row]
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 // MARK: - API CALL
@@ -106,10 +129,8 @@ extension MainViewController {
         let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_FEATURED_STATUS: "1" as AnyObject]
         WSManager.wsCallFeaturedProperties(params) { isSuccess, message, response in
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
-                self.featuredProperties = response ?? []
-                self.featuredPropertiesCollectionView.reloadData()
-            })
+            self.featuredProperties = response ?? []
+            self.featuredPropertiesCollectionView.reloadData()
         }
     }
     

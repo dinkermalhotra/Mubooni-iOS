@@ -16,6 +16,7 @@ class FiltersViewController: UIViewController {
     @IBOutlet weak var landView: UIView!
     @IBOutlet weak var landTypeCollectionView: UICollectionView!
     @IBOutlet weak var bedroomCollectionView: UICollectionView!
+    @IBOutlet weak var btnApplyTopConstraint: NSLayoutConstraint!
     
     var bedroom = ["1", "2", "3", "3+"]
     var landType = [Strings.FREEHOLD, Strings.LEASEHOLD]
@@ -78,10 +79,23 @@ extension FiltersViewController {
     }
     
     @IBAction func resetClicked(_ sender: UIButton) {
+        distanceSlider.value = 0
+        areaSlider.value = 0
+        priceSlider.value = 0
+        
+        lblKmUpto.text = "(km) upto: 0)"
+        lblAreaUpto.text = "(Sq. ft.) upto: 0)"
+        lblPriceUpto.text = "(KES) upto: 0)"
+        
         selectedBedroom = ""
         selectedLandType = ""
         selectedPropertyType = ""
         selectedPropertyFor = ""
+        
+        propertyTypeCollectionView.reloadData()
+        propertyForCollectionView.reloadData()
+        landTypeCollectionView.reloadData()
+        bedroomCollectionView.reloadData()
     }
     
     @IBAction func distanceSliderValueChange(_ sender: UISlider) {
@@ -94,6 +108,12 @@ extension FiltersViewController {
     
     @IBAction func priceSliderValueChange(_ sender: UISlider) {
         lblPriceUpto.text = "(KES) upto: \(Int(sender.value))"
+    }
+    
+    @IBAction func applyClicked(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .FilteredPropertiesViewController) as? FilteredPropertiesViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
