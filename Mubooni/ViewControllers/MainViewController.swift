@@ -6,10 +6,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var btnUser: UIButton!
     @IBOutlet weak var featuredPropertiesCollectionView: UICollectionView!
     @IBOutlet weak var propertiesCollectionView: UICollectionView!
+    @IBOutlet weak var serviceProviderCollectionView: UICollectionView!
     @IBOutlet weak var viewSearch: UIView!
     
     var featuredProperties = [Properties]()
     var properties = [Properties]()
+    var serviceProviders = [ServiceProviders]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,7 @@ class MainViewController: UIViewController {
         Helper.showLoader(onVC: self)
         fetchFeaturedProperties()
         fetchProperties()
+        fetchServiceProviders()
     }
 
     func setupCollectionViewLayout() {
@@ -39,6 +42,14 @@ class MainViewController: UIViewController {
         propertiesLayout.minimumLineSpacing = 0
         propertiesLayout.scrollDirection = .horizontal
         propertiesCollectionView.collectionViewLayout = propertiesLayout
+        
+        let serviceProviderLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        serviceProviderLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        serviceProviderLayout.itemSize = CGSize(width: AppConstants.PORTRAIT_SCREEN_WIDTH, height: serviceProviderCollectionView.frame.size.height)
+        serviceProviderLayout.minimumInteritemSpacing = 0
+        serviceProviderLayout.minimumLineSpacing = 0
+        serviceProviderLayout.scrollDirection = .horizontal
+        serviceProviderCollectionView.collectionViewLayout = serviceProviderLayout
     }
     
     @objc func searchClicked() {
@@ -67,14 +78,15 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         if collectionView == featuredPropertiesCollectionView {
             return featuredProperties.count
         }
-        else {
+        else if collectionView == propertiesCollectionView {
             return properties.count
+        }
+        else {
+            return serviceProviders.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.MainFeaturedCell, for: indexPath) as! MainFeaturedCell
-        
         let block: SDExternalCompletionBlock? = {(image: UIImage?, error: Error?, cacheType: SDImageCacheType, imageURL: URL?) -> Void in
             //print(image)
             if (image == nil) {
@@ -83,6 +95,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
 
         if collectionView == featuredPropertiesCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.MainFeaturedCell, for: indexPath) as! MainFeaturedCell
+            
             let dict = featuredProperties[indexPath.row]
             
             if let url = URL(string: dict.app_Attachments.count > 0 ? "\(WebService.baseImageUrl)\(dict.app_Attachments[0].img)" : "") {
@@ -93,8 +107,12 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             let unit = dict.units.count > 0 ? dict.units[0] : nil
             cell.lblPrice.text = unit?.unitStatus.lowercased() == Strings.UNIT_STATUS_SALE.lowercased() ? "\(Strings.SELLING_PRICE): \(Strings.KES)\(unit?.monthlyRent ?? "")" : "\(Strings.MONTHLY_RENT): \(Strings.KES)\(unit?.monthlyRent ?? "")"
+            
+            return cell
         }
-        else {
+        else if collectionView == propertiesCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.MainFeaturedCell, for: indexPath) as! MainFeaturedCell
+            
             let dict = properties[indexPath.row]
             
             if let url = URL(string: dict.app_Attachments.count > 0 ? "\(WebService.baseImageUrl)\(dict.app_Attachments[0].img)" : "") {
@@ -105,20 +123,40 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             let unit = dict.units.count > 0 ? dict.units[0] : nil
             cell.lblPrice.text = unit?.unitStatus.lowercased() == Strings.UNIT_STATUS_SALE.lowercased() ? "\(Strings.SELLING_PRICE): \(Strings.KES)\(unit?.monthlyRent ?? "")" : "\(Strings.MONTHLY_RENT): \(Strings.KES)\(unit?.monthlyRent ?? "")"
+            
+            return cell
         }
-        
-        return cell
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.ServiceProviderCell, for: indexPath) as! ServiceProviderCell
+            
+            let dict = serviceProviders[indexPath.row]
+            
+            if let url = URL(string: "\(WebService.baseImageUrl)\(dict.profile)") {
+                cell.imgProfile.sd_setImage(with: url, completed: block)
+            }
+
+            cell.lblName.text = dict.name
+            cell.lblSpecialisations.text = dict.specialisations
+            
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .AgentPropertyDetailViewController) as? AgentPropertyDetailViewController {
-            if collectionView == featuredPropertiesCollectionView {
+        if collectionView == featuredPropertiesCollectionView {
+            if let vc = ViewControllerHelper.getViewController(ofType: .AgentPropertyDetailViewController) as? AgentPropertyDetailViewController {
                 vc.property = featuredProperties[indexPath.row]
+                self.navigationController?.pushViewController(vc, animated: true)
             }
-            else {
+        }
+        else if collectionView == propertiesCollectionView {
+            if let vc = ViewControllerHelper.getViewController(ofType: .AgentPropertyDetailViewController) as? AgentPropertyDetailViewController {
                 vc.property = properties[indexPath.row]
+                self.navigationController?.pushViewController(vc, animated: true)
             }
-            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else {
+            
         }
     }
 }
@@ -137,10 +175,18 @@ extension MainViewController {
     func fetchProperties() {
         let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_FEATURED_STATUS: "0" as AnyObject]
         WSManager.wsCallFeaturedProperties(params) { isSuccess, message, response in
-            Helper.hideLoader(onVC: self)
             
             self.properties = response ?? []
             self.propertiesCollectionView.reloadData()
+        }
+    }
+    
+    func fetchServiceProviders() {
+        WSManager.wsCallGetServiceProviders([:]) { isSuccess, message, serviceProviders in
+            Helper.hideLoader(onVC: self)
+            
+            self.serviceProviders = serviceProviders ?? []
+            self.serviceProviderCollectionView.reloadData()
         }
     }
 }

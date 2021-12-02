@@ -45,6 +45,7 @@ struct CellIds {
     static let IntroScreensCell     = "IntroScreensCell"
     static let MainFeaturedCell     = "MainFeaturedCell"
     static let MyPropertiesCell     = "MyPropertiesCell"
+    static let ServiceProviderCell  = "ServiceProviderCell"
 }
 
 struct Strings {

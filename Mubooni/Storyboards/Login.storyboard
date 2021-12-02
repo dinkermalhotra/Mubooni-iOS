@@ -240,7 +240,7 @@
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcV-nR-bEe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1049"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find affordable residential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-3Q-adv">
                                                 <rect key="frame" x="16" y="8" width="343" height="28"/>
@@ -487,31 +487,127 @@
                                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="s9f-ok-JRt"/>
                                                 </connections>
                                             </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Providers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-aT-frr">
+                                                <rect key="frame" x="16" y="762" width="343" height="19"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-aF-iPP">
+                                                <rect key="frame" x="0.0" y="789" width="375" height="240"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="fHz-00-vQM"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="r0K-Gh-xCN">
+                                                    <size key="itemSize" width="375" height="240"/>
+                                                    <size key="estimatedItemSize" width="375" height="240"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ServiceProviderCell" id="V5j-TN-xP2" customClass="ServiceProviderCell" customModule="Mubooni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8de-Wq-E3e">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDJ-Td-1fL">
+                                                                    <rect key="frame" x="16" y="0.0" width="343" height="240"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OqX-7V-HIi">
+                                                                    <rect key="frame" x="16" y="0.0" width="343" height="180.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="180.5" id="hkB-rN-sfD"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCE-EU-gzm">
+                                                                    <rect key="frame" x="24" y="215.5" width="327" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFn-FZ-7G5">
+                                                                    <rect key="frame" x="24" y="188.5" width="327" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="OqX-7V-HIi" secondAttribute="trailing" constant="16" id="4jR-mE-5w4"/>
+                                                                <constraint firstItem="ZDJ-Td-1fL" firstAttribute="top" secondItem="8de-Wq-E3e" secondAttribute="top" id="4o4-KN-cA5"/>
+                                                                <constraint firstItem="kFn-FZ-7G5" firstAttribute="leading" secondItem="8de-Wq-E3e" secondAttribute="leading" constant="24" id="5kw-Kc-g5V"/>
+                                                                <constraint firstItem="fCE-EU-gzm" firstAttribute="leading" secondItem="8de-Wq-E3e" secondAttribute="leading" constant="24" id="71d-Ih-S1B"/>
+                                                                <constraint firstItem="kFn-FZ-7G5" firstAttribute="top" secondItem="OqX-7V-HIi" secondAttribute="bottom" constant="8" symbolic="YES" id="EwM-S1-NkZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="fCE-EU-gzm" secondAttribute="bottom" constant="8" id="Ezn-Pc-Nem"/>
+                                                                <constraint firstItem="OqX-7V-HIi" firstAttribute="top" secondItem="8de-Wq-E3e" secondAttribute="top" id="Fka-bt-iAa"/>
+                                                                <constraint firstAttribute="trailing" secondItem="kFn-FZ-7G5" secondAttribute="trailing" constant="24" id="M47-Ev-t2Y"/>
+                                                                <constraint firstItem="ZDJ-Td-1fL" firstAttribute="leading" secondItem="8de-Wq-E3e" secondAttribute="leading" constant="16" id="Rhf-Ki-bJd"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ZDJ-Td-1fL" secondAttribute="bottom" id="c6u-KT-YDo"/>
+                                                                <constraint firstItem="OqX-7V-HIi" firstAttribute="leading" secondItem="8de-Wq-E3e" secondAttribute="leading" constant="16" id="cG9-ce-0J5"/>
+                                                                <constraint firstAttribute="trailing" secondItem="fCE-EU-gzm" secondAttribute="trailing" constant="24" id="ebp-h2-SOy"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ZDJ-Td-1fL" secondAttribute="trailing" constant="16" id="plJ-mg-0bS"/>
+                                                                <constraint firstItem="fCE-EU-gzm" firstAttribute="top" secondItem="kFn-FZ-7G5" secondAttribute="bottom" constant="8" id="yj0-Yh-jcg"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="375" height="240"/>
+                                                        <connections>
+                                                            <outlet property="imgProfile" destination="OqX-7V-HIi" id="Wq3-TU-fub"/>
+                                                            <outlet property="lblName" destination="kFn-FZ-7G5" id="duc-bH-ngO"/>
+                                                            <outlet property="lblSpecialisations" destination="fCE-EU-gzm" id="rb2-a1-uQI"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="M1f-Om-rBP"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="CCt-I8-NOR"/>
+                                                </connections>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="mfK-3Q-adv" firstAttribute="top" secondItem="HcV-nR-bEe" secondAttribute="top" constant="8" id="0JM-iR-P7p"/>
+                                            <constraint firstAttribute="trailing" secondItem="5J2-aT-frr" secondAttribute="trailing" constant="16" id="0pl-T1-LeA"/>
+                                            <constraint firstItem="5J2-aT-frr" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="1XF-lN-4Ys"/>
                                             <constraint firstAttribute="trailing" secondItem="4Qt-VE-K5A" secondAttribute="trailing" id="2UE-XV-81Y"/>
                                             <constraint firstItem="PQG-cJ-zRi" firstAttribute="top" secondItem="031-Q4-nYR" secondAttribute="bottom" constant="8" symbolic="YES" id="3yB-5i-2EO"/>
                                             <constraint firstAttribute="trailing" secondItem="npZ-QQ-WZW" secondAttribute="trailing" constant="16" id="4gT-KP-kpH"/>
                                             <constraint firstItem="031-Q4-nYR" firstAttribute="top" secondItem="c8C-B6-GaX" secondAttribute="bottom" constant="34" id="5D4-JQ-qCt"/>
                                             <constraint firstItem="c8C-B6-GaX" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="6Pc-hW-eL4"/>
+                                            <constraint firstAttribute="bottom" secondItem="C3e-aF-iPP" secondAttribute="bottom" constant="20" id="7iW-u5-ybB"/>
                                             <constraint firstAttribute="trailing" secondItem="mfK-3Q-adv" secondAttribute="trailing" constant="16" id="CfC-f4-yQj"/>
                                             <constraint firstItem="C4Y-Dd-oNJ" firstAttribute="top" secondItem="mfK-3Q-adv" secondAttribute="bottom" constant="8" id="FRv-hU-jit"/>
                                             <constraint firstAttribute="trailing" secondItem="C4Y-Dd-oNJ" secondAttribute="trailing" constant="16" id="Frl-Hg-tdj"/>
                                             <constraint firstItem="C4Y-Dd-oNJ" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="GuY-Ly-xqM"/>
                                             <constraint firstAttribute="trailing" secondItem="PQG-cJ-zRi" secondAttribute="trailing" id="Ju7-YE-a85"/>
+                                            <constraint firstAttribute="trailing" secondItem="C3e-aF-iPP" secondAttribute="trailing" id="Kg4-1k-idH"/>
                                             <constraint firstItem="4Qt-VE-K5A" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" id="Lkd-lA-iOL"/>
                                             <constraint firstItem="npZ-QQ-WZW" firstAttribute="top" secondItem="PQG-cJ-zRi" secondAttribute="bottom" constant="24" id="Q1v-kX-X2g"/>
                                             <constraint firstItem="PQG-cJ-zRi" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" id="SBf-km-EDb"/>
-                                            <constraint firstAttribute="bottom" secondItem="4Qt-VE-K5A" secondAttribute="bottom" constant="20" id="WMQ-cU-Yem"/>
                                             <constraint firstItem="031-Q4-nYR" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="YFf-o0-XtS"/>
                                             <constraint firstItem="mfK-3Q-adv" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="fOb-zi-N3O"/>
                                             <constraint firstItem="4Qt-VE-K5A" firstAttribute="top" secondItem="npZ-QQ-WZW" secondAttribute="bottom" constant="8" symbolic="YES" id="fRM-tQ-jFu"/>
                                             <constraint firstAttribute="trailing" secondItem="031-Q4-nYR" secondAttribute="trailing" constant="16" id="g2f-u3-G3X"/>
                                             <constraint firstItem="c8C-B6-GaX" firstAttribute="top" secondItem="C4Y-Dd-oNJ" secondAttribute="bottom" constant="24" id="l0C-ru-bzM"/>
+                                            <constraint firstItem="C3e-aF-iPP" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" id="nC2-7f-9Sk"/>
+                                            <constraint firstItem="5J2-aT-frr" firstAttribute="top" secondItem="4Qt-VE-K5A" secondAttribute="bottom" constant="24" id="oQs-An-lxE"/>
                                             <constraint firstAttribute="trailing" secondItem="c8C-B6-GaX" secondAttribute="trailing" constant="16" id="pd6-DL-DYu"/>
                                             <constraint firstItem="npZ-QQ-WZW" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="vyA-GU-7pU"/>
+                                            <constraint firstItem="C3e-aF-iPP" firstAttribute="top" secondItem="5J2-aT-frr" secondAttribute="bottom" constant="8" symbolic="YES" id="wuw-Y5-UGx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -559,6 +655,7 @@
                         <outlet property="btnUser" destination="PYO-Xh-g6A" id="rIQ-Ab-oig"/>
                         <outlet property="featuredPropertiesCollectionView" destination="PQG-cJ-zRi" id="G8c-VZ-6c5"/>
                         <outlet property="propertiesCollectionView" destination="4Qt-VE-K5A" id="9nY-Xm-VO8"/>
+                        <outlet property="serviceProviderCollectionView" destination="C3e-aF-iPP" id="FDJ-3M-A2S"/>
                         <outlet property="viewSearch" destination="c8C-B6-GaX" id="abx-JE-V62"/>
                     </connections>
                 </viewController>

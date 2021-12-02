@@ -46,6 +46,8 @@
 		40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9642754ABA700B9622E /* FiltersViewController.swift */; };
 		40A4B9672754BF6900B9622E /* CheckboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9662754BF6900B9622E /* CheckboxCell.swift */; };
 		40A4B9692754E9C100B9622E /* BedroomSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9682754E9C100B9622E /* BedroomSelectionCell.swift */; };
+		40A4B96D27588C8A00B9622E /* ServiceProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B96C27588C8A00B9622E /* ServiceProviders.swift */; };
+		40A4B96F27588FC900B9622E /* ServiceProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B96E27588FC900B9622E /* ServiceProviderCell.swift */; };
 		40A665A02750AA890047674C /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A6659F2750AA890047674C /* ImagesCell.swift */; };
 		40A665A22750B3D40047674C /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A12750B3D40047674C /* UIPageControl.swift */; };
 		40A665A42750C1D90047674C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A32750C1D90047674C /* LocationManager.swift */; };
@@ -130,6 +132,8 @@
 		40A4B9642754ABA700B9622E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		40A4B9662754BF6900B9622E /* CheckboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxCell.swift; sourceTree = "<group>"; };
 		40A4B9682754E9C100B9622E /* BedroomSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedroomSelectionCell.swift; sourceTree = "<group>"; };
+		40A4B96C27588C8A00B9622E /* ServiceProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviders.swift; sourceTree = "<group>"; };
+		40A4B96E27588FC900B9622E /* ServiceProviderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderCell.swift; sourceTree = "<group>"; };
 		40A6659F2750AA890047674C /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
 		40A665A12750B3D40047674C /* UIPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControl.swift; sourceTree = "<group>"; };
 		40A665A32750C1D90047674C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -358,6 +362,7 @@
 				199720BD26D63D330044BE8D /* IntroScreensCell.swift */,
 				8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */,
 				8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */,
+				40A4B96E27588FC900B9622E /* ServiceProviderCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 			children = (
 				8BCA42F8273BAE29002BC5BD /* Properties.swift */,
 				8B9BE98B2746564900A472AA /* PropertyType.swift */,
+				40A4B96C27588C8A00B9622E /* ServiceProviders.swift */,
 				19EBE01627213D5900BD307F /* Specilizations.swift */,
 				8BCA42FA273BC230002BC5BD /* Units.swift */,
 				19A262B02722BDC100EDF5CE /* UserProfile.swift */,
@@ -672,12 +678,14 @@
 				198C400E27583F96008866F2 /* FilteredPropertiesViewController.swift in Sources */,
 				19EBE02127216A6B00BD307F /* Singleton.swift in Sources */,
 				19AD9E32271E9560007639F1 /* WSManager.swift in Sources */,
+				40A4B96D27588C8A00B9622E /* ServiceProviders.swift in Sources */,
 				8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */,
 				19A262B12722BDC100EDF5CE /* UserProfile.swift in Sources */,
 				19925B7E26D3E03200FC574F /* SceneDelegate.swift in Sources */,
 				8B9A7907274625CE0020753B /* AddPropertyAmenitiesViewController.swift in Sources */,
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
 				40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */,
+				40A4B96F27588FC900B9622E /* ServiceProviderCell.swift in Sources */,
 				8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */,
 				19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */,
 				40A665A42750C1D90047674C /* LocationManager.swift in Sources */,
