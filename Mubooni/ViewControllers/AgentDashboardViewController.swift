@@ -54,7 +54,10 @@ extension AgentDashboardViewController {
     }
     
     @IBAction func jobListClicked(_ sender: UIButton) {
-        
+        if let vc = ViewControllerHelper.getViewController(ofType: .JobListViewController) as? JobListViewController {
+            vc.userProfile = userProfile
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func invoicesClicked(_ sender: UIButton) {
@@ -66,6 +69,8 @@ extension AgentDashboardViewController {
     }
     
     @IBAction func shuffleProfileClicked(_ sender: UIButton) {
-        
+        if let vc = ViewControllerHelper.getViewController(ofType: .ShuffleProfileViewController) as? ShuffleProfileViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

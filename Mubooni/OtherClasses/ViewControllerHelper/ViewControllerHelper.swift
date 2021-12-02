@@ -10,11 +10,13 @@ struct ViewControllerIdentifiers {
     static let FiltersViewController                = "FiltersViewController"
     static let FindServiceProviderViewController    = "FindServiceProviderViewController"
     static let IntroScreensViewController           = "IntroScreensViewController"
+    static let JobListViewController                = "JobListViewController"
     static let LoginViewController                  = "LoginViewController"
     static let MainViewController                   = "MainViewController"
     static let MyPropertiesViewController           = "MyPropertiesViewController"
     static let ProfileViewController                = "ProfileViewController"
     static let ServiceProviderDetailViewController  = "ServiceProviderDetailViewController"
+    static let ShuffleProfileViewController         = "ShuffleProfileViewController"
     static let SignInViewController                 = "SignInViewController"
     static let SignupViewController                 = "SignupViewController"
 }
@@ -32,11 +34,13 @@ enum ViewControllerType {
     case FiltersViewController
     case FindServiceProviderViewController
     case IntroScreensViewController
+    case JobListViewController
     case LoginViewController
     case MainViewController
     case MyPropertiesViewController
     case ProfileViewController
     case ServiceProviderDetailViewController
+    case ShuffleProfileViewController
     case SignInViewController
     case SignupViewController
 }
@@ -88,6 +92,9 @@ class ViewControllerHelper: NSObject {
         else if viewControllerType == .FindServiceProviderViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FindServiceProviderViewController) as! FindServiceProviderViewController
         }
+        else if viewControllerType == .JobListViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.JobListViewController) as! JobListViewController
+        }
         else if viewControllerType == .MyPropertiesViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.MyPropertiesViewController) as! MyPropertiesViewController
         }
@@ -102,6 +109,9 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .ProfileViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ProfileViewController) as! ProfileViewController
+        }
+        else if viewControllerType == .ShuffleProfileViewController {
+            viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ShuffleProfileViewController) as! ShuffleProfileViewController
         }
         else {
             print("Unknown view controller type")

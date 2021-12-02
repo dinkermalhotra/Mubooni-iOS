@@ -156,7 +156,10 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             }
         }
         else {
-            
+            if let vc = ViewControllerHelper.getViewController(ofType: .ServiceProviderDetailViewController) as? ServiceProviderDetailViewController {
+                vc.serviceProvider = serviceProviders[indexPath.row]
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
 }

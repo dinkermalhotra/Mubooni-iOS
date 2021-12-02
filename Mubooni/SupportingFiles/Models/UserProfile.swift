@@ -24,6 +24,8 @@ class UserProfile: Mappable, CustomStringConvertible {
         mobile <- map[WSResponseParams.WS_RESP_PARAM_MOBILE]
         name <- map[WSResponseParams.WS_RESP_PARAM_NAME]
         profile <- map[WSResponseParams.WS_RESP_PARAM_PROFILE]
+        roleId <- map[WSResponseParams.WS_RESP_PARAM_ROLE_ID]
+        subRole <- map[WSResponseParams.WS_RESP_PARAM_SUB_ROLE]
         userId <- map[WSResponseParams.WS_RESP_PARAM_USER_ID]
     }
     
@@ -59,6 +61,8 @@ class UserProfile: Mappable, CustomStringConvertible {
     lazy var mobile = String()
     lazy var name = String()
     lazy var profile = String()
+    lazy var roleId = String()
+    lazy var subRole = String()
     lazy var userId = String()
 }
 

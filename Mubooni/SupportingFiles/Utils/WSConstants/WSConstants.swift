@@ -59,6 +59,7 @@ struct WSResponseParams {
     static let WS_RESP_PARAM_ROLE_ID                 = "roleId"
     static let WS_RESP_PARAM_ROLE_DES                = "role_des"
     static let WS_RESP_PARAM_ROLE_IMAGE              = "role_image"
+    static let WS_RESP_PARAM_SUB_ROLE                = "sub_role"
     static let WS_RESP_PARAM_SPECIALISATIONS         = "specialisations"
     static let WS_RESP_PARAM_SPEC_NAME               = "spec_name"
     static let WS_RESP_PARAM_STATUS                  = "status"
