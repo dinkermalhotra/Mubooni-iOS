@@ -13,6 +13,9 @@
         <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
@@ -283,7 +286,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlD-D9-3f6">
                                         <rect key="frame" x="187.5" y="0.0" width="75.5" height="75.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_reports" translatesAutoresizingMaskIntoConstraints="NO" id="ihS-nB-92V">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_job_list" translatesAutoresizingMaskIntoConstraints="NO" id="ihS-nB-92V">
                                                 <rect key="frame" x="16" y="16" width="43.5" height="43.5"/>
                                             </imageView>
                                         </subviews>
@@ -329,7 +332,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reports" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqx-PS-9uD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job List" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqx-PS-9uD">
                                         <rect key="frame" x="187.5" y="83.5" width="75.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -344,7 +347,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCx-xe-HHG">
                                         <rect key="frame" x="179.5" y="0.0" width="83.5" height="113.5"/>
                                         <connections>
-                                            <action selector="reportsClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hV4-Gu-v9c"/>
+                                            <action selector="jobListClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZVm-0Y-4eo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -421,7 +424,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gli-kE-iCX">
                                         <rect key="frame" x="187.5" y="0.0" width="75.5" height="75"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_find_service_provider" translatesAutoresizingMaskIntoConstraints="NO" id="1Hk-c7-xO4">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tenant" translatesAutoresizingMaskIntoConstraints="NO" id="1Hk-c7-xO4">
                                                 <rect key="frame" x="16" y="16" width="43.5" height="43"/>
                                             </imageView>
                                         </subviews>
@@ -467,7 +470,7 @@
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-hr-xyO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tenant" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7s-hr-xyO">
                                         <rect key="frame" x="187.5" y="83" width="75.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -482,7 +485,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M57-RO-xZ9">
                                         <rect key="frame" x="179.5" y="0.0" width="83.5" height="113"/>
                                         <connections>
-                                            <action selector="chatClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aFo-7e-VZf"/>
+                                            <action selector="tenantClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hn5-9p-fmP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -724,12 +727,195 @@
                                     <action selector="backClicked:" destination="3uV-ug-yPd" eventType="touchUpInside" id="4Jm-E9-JG6"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mI-Bq-VKZ">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sp-A0-Gxh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="418.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KID-dM-MNg">
+                                                <rect key="frame" x="16" y="8" width="343" height="160"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="CKU-5L-k0y"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRT-pe-ISe">
+                                                <rect key="frame" x="16" y="184" width="343" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3k-28-bBO">
+                                                <rect key="frame" x="16" y="215.5" width="343" height="20"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="14"/>
+                                                <color key="textColor" red="0.92941176469999998" green="0.1215686275" blue="0.13725490200000001" alpha="0.80311968540000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="TEh-i3-gVn">
+                                                <rect key="frame" x="16" y="243.5" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="0hf-1d-sYm"/>
+                                                    <constraint firstAttribute="width" constant="24" id="UAQ-5F-w5S"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-0r-p7h">
+                                                <rect key="frame" x="48" y="243.5" width="311" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.15294117647058825" green="0.15686274509803921" blue="0.2196078431372549" alpha="0.80001062925170063" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successful jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np2-1k-fF3">
+                                                <rect key="frame" x="16" y="280" width="112.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIc-qa-4Ju">
+                                                <rect key="frame" x="136.5" y="280" width="39.5" height="19"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" red="0.11764705882352941" green="0.55686274509803924" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmU-KE-sjT">
+                                                <rect key="frame" x="16" y="307" width="343" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScH-lL-fnP">
+                                                <rect key="frame" x="16" y="363.5" width="103.5" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Start Chat">
+                                                    <color key="titleColor" red="0.92941176470588238" green="0.12156862745098039" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.92941176470588238" green="0.12156862745098039" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="startChatClicked:" destination="3uV-ug-yPd" eventType="touchUpInside" id="iOR-bF-f34"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md8-hd-haM">
+                                                <rect key="frame" x="135.5" y="363.5" width="104" height="35"/>
+                                                <color key="backgroundColor" red="0.92941176469999998" green="0.1215686275" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Assign Job">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.92941176469999998" green="0.1215686275" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="assignJobClicked:" destination="3uV-ug-yPd" eventType="touchUpInside" id="DB5-wX-qny"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wI-lT-aYi">
+                                                <rect key="frame" x="255.5" y="363.5" width="103.5" height="35"/>
+                                                <color key="backgroundColor" red="0.81960784313725488" green="0.92549019607843142" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Contact">
+                                                    <color key="titleColor" red="0.92941176469999998" green="0.1215686275" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.92941176469999998" green="0.1215686275" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="contactClicked:" destination="3uV-ug-yPd" eventType="touchUpInside" id="i4d-qe-csw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3wI-lT-aYi" firstAttribute="width" secondItem="ScH-lL-fnP" secondAttribute="width" id="16a-Ij-lbX"/>
+                                            <constraint firstItem="md8-hd-haM" firstAttribute="leading" secondItem="ScH-lL-fnP" secondAttribute="trailing" constant="16" id="5UK-jt-jdy"/>
+                                            <constraint firstAttribute="trailing" secondItem="vsf-0r-p7h" secondAttribute="trailing" constant="16" id="5bS-9H-QoL"/>
+                                            <constraint firstItem="md8-hd-haM" firstAttribute="height" secondItem="ScH-lL-fnP" secondAttribute="height" id="BHX-oY-6n0"/>
+                                            <constraint firstItem="np2-1k-fF3" firstAttribute="top" secondItem="vsf-0r-p7h" secondAttribute="bottom" constant="16" id="Eu7-O0-Prl"/>
+                                            <constraint firstAttribute="bottom" secondItem="md8-hd-haM" secondAttribute="bottom" constant="20" id="H0e-Ct-sTd"/>
+                                            <constraint firstItem="hmU-KE-sjT" firstAttribute="leading" secondItem="5sp-A0-Gxh" secondAttribute="leading" constant="16" id="Hd6-Sd-mJn"/>
+                                            <constraint firstItem="j3k-28-bBO" firstAttribute="top" secondItem="hRT-pe-ISe" secondAttribute="bottom" constant="8" id="IW8-1G-6fu"/>
+                                            <constraint firstItem="3wI-lT-aYi" firstAttribute="leading" secondItem="md8-hd-haM" secondAttribute="trailing" constant="16" id="LZY-aA-VDT"/>
+                                            <constraint firstItem="hmU-KE-sjT" firstAttribute="top" secondItem="np2-1k-fF3" secondAttribute="bottom" constant="8" symbolic="YES" id="LuN-NH-F5S"/>
+                                            <constraint firstItem="j3k-28-bBO" firstAttribute="leading" secondItem="5sp-A0-Gxh" secondAttribute="leading" constant="16" id="MIY-s3-duQ"/>
+                                            <constraint firstItem="KID-dM-MNg" firstAttribute="top" secondItem="5sp-A0-Gxh" secondAttribute="top" constant="8" id="MLh-3E-UDd"/>
+                                            <constraint firstItem="ScH-lL-fnP" firstAttribute="leading" secondItem="5sp-A0-Gxh" secondAttribute="leading" constant="16" id="PVv-iv-w2s"/>
+                                            <constraint firstItem="dIc-qa-4Ju" firstAttribute="leading" secondItem="np2-1k-fF3" secondAttribute="trailing" constant="8" id="Vx7-W3-6m5"/>
+                                            <constraint firstItem="np2-1k-fF3" firstAttribute="leading" secondItem="5sp-A0-Gxh" secondAttribute="leading" constant="16" id="WEk-zK-vNj"/>
+                                            <constraint firstItem="hRT-pe-ISe" firstAttribute="leading" secondItem="5sp-A0-Gxh" secondAttribute="leading" constant="16" id="XHx-Bi-Z4O"/>
+                                            <constraint firstItem="dIc-qa-4Ju" firstAttribute="centerY" secondItem="np2-1k-fF3" secondAttribute="centerY" id="XUb-xU-mba"/>
+                                            <constraint firstAttribute="bottom" secondItem="3wI-lT-aYi" secondAttribute="bottom" constant="20" id="ZYz-Nr-Bi5"/>
+                                            <constraint firstItem="ScH-lL-fnP" firstAttribute="top" secondItem="hmU-KE-sjT" secondAttribute="bottom" constant="40" id="aQF-OU-Z24"/>
+                                            <constraint firstItem="3wI-lT-aYi" firstAttribute="height" secondItem="ScH-lL-fnP" secondAttribute="height" id="aZw-z0-3RH"/>
+                                            <constraint firstItem="hRT-pe-ISe" firstAttribute="top" secondItem="KID-dM-MNg" secondAttribute="bottom" constant="16" id="cSD-l0-bCQ"/>
+                                            <constraint firstItem="TEh-i3-gVn" firstAttribute="leading" secondItem="5sp-A0-Gxh" secondAttribute="leading" constant="16" id="dlh-X0-dSs"/>
+                                            <constraint firstItem="vsf-0r-p7h" firstAttribute="top" secondItem="j3k-28-bBO" secondAttribute="bottom" constant="8" id="iMG-TN-gzu"/>
+                                            <constraint firstItem="md8-hd-haM" firstAttribute="top" secondItem="hmU-KE-sjT" secondAttribute="bottom" constant="40" id="iXu-qB-3F7"/>
+                                            <constraint firstAttribute="trailing" secondItem="KID-dM-MNg" secondAttribute="trailing" constant="16" id="kXJ-vn-NjZ"/>
+                                            <constraint firstItem="vsf-0r-p7h" firstAttribute="leading" secondItem="TEh-i3-gVn" secondAttribute="trailing" constant="8" symbolic="YES" id="lSF-xa-32A"/>
+                                            <constraint firstAttribute="bottom" secondItem="ScH-lL-fnP" secondAttribute="bottom" constant="20" id="ldD-5k-BpH"/>
+                                            <constraint firstItem="TEh-i3-gVn" firstAttribute="top" secondItem="j3k-28-bBO" secondAttribute="bottom" constant="8" id="ou9-V6-zHn"/>
+                                            <constraint firstAttribute="trailing" secondItem="3wI-lT-aYi" secondAttribute="trailing" constant="16" id="pSD-iS-OkS"/>
+                                            <constraint firstAttribute="trailing" secondItem="hRT-pe-ISe" secondAttribute="trailing" constant="16" id="tj1-Kg-qUc"/>
+                                            <constraint firstItem="md8-hd-haM" firstAttribute="width" secondItem="ScH-lL-fnP" secondAttribute="width" id="tzm-v7-uWW"/>
+                                            <constraint firstItem="3wI-lT-aYi" firstAttribute="top" secondItem="hmU-KE-sjT" secondAttribute="bottom" constant="40" id="v0x-bk-8Cb"/>
+                                            <constraint firstItem="KID-dM-MNg" firstAttribute="leading" secondItem="5sp-A0-Gxh" secondAttribute="leading" constant="16" id="vFB-JH-Iu0"/>
+                                            <constraint firstAttribute="trailing" secondItem="j3k-28-bBO" secondAttribute="trailing" constant="16" id="vxB-bd-OT7"/>
+                                            <constraint firstAttribute="trailing" secondItem="hmU-KE-sjT" secondAttribute="trailing" constant="16" id="zHy-KT-NW9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5sp-A0-Gxh" firstAttribute="width" secondItem="7mI-Bq-VKZ" secondAttribute="width" id="3J4-fA-Lwz"/>
+                                    <constraint firstAttribute="trailing" secondItem="5sp-A0-Gxh" secondAttribute="trailing" id="5Pr-mf-a1p"/>
+                                    <constraint firstItem="5sp-A0-Gxh" firstAttribute="height" secondItem="7mI-Bq-VKZ" secondAttribute="height" priority="250" id="7HM-uQ-flk"/>
+                                    <constraint firstItem="5sp-A0-Gxh" firstAttribute="leading" secondItem="7mI-Bq-VKZ" secondAttribute="leading" id="Afr-33-16e"/>
+                                    <constraint firstAttribute="bottom" secondItem="5sp-A0-Gxh" secondAttribute="bottom" id="L8K-yA-rvZ"/>
+                                    <constraint firstItem="5sp-A0-Gxh" firstAttribute="top" secondItem="7mI-Bq-VKZ" secondAttribute="top" id="onm-dJ-ew0"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ln-tG-gYA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7mI-Bq-VKZ" firstAttribute="trailing" secondItem="5Ln-tG-gYA" secondAttribute="trailing" id="DqF-Ep-mF7"/>
+                            <constraint firstItem="7mI-Bq-VKZ" firstAttribute="leading" secondItem="5Ln-tG-gYA" secondAttribute="leading" id="GyI-V3-jBf"/>
                             <constraint firstItem="Hzb-nI-CHY" firstAttribute="leading" secondItem="5Ln-tG-gYA" secondAttribute="leading" id="M8R-zG-Bas"/>
                             <constraint firstItem="Hzb-nI-CHY" firstAttribute="trailing" secondItem="5Ln-tG-gYA" secondAttribute="trailing" id="VZV-7p-WTt"/>
+                            <constraint firstItem="7mI-Bq-VKZ" firstAttribute="top" secondItem="652-GR-Vki" secondAttribute="bottom" constant="8" symbolic="YES" id="VyT-LY-JhG"/>
+                            <constraint firstAttribute="bottom" secondItem="7mI-Bq-VKZ" secondAttribute="bottom" id="c3E-89-6QU"/>
                             <constraint firstItem="652-GR-Vki" firstAttribute="top" secondItem="5Ln-tG-gYA" secondAttribute="top" constant="20" id="n9v-bT-bqm"/>
                             <constraint firstAttribute="bottom" secondItem="Hzb-nI-CHY" secondAttribute="bottom" id="pg5-P6-T9H"/>
                             <constraint firstItem="652-GR-Vki" firstAttribute="leading" secondItem="5Ln-tG-gYA" secondAttribute="leading" constant="16" id="rye-d2-zzJ"/>
@@ -751,10 +937,18 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="imgProfile" destination="KID-dM-MNg" id="wQ2-Pq-XTL"/>
+                        <outlet property="lblAbout" destination="hmU-KE-sjT" id="LwV-yc-ZKv"/>
+                        <outlet property="lblAddress" destination="vsf-0r-p7h" id="LUg-cp-ATI"/>
+                        <outlet property="lblName" destination="hRT-pe-ISe" id="ceT-22-OCV"/>
+                        <outlet property="lblSpecialisation" destination="j3k-28-bBO" id="p2G-Is-fDm"/>
+                        <outlet property="lblSuccessfulJobs" destination="dIc-qa-4Ju" id="tjR-IP-Z5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAS-zx-oFP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="814"/>
+            <point key="canvasLocation" x="132" y="813.64317841079469"/>
         </scene>
         <!--Find Service Provider View Controller-->
         <scene sceneID="Lzm-5J-cBn">
@@ -907,7 +1101,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6R-5Y-qaS">
                                                             <rect key="frame" x="40" y="151.5" width="279" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.1529411765" green="0.15686274510000001" blue="0.21960784310000001" alpha="0.8000106293" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -2496,13 +2690,14 @@
         <image name="ic_down" width="25" height="25"/>
         <image name="ic_find_service_provider" width="67.5" height="67.5"/>
         <image name="ic_invoices" width="65.5" height="68"/>
+        <image name="ic_job_list" width="66.5" height="66.5"/>
         <image name="ic_location" width="32" height="32"/>
         <image name="ic_m" width="22" height="17"/>
         <image name="ic_my_properties" width="64.5" height="64.5"/>
         <image name="ic_notification" width="15" height="18"/>
         <image name="ic_page_control_red" width="34.5" height="8"/>
-        <image name="ic_reports" width="54" height="64.5"/>
         <image name="ic_shuffle_profile" width="68" height="42.5"/>
+        <image name="ic_tenant" width="20.5" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

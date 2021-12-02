@@ -9,8 +9,10 @@ class ServiceProviders: Mappable, CustomStringConvertible {
     }
     
     func mapping(map: Map) {
+        about <- map[WSResponseParams.WS_RESP_PARAM_ABOUT]
         address <- map[WSResponseParams.WS_RESP_PARAM_ADDRESS]
         name <- map[WSResponseParams.WS_RESP_PARAM_NAME]
+        mobile <- map[WSResponseParams.WS_RESP_PARAM_MOBILE]
         profile <- map[WSResponseParams.WS_RESP_PARAM_PROFILE]
         specialisations <- map[WSResponseParams.WS_RESP_PARAM_SPECIALISATIONS]
     }
@@ -32,7 +34,9 @@ class ServiceProviders: Mappable, CustomStringConvertible {
         return nil
     })
     
+    lazy var about = String()
     lazy var address = String()
+    lazy var mobile = String()
     lazy var name = String()
     lazy var profile = String()
     lazy var specialisations = String()

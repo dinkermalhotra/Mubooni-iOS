@@ -53,7 +53,7 @@ extension AgentDashboardViewController {
         }
     }
     
-    @IBAction func reportsClicked(_ sender: UIButton) {
+    @IBAction func jobListClicked(_ sender: UIButton) {
         
     }
     
@@ -61,7 +61,7 @@ extension AgentDashboardViewController {
         
     }
     
-    @IBAction func chatClicked(_ sender: UIButton) {
+    @IBAction func tenantClicked(_ sender: UIButton) {
         
     }
     
