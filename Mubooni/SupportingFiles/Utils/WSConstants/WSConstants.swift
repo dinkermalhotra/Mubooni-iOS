@@ -21,6 +21,7 @@ struct WSRequestParams {
     static let WS_REQS_PARAM_FEATURED_STATUS         = "featured_status"
     static let WS_REQS_PARAM_GOOGLE_EMAIL            = "google_email"
     static let WS_REQS_PARAM_GOOGLE_ID               = "google_id"
+    static let WS_REQS_PARAM_INDEX                   = "index"
     static let WS_REQS_PARAM_LAT                     = "lat"
     static let WS_REQS_PARAM_LNG                     = "lng"
     static let WS_REQS_PARAM_LOCATION_SPEC           = "location_spec"

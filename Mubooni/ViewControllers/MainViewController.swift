@@ -185,7 +185,8 @@ extension MainViewController {
     }
     
     func fetchServiceProviders() {
-        WSManager.wsCallGetServiceProviders([:]) { isSuccess, message, serviceProviders in
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_INDEX: Strings.DASHBOARD as AnyObject]
+        WSManager.wsCallGetServiceProviders(params) { isSuccess, message, serviceProviders in
             Helper.hideLoader(onVC: self)
             
             self.serviceProviders = serviceProviders ?? []

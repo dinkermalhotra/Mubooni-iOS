@@ -58,6 +58,7 @@ struct Strings {
     static let BOOK_YOUR_SLOT = "BOOK YOUR SLOT"
     static let BUY = "Buy"
     static let CHOOSE_PHOTO = "Choose Photo"
+    static let DASHBOARD = "dashboard"
     static let FREEHOLD = "Freehold"
     static let KES = "KES"
     static let LAND = "LAND"
