@@ -2337,6 +2337,12 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LISTING MEDIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-x2-jrC">
+                                <rect key="frame" x="16" y="163" width="343" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FSp-l6-wG7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2345,15 +2351,18 @@
                             <constraint firstItem="JgZ-lz-ti3" firstAttribute="trailing" secondItem="FSp-l6-wG7" secondAttribute="trailing" id="9s7-7n-k0f"/>
                             <constraint firstAttribute="bottom" secondItem="JgZ-lz-ti3" secondAttribute="bottom" id="FLe-4C-8za"/>
                             <constraint firstItem="lvx-As-oaw" firstAttribute="leading" secondItem="XRC-AS-IjU" secondAttribute="trailing" id="HX0-nA-5v8"/>
+                            <constraint firstItem="FSp-l6-wG7" firstAttribute="trailing" secondItem="Euq-x2-jrC" secondAttribute="trailing" constant="16" id="I2A-Pl-YrX"/>
                             <constraint firstItem="FSp-l6-wG7" firstAttribute="trailing" secondItem="lvx-As-oaw" secondAttribute="trailing" id="LQN-k9-Law"/>
                             <constraint firstAttribute="bottom" secondItem="XRC-AS-IjU" secondAttribute="bottom" id="Mb8-jk-dIy"/>
                             <constraint firstItem="uhK-q7-JkT" firstAttribute="top" secondItem="eQg-21-iyz" secondAttribute="bottom" constant="24" id="NTY-6H-ZjP"/>
                             <constraint firstItem="eQg-21-iyz" firstAttribute="leading" secondItem="FSp-l6-wG7" secondAttribute="leading" constant="16" id="OJI-w5-817"/>
                             <constraint firstItem="eQg-21-iyz" firstAttribute="top" secondItem="FSp-l6-wG7" secondAttribute="top" constant="20" id="P2O-hm-oOx"/>
+                            <constraint firstItem="Euq-x2-jrC" firstAttribute="leading" secondItem="FSp-l6-wG7" secondAttribute="leading" constant="16" id="SOM-Lw-Ehe"/>
                             <constraint firstItem="XRC-AS-IjU" firstAttribute="leading" secondItem="FSp-l6-wG7" secondAttribute="leading" id="UJW-P8-Rgl"/>
                             <constraint firstItem="uhK-q7-JkT" firstAttribute="leading" secondItem="FSp-l6-wG7" secondAttribute="leading" constant="16" id="XdJ-kP-eCv"/>
                             <constraint firstItem="JgZ-lz-ti3" firstAttribute="leading" secondItem="FSp-l6-wG7" secondAttribute="leading" id="YX4-sM-QJU"/>
                             <constraint firstItem="FSp-l6-wG7" firstAttribute="trailing" secondItem="uhK-q7-JkT" secondAttribute="trailing" constant="16" id="Yc5-i2-fHP"/>
+                            <constraint firstItem="Euq-x2-jrC" firstAttribute="top" secondItem="uhK-q7-JkT" secondAttribute="bottom" constant="24" id="YeJ-8U-0gV"/>
                             <constraint firstItem="lvx-As-oaw" firstAttribute="bottom" secondItem="sPC-h8-5T9" secondAttribute="bottomMargin" id="jQk-dv-auE"/>
                             <constraint firstItem="bGK-Xp-Ybh" firstAttribute="leading" secondItem="eQg-21-iyz" secondAttribute="trailing" constant="16" id="oQ8-5A-DCa"/>
                             <constraint firstItem="bGK-Xp-Ybh" firstAttribute="centerY" secondItem="eQg-21-iyz" secondAttribute="centerY" id="rLi-JS-RxQ"/>

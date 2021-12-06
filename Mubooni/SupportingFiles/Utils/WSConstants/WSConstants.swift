@@ -11,6 +11,7 @@ struct WebService {
     static let getUserProperties                     = "\(baseUrl)/get_all_user_properties/app/"
     static let getUserRoles                          = "\(baseUrl)/get_user_roles/app"
     static let getUserSpecialisations                = "\(baseUrl)/get_user_specialisations/app"
+    static let getUnitType                           = "\(baseUrl)/get_all_unit_types/app/"
     static let loginUser                             = "\(baseUrl)/loginMe/app"
     static let searchServiceProviders                = "\(baseUrl)/get_searched_ServicesProviders/app/"
 }
@@ -48,6 +49,7 @@ struct WSResponseParams {
     static let WS_RESP_PARAM_DATA                    = "data"
     static let WS_RESP_PARAM_EMAIL                   = "email"
     static let WS_RESP_PARAM_ESTATE_NAME             = "estate_name"
+    static let WS_RESP_PARAM_ESTATE_TYPE             = "estate_type"
     static let WS_RESP_PARAM_FACEBOOK_ID             = "facebook_id"
     static let WS_RESP_PARAM_FEATURED_STATUS         = "featured_status"
     static let WS_RESP_PARAM_GOOGLE_ID               = "google_id"
@@ -75,6 +77,7 @@ struct WSResponseParams {
     static let WS_RESP_PARAM_STATUS                  = "status"
     static let WS_RESP_PARAM_TRUE                    = "true"
     static let WS_RESP_PARAM_TYPE_NAME               = "type_name"
+    static let WS_RESP_PARAM_UNIT_NAME               = "unit_name"
     static let WS_RESP_PARAM_UNIT_STATUS             = "unit_status"
     static let WS_RESP_PARAM_UNIT_TYPE               = "unit_type"
     static let WS_RESP_PARAM_UNITS                   = "units"

@@ -8,6 +8,11 @@ class AddPropertyMediaViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        //viewUploadKenyaId.addDashedBorder()
+    }
 }
 
 // MARK: - UIBUTTON ACTIONS

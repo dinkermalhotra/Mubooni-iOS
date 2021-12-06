@@ -10,27 +10,30 @@ class FiltersViewController: UIViewController {
     @IBOutlet weak var lblKmUpto: UILabel!
     @IBOutlet weak var lblAreaUpto: UILabel!
     @IBOutlet weak var lblPriceUpto: UILabel!
+    @IBOutlet weak var lblType: UILabel!
     @IBOutlet weak var propertyTypeCollectionView: UICollectionView!
     @IBOutlet weak var propertyForCollectionView: UICollectionView!
-    @IBOutlet weak var bedroomView: UIView!
-    @IBOutlet weak var landView: UIView!
-    @IBOutlet weak var landTypeCollectionView: UICollectionView!
-    @IBOutlet weak var bedroomCollectionView: UICollectionView!
-    @IBOutlet weak var btnApplyTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var typeCollectionView: UICollectionView!
+    @IBOutlet weak var typeViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var unitTypeCollectionViewHeightConstraint: NSLayoutConstraint!
     
-    var bedroom = ["1", "2", "3", "3+"]
-    var landType = [Strings.FREEHOLD, Strings.LEASEHOLD]
     var propertyTypes = [PropertyTypes]()
     var propertyFor = [Strings.RENT, Strings.BUY, Strings.LEASE, Strings.SHORT_STAY]
+    var unitTypeBedroom = [UnitType]()
+    var unitTypeLand = [UnitType]()
+    
     var area = ""
     var distance = ""
     var latitude = ""
     var longitude = ""
     var price = ""
-    var selectedBedroom = ""
-    var selectedLandType = ""
+    
+    var selectedPropertyTypeId = ""
     var selectedPropertyType = ""
     var selectedPropertyFor = ""
+    var selectedUnitType = ""
+    var selectedUnitTypeId = ""
+    var state = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,7 @@ class FiltersViewController: UIViewController {
         setupSliders()
         
         fetchPropertyType()
+        fetchUnitType()
     }
 
     override func viewDidLayoutSubviews() {
@@ -49,21 +53,18 @@ class FiltersViewController: UIViewController {
     }
     
     func setupCollectionViewLayout() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: 30, height: 30)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 30
-        layout.scrollDirection = .horizontal
-        bedroomCollectionView.collectionViewLayout = layout
+        if let collectionViewLayout = typeCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            collectionViewLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
     }
     
     func setupCurrentLocation() {
         LocationManager.shared.requestLocation()
-        LocationManager.shared.onCompletion = { (latitude, longitude, address) in
+        LocationManager.shared.onCompletion = { (state, latitude, longitude, address) in
             self.lblCurrentLocation.text = address
             self.latitude = latitude
             self.longitude = longitude
+            self.state = state
         }
     }
     
@@ -97,15 +98,16 @@ extension FiltersViewController {
         area = ""
         distance = ""
         price = ""
-        selectedBedroom = ""
-        selectedLandType = ""
+        
         selectedPropertyType = ""
+        selectedPropertyTypeId = ""
         selectedPropertyFor = ""
+        selectedUnitType = ""
+        selectedUnitTypeId = ""
         
         propertyTypeCollectionView.reloadData()
         propertyForCollectionView.reloadData()
-        landTypeCollectionView.reloadData()
-        bedroomCollectionView.reloadData()
+        typeCollectionView.reloadData()
     }
     
     @IBAction func distanceSliderValueChange(_ sender: UISlider) {
@@ -142,19 +144,20 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
         else if collectionView == propertyForCollectionView {
             return propertyFor.count
         }
-        else if collectionView == bedroomCollectionView {
-            return bedroom.count
-        }
         else {
-            return landType.count
+            if selectedPropertyType.lowercased() == Strings.LAND.lowercased() {
+                return unitTypeLand.count
+            }
+            else {
+                return unitTypeBedroom.count
+            }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.CheckboxCell, for: indexPath) as! CheckboxCell
         
         if collectionView == propertyTypeCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.CheckboxCell, for: indexPath) as! CheckboxCell
-            
             let dict = propertyTypes[indexPath.row]
             cell.lblType.text = dict.typeName
             
@@ -165,21 +168,8 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
             else {
                 cell.btnCheckbox.isSelected = false
             }
-            
-            if selectedPropertyType.lowercased() == Strings.LAND.lowercased() {
-                bedroomView.isHidden = true
-                landView.isHidden = false
-            }
-            else {
-                bedroomView.isHidden = false
-                landView.isHidden = true
-            }
-            
-            return cell
         }
         else if collectionView == propertyForCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.CheckboxCell, for: indexPath) as! CheckboxCell
-            
             cell.lblType.text = propertyFor[indexPath.row]
             
             if selectedPropertyFor == propertyFor[indexPath.row] {
@@ -188,39 +178,28 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
             else {
                 cell.btnCheckbox.isSelected = false
             }
-            
-            return cell
-        }
-        else if collectionView == bedroomCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.BedroomSelectionCell, for: indexPath) as! BedroomSelectionCell
-            
-            cell.lblType.text = bedroom[indexPath.row]
-            
-            if selectedBedroom == bedroom[indexPath.row] {
-                cell.lblType.backgroundColor = MubooniColors.backgroundGreenColor
-                cell.lblType.textColor = UIColor.white
-            }
-            else {
-                cell.lblType.backgroundColor = UIColor.clear
-                cell.lblType.textColor = UIColor.black.withAlphaComponent(0.8)
-            }
-            
-            return cell
         }
         else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.CheckboxCell, for: indexPath) as! CheckboxCell
+            var dict: UnitType?
             
-            cell.lblType.text = landType[indexPath.row]
+            if selectedPropertyType.lowercased() == Strings.LAND.lowercased() {
+                dict = unitTypeLand[indexPath.row]
+            }
+            else {
+                dict = unitTypeBedroom[indexPath.row]
+            }
             
-            if selectedLandType == landType[indexPath.row] {
+            cell.lblType.text = dict?.unitName ?? ""
+            
+            if selectedUnitType == dict?.unitName ?? "" {
                 cell.btnCheckbox.isSelected = true
             }
             else {
                 cell.btnCheckbox.isSelected = false
             }
-            
-            return cell
         }
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -228,19 +207,34 @@ extension FiltersViewController: UICollectionViewDataSource, UICollectionViewDel
             let dict = propertyTypes[indexPath.row]
             
             selectedPropertyType = dict.typeName
+            selectedPropertyTypeId = dict.id
             propertyTypeCollectionView.reloadData()
+            typeCollectionView.reloadData()
+            typeCollectionView.layoutIfNeeded()
+            
+            lblType.text = selectedPropertyType.lowercased() == Strings.LAND.lowercased() ? Strings.LAND.capitalized : Strings.BEDROOM.capitalized
+            
+            let height = typeCollectionView.collectionViewLayout.collectionViewContentSize.height
+            unitTypeCollectionViewHeightConstraint.constant = height
+            self.view.setNeedsLayout()
         }
         else if collectionView == propertyForCollectionView {
             selectedPropertyFor = propertyFor[indexPath.row]
             propertyForCollectionView.reloadData()
         }
-        else if collectionView == bedroomCollectionView {
-            selectedBedroom = bedroom[indexPath.row]
-            bedroomCollectionView.reloadData()
-        }
         else {
-            selectedLandType = landType[indexPath.row]
-            landTypeCollectionView.reloadData()
+            var dict: UnitType?
+            
+            if selectedPropertyType.lowercased() == Strings.LAND.lowercased() {
+                dict = unitTypeLand[indexPath.row]
+            }
+            else {
+                dict = unitTypeBedroom[indexPath.row]
+            }
+            
+            selectedUnitType = dict?.unitName ?? ""
+            selectedUnitTypeId = dict?.id ?? ""
+            typeCollectionView.reloadData()
         }
     }
 }
@@ -259,11 +253,35 @@ extension FiltersViewController {
         }
     }
     
+    func fetchUnitType() {
+        WSManager.wsCallGetUnitType { isSuccess, message, unitType in
+            if isSuccess {
+                self.unitTypeBedroom = unitType?.filter({ value in
+                    value.estateType.lowercased() != Strings.LAND.lowercased()
+                }) ?? []
+                
+                self.unitTypeLand = unitType?.filter({ value in
+                    value.estateType.lowercased() == Strings.LAND.lowercased()
+                }) ?? []
+                
+                self.typeCollectionView.reloadData()
+                self.typeCollectionView.layoutIfNeeded()
+
+                let height = self.typeCollectionView.collectionViewLayout.collectionViewContentSize.height
+                self.unitTypeCollectionViewHeightConstraint.constant = height
+                self.view.setNeedsLayout()
+            }
+            else {
+                Helper.showOKAlert(onVC: self, title: Alert.ERROR, message: message)
+            }
+        }
+    }
+    
     func getFilteredProperties() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_SEARCHED: lblCurrentLocation.text as AnyObject,
-                                           WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE: "" as AnyObject,
-                                           WSRequestParams.WS_REQS_PARAM_UNIT_TYPE: "" as AnyObject,
-                                           WSRequestParams.WS_REQS_PARAM_UNIT_STATUS: "" as AnyObject,
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_SEARCHED: state as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE: selectedPropertyTypeId as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_UNIT_TYPE: selectedUnitTypeId as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_UNIT_STATUS: selectedPropertyFor as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_DISTANCE: distance as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_PRICE: price as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_AREA: area as AnyObject,

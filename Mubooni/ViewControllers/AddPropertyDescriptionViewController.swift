@@ -23,7 +23,7 @@ class AddPropertyDescriptionViewController: UIViewController {
     
     func setCurrentLocation() {
         LocationManager.shared.requestLocation()
-        LocationManager.shared.onCompletion = { (latitude, longitude, address) in
+        LocationManager.shared.onCompletion = { (state, latitude, longitude, address) in
             self.txtCurrentLocation.text = address
         }
     }

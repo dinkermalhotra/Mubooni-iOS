@@ -8,7 +8,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private override init() {}
     
     let locationManager = CLLocationManager()
-    var onCompletion: ((_ latitude: String, _ longitude: String, _ address: String) -> Void)?
+    var onCompletion: ((_ state: String, _ latitude: String, _ longitude: String, _ address: String) -> Void)?
     
     func requestLocation() {
         self.locationManager.requestWhenInUseAuthorization()
@@ -26,6 +26,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         var address = ""
         let latitude = "\(userLocation.coordinate.latitude)"
         let longitude = "\(userLocation.coordinate.longitude)"
+        var state = ""
         
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
@@ -36,12 +37,14 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             else {
                 if let placemarks = placemarks, let placemark = placemarks.first {
                     address = "\(placemark.thoroughfare ?? "") \(placemark.locality ?? ""), \(placemark.administrativeArea ?? ""), \(placemark.country ?? "")"
+                    state = placemark.locality ?? ""
                 } else {
                     address = "No Matching Addresses Found"
+                    state = "No Matching Addresses Found"
                 }
                 
                 if let block = self.onCompletion {
-                    block(latitude, longitude, address)
+                    block(state, latitude, longitude, address)
                 }
                 
                 self.locationManager.stopUpdatingLocation()
