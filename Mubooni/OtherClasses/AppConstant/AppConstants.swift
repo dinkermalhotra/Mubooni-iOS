@@ -50,6 +50,7 @@ struct CellIds {
 }
 
 struct Strings {
+    static let ALL = "all"
     static let BATH = "Bath"
     static let BATHS = "Baths"
     static let BEDROOM = "Bedroom"

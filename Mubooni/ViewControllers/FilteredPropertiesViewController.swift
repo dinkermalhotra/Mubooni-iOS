@@ -11,9 +11,6 @@ class FilteredPropertiesViewController: UIViewController {
         super.viewDidLoad()
 
         setupCollectionViewLayout()
-        
-        Helper.showLoader(onVC: self)
-        fetchFilteredProperties()
     }
     
     func setupCollectionViewLayout() {
@@ -75,18 +72,5 @@ extension FilteredPropertiesViewController: UICollectionViewDataSource, UICollec
         cell.lblPrice.text = unit?.unitStatus.lowercased() == Strings.UNIT_STATUS_SALE.lowercased() ? "\(Strings.SELLING_PRICE): \(Strings.KES)\(unit?.monthlyRent ?? "")" : "\(Strings.MONTHLY_RENT): \(Strings.KES)\(unit?.monthlyRent ?? "")"
         
         return cell
-    }
-}
-
-// MARK: - API CALL
-extension FilteredPropertiesViewController {
-    func fetchFilteredProperties() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_FEATURED_STATUS: "1" as AnyObject]
-        WSManager.wsCallFeaturedProperties(params) { isSuccess, message, response in
-            Helper.hideLoader(onVC: self)
-            
-            self.filteredProperties = response ?? []
-            self.collectionView.reloadData()
-        }
     }
 }

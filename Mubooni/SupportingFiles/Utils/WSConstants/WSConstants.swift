@@ -4,6 +4,7 @@ struct WebService {
     static let checkFacebookIdExist                  = "\(baseUrl)/checkFacebookId/app"
     static let checkGoogleIdExist                    = "\(baseUrl)/checkGoogleId/app"
     static let getFeaturedProperties                 = "\(baseUrl)/get_all_FeaturedProperties/app/"
+    static let getFilteredProperties                 = "\(baseUrl)/get_all_properties/app"
     static let getPropertyTypes                      = "\(baseUrl)/get_all_property_types/app/"
     static let getServiceProviders                   = "\(baseUrl)/get_all_ServicesProviders/app/"
     static let getUserProfile                        = "\(baseUrl)/get_user_info/app/"
@@ -15,7 +16,10 @@ struct WebService {
 }
 
 struct WSRequestParams {
+    static let WS_REQS_PARAM_AREA                    = "area"
+    static let WS_REQS_PARAM_DISTANCE                = "distance"
     static let WS_REQS_PARAM_EMAIL                   = "email"
+    static let WS_REQS_PARAM_ESTATE_TYPE             = "estate_type"
     static let WS_REQS_PARAM_FACEBOOK_EMAIL          = "facebook_email"
     static let WS_REQS_PARAM_FACEBOOK_ID             = "facebook_id"
     static let WS_REQS_PARAM_FEATURED_STATUS         = "featured_status"
@@ -27,7 +31,12 @@ struct WSRequestParams {
     static let WS_REQS_PARAM_LOCATION_SPEC           = "location_spec"
     static let WS_REQS_PARAM_LOG_USERID              = "log_userId"
     static let WS_REQS_PARAM_PASSWORD                = "password"
+    static let WS_REQS_PARAM_PRICE                   = "price"
+    static let WS_REQS_PARAM_REG_TYPE                = "reg_type"
+    static let WS_REQS_PARAM_SEARCHED                = "searched"
     static let WS_REQS_PARAM_SEARCHED_SPECS          = "searched_spec"
+    static let WS_REQS_PARAM_UNIT_STATUS             = "unitStatus"
+    static let WS_REQS_PARAM_UNIT_TYPE               = "unit_type"
 }
 
 struct WSResponseParams {

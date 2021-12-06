@@ -22,6 +22,11 @@ class FiltersViewController: UIViewController {
     var landType = [Strings.FREEHOLD, Strings.LEASEHOLD]
     var propertyTypes = [PropertyTypes]()
     var propertyFor = [Strings.RENT, Strings.BUY, Strings.LEASE, Strings.SHORT_STAY]
+    var area = ""
+    var distance = ""
+    var latitude = ""
+    var longitude = ""
+    var price = ""
     var selectedBedroom = ""
     var selectedLandType = ""
     var selectedPropertyType = ""
@@ -57,6 +62,8 @@ class FiltersViewController: UIViewController {
         LocationManager.shared.requestLocation()
         LocationManager.shared.onCompletion = { (latitude, longitude, address) in
             self.lblCurrentLocation.text = address
+            self.latitude = latitude
+            self.longitude = longitude
         }
     }
     
@@ -87,6 +94,9 @@ extension FiltersViewController {
         lblAreaUpto.text = "(Sq. ft.) upto: 0)"
         lblPriceUpto.text = "(KES) upto: 0)"
         
+        area = ""
+        distance = ""
+        price = ""
         selectedBedroom = ""
         selectedLandType = ""
         selectedPropertyType = ""
@@ -100,20 +110,22 @@ extension FiltersViewController {
     
     @IBAction func distanceSliderValueChange(_ sender: UISlider) {
         lblKmUpto.text = "(km) upto: \(Int(sender.value))"
+        distance = "\(Int(sender.value))"
     }
     
     @IBAction func areaSliderValueChange(_ sender: UISlider) {
         lblAreaUpto.text = "(Sq. ft.) upto: \(Int(sender.value))"
+        area = "\(Int(sender.value))"
     }
     
     @IBAction func priceSliderValueChange(_ sender: UISlider) {
         lblPriceUpto.text = "(KES) upto: \(Int(sender.value))"
+        price = "\(Int(sender.value))"
     }
     
     @IBAction func applyClicked(_ sender: UIButton) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .FilteredPropertiesViewController) as? FilteredPropertiesViewController {
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        Helper.showLoader(onVC: self)
+        getFilteredProperties()
     }
 }
 
@@ -243,6 +255,26 @@ extension FiltersViewController {
             }
             else {
                 Helper.showOKAlert(onVC: self, title: Alert.ERROR, message: message)
+            }
+        }
+    }
+    
+    func getFilteredProperties() {
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_SEARCHED: lblCurrentLocation.text as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE: "" as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_UNIT_TYPE: "" as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_UNIT_STATUS: "" as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_DISTANCE: distance as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_PRICE: price as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_AREA: area as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_LAT: latitude as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_LNG: longitude as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_REG_TYPE: Strings.ALL as AnyObject]
+        WSManager.wsCallFilteredProperties(params) { isSuccess, message, properties in
+            Helper.hideLoader(onVC: self)
+            if let vc = ViewControllerHelper.getViewController(ofType: .FilteredPropertiesViewController) as? FilteredPropertiesViewController {
+                vc.filteredProperties = properties ?? []
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
