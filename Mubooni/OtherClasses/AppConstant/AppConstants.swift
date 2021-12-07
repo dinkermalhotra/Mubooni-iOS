@@ -36,6 +36,7 @@ struct MubooniFonts {
     static let FONT_ROBOTO_BOLD_16 = UIFont.init(name: "Roboto-Bold", size: 16)
     static let FONT_ROBOTO_REGULAR_10 = UIFont.init(name: "Roboto-Regular", size: 10)
     static let FONT_ROBOTO_REGULAR_14 = UIFont.init(name: "Roboto-Regular", size: 14)
+    static let FONT_ROBOTO_REGULAR_16 = UIFont.init(name: "Roboto-Regular", size: 16)
 }
 
 struct CellIds {
