@@ -20,21 +20,29 @@ class JobListViewController: UIViewController,UITableViewDelegate,UITableViewDat
         // Do any additional setup after loading the view.
     }
 
+    @available(iOS 13.0, *)
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
+        switch segmentControl.selectedSegmentIndex
+        {
+        case 0:
+            print("0")
             if #available(iOS 13.0, *) {
                 segmentControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-                segmentControl.selectedSegmentTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                segmentControl.selectedSegmentTintColor = UIColor.blue
+            } else {
+                segmentControl.tintColor = UIColor.blue
             }
-//            if sender.selectedSegmentIndex == 1 {
-//                if #available(iOS 13.0, *) {
-//                    segmentControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-//                    segmentControl.selectedSegmentTintColor = #colorLiteral(red: 0.8392156863, green: 0.8666666667, blue: 0.8745098039, alpha: 1)
-//                }
-//            }
+            segmentControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+            segmentControl.selectedSegmentTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        case 1:
+            print("1")
+            segmentControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+            segmentControl.selectedSegmentTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        default:
+            break;
         }
+        
     }
-
 // MARK: - TABLE VIEW DELEGATE METHOD
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 5
@@ -42,9 +50,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: CellIds.JobListCell, for: indexPath as IndexPath) as! JobListCell
-    cell.detailsBtn.layer.cornerRadius = 7
-    cell.detailsBtn.layer.borderWidth = 1
-    cell.detailsBtn.layer.borderColor = #colorLiteral(red: 0.537254902, green: 0.537254902, blue: 0.537254902, alpha: 0.802596831)
+
     return cell
 }
 }
