@@ -975,12 +975,18 @@
                                     <action selector="backClicked:" destination="mBs-K3-YQL" eventType="touchUpInside" id="d8q-XB-Mbu"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_buildings_dull" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-CE-b6q">
+                                <rect key="frame" x="0.0" y="458" width="375" height="209"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H7w-cC-hHW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iqP-XE-TTo" firstAttribute="top" secondItem="H7w-cC-hHW" secondAttribute="top" constant="20" id="DC0-3O-h6e"/>
+                            <constraint firstAttribute="bottom" secondItem="Qkh-CE-b6q" secondAttribute="bottom" id="QQC-so-Na6"/>
                             <constraint firstItem="iqP-XE-TTo" firstAttribute="leading" secondItem="H7w-cC-hHW" secondAttribute="leading" constant="16" id="aM9-Py-gSW"/>
+                            <constraint firstItem="Qkh-CE-b6q" firstAttribute="leading" secondItem="H7w-cC-hHW" secondAttribute="leading" id="d91-af-8oC"/>
+                            <constraint firstItem="Qkh-CE-b6q" firstAttribute="trailing" secondItem="H7w-cC-hHW" secondAttribute="trailing" id="ztm-zM-EpY"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
@@ -2401,7 +2407,7 @@
                                 <rect key="frame" x="0.0" y="458" width="375" height="209"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOX-JZ-Iix">
-                                <rect key="frame" x="72" y="26" width="139.5" height="28"/>
+                                <rect key="frame" x="72" y="26" width="142.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
