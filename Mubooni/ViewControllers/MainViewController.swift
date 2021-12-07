@@ -62,7 +62,17 @@ class MainViewController: UIViewController {
 // MARK: - UIBUTTON ACTIONS
 extension MainViewController {
     @IBAction func userClicked(_ sender: UIButton) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .LoginViewController) as? LoginViewController {
+//        if let vc = ViewControllerHelper.getViewController(ofType: .LoginViewController) as? LoginViewController {
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+        if let vc = ViewControllerHelper.getViewController(ofType: .InquirySubmissionViewController) as? InquirySubmissionViewController {
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func searchOnMapClicked(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .SearchOnMapViewController) as? SearchOnMapViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

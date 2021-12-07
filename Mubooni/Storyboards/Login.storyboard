@@ -240,7 +240,7 @@
                                 <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcV-nR-bEe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1049"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1068"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find affordable residential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-3Q-adv">
                                                 <rect key="frame" x="16" y="8" width="343" height="28"/>
@@ -308,13 +308,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="031-Q4-nYR">
-                                                <rect key="frame" x="16" y="180" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="199" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PQG-cJ-zRi">
-                                                <rect key="frame" x="0.0" y="207" width="375" height="240"/>
+                                                <rect key="frame" x="0.0" y="226" width="375" height="240"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="Caq-XM-JYf"/>
@@ -398,13 +398,13 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-QQ-WZW">
-                                                <rect key="frame" x="16" y="471" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="490" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Qt-VE-K5A">
-                                                <rect key="frame" x="0.0" y="498" width="375" height="240"/>
+                                                <rect key="frame" x="0.0" y="517" width="375" height="240"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="Yq0-ex-PoH"/>
@@ -488,13 +488,13 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Providers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-aT-frr">
-                                                <rect key="frame" x="16" y="762" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="781" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-aF-iPP">
-                                                <rect key="frame" x="0.0" y="789" width="375" height="240"/>
+                                                <rect key="frame" x="0.0" y="808" width="375" height="240"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="fHz-00-vQM"/>
@@ -577,19 +577,32 @@
                                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="CCt-I8-NOR"/>
                                                 </connections>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05t-zU-qEq">
+                                                <rect key="frame" x="265" y="154" width="94" height="29"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Search on map">
+                                                    <color key="titleColor" red="0.92941176470588238" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchOnMapClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eDH-rl-S8x"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="031-Q4-nYR" firstAttribute="top" secondItem="05t-zU-qEq" secondAttribute="bottom" constant="16" id="04n-t7-EWI"/>
                                             <constraint firstItem="mfK-3Q-adv" firstAttribute="top" secondItem="HcV-nR-bEe" secondAttribute="top" constant="8" id="0JM-iR-P7p"/>
                                             <constraint firstAttribute="trailing" secondItem="5J2-aT-frr" secondAttribute="trailing" constant="16" id="0pl-T1-LeA"/>
                                             <constraint firstItem="5J2-aT-frr" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="1XF-lN-4Ys"/>
                                             <constraint firstAttribute="trailing" secondItem="4Qt-VE-K5A" secondAttribute="trailing" id="2UE-XV-81Y"/>
                                             <constraint firstItem="PQG-cJ-zRi" firstAttribute="top" secondItem="031-Q4-nYR" secondAttribute="bottom" constant="8" symbolic="YES" id="3yB-5i-2EO"/>
                                             <constraint firstAttribute="trailing" secondItem="npZ-QQ-WZW" secondAttribute="trailing" constant="16" id="4gT-KP-kpH"/>
-                                            <constraint firstItem="031-Q4-nYR" firstAttribute="top" secondItem="c8C-B6-GaX" secondAttribute="bottom" constant="34" id="5D4-JQ-qCt"/>
                                             <constraint firstItem="c8C-B6-GaX" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="6Pc-hW-eL4"/>
                                             <constraint firstAttribute="bottom" secondItem="C3e-aF-iPP" secondAttribute="bottom" constant="20" id="7iW-u5-ybB"/>
                                             <constraint firstAttribute="trailing" secondItem="mfK-3Q-adv" secondAttribute="trailing" constant="16" id="CfC-f4-yQj"/>
+                                            <constraint firstAttribute="trailing" secondItem="05t-zU-qEq" secondAttribute="trailing" constant="16" id="CnI-pX-vgg"/>
+                                            <constraint firstItem="05t-zU-qEq" firstAttribute="top" secondItem="c8C-B6-GaX" secondAttribute="bottom" constant="8" symbolic="YES" id="D3A-uA-smh"/>
                                             <constraint firstItem="C4Y-Dd-oNJ" firstAttribute="top" secondItem="mfK-3Q-adv" secondAttribute="bottom" constant="8" id="FRv-hU-jit"/>
                                             <constraint firstAttribute="trailing" secondItem="C4Y-Dd-oNJ" secondAttribute="trailing" constant="16" id="Frl-Hg-tdj"/>
                                             <constraint firstItem="C4Y-Dd-oNJ" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="GuY-Ly-xqM"/>
