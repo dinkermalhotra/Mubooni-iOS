@@ -71,6 +71,7 @@
 		8BCA42FD273D1346002BC5BD /* MyPropertiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */; };
 		8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */; };
 		8BCA4301273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */; };
+		988F5BD6275F229E008497F0 /* JobListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988F5BD5275F229E008497F0 /* JobListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertiesViewController.swift; sourceTree = "<group>"; };
 		8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPropertiesCell.swift; sourceTree = "<group>"; };
 		8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentPropertyDetailViewController.swift; sourceTree = "<group>"; };
+		988F5BD5275F229E008497F0 /* JobListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListCell.swift; sourceTree = "<group>"; };
 		9AF3E744092B8C4D06D80BC6 /* Pods_Mubooni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mubooni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 				191B480E26D4BE2300552A2D /* Font */,
 				19EBE01327213A1E00BD307F /* Models */,
 				19EBE01F27216A5C00BD307F /* Singleton */,
+				988F5BD4275F2267008497F0 /* TableViewCells */,
 				19AD9E2C271E949B007639F1 /* Utils */,
 				19925B8926D3E03300FC574F /* Info.plist */,
 				19925B8426D3E03300FC574F /* Assets.xcassets */,
@@ -477,6 +480,14 @@
 			path = AlertMessages;
 			sourceTree = "<group>";
 		};
+		988F5BD4275F2267008497F0 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				988F5BD5275F229E008497F0 /* JobListCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -663,6 +674,7 @@
 			files = (
 				8B9A7905274625880020753B /* AddPropertyDetailsViewController.swift in Sources */,
 				199720B926D617D00044BE8D /* SignupViewController.swift in Sources */,
+				988F5BD6275F229E008497F0 /* JobListCell.swift in Sources */,
 				40464E402758C2FC00615908 /* ShuffleProfileViewController.swift in Sources */,
 				40A4B9732758A6DA00B9622E /* ServiceProviderDetailViewController.swift in Sources */,
 				8BCA42FB273BC230002BC5BD /* Units.swift in Sources */,

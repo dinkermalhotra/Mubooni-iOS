@@ -44,6 +44,7 @@ struct CellIds {
     static let FindServiceProviderCell  = "FindServiceProviderCell"
     static let ImagesCell               = "ImagesCell"
     static let IntroScreensCell         = "IntroScreensCell"
+    static let JobListCell              = "JobListCell"
     static let MainFeaturedCell         = "MainFeaturedCell"
     static let MyPropertiesCell         = "MyPropertiesCell"
     static let ServiceProviderCell      = "ServiceProviderCell"

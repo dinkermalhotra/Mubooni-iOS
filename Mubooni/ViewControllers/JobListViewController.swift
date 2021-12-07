@@ -1,15 +1,52 @@
 import UIKit
 
-class JobListViewController: UIViewController {
-
+class JobListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+   
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+    
     var userProfile: UserProfile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        segmentControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+    
+        if #available(iOS 13.0, *) {
+            segmentControl.selectedSegmentTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        } else {
+            // Fallback on earlier versions
+        }
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            if #available(iOS 13.0, *) {
+                segmentControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+                segmentControl.selectedSegmentTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            }
+//            if sender.selectedSegmentIndex == 1 {
+//                if #available(iOS 13.0, *) {
+//                    segmentControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+//                    segmentControl.selectedSegmentTintColor = #colorLiteral(red: 0.8392156863, green: 0.8666666667, blue: 0.8745098039, alpha: 1)
+//                }
+//            }
+        }
+    }
+
+// MARK: - TABLE VIEW DELEGATE METHOD
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 5
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: CellIds.JobListCell, for: indexPath as IndexPath) as! JobListCell
+    cell.detailsBtn.layer.cornerRadius = 7
+    cell.detailsBtn.layer.borderWidth = 1
+    cell.detailsBtn.layer.borderColor = #colorLiteral(red: 0.537254902, green: 0.537254902, blue: 0.537254902, alpha: 0.802596831)
+    return cell
+}
 }
 
 // MARK: - UIBUTTON ACTIONS
