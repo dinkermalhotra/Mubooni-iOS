@@ -11,9 +11,37 @@ class InquirySubmissionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        txtVisitDate.datePicker(self, #selector(doneVisitDateAction), #selector(cancelVisitDateAction))
+        txtVisitTime.datePicker(self, #selector(doneVisitTimeAction), #selector(cancelVisitTimeAction), .time)
     }
 
+    @objc func cancelVisitDateAction() {
+        txtVisitDate.resignFirstResponder()
+    }
+    
+    @objc func cancelVisitTimeAction() {
+        txtVisitTime.resignFirstResponder()
+    }
+
+    @objc func doneVisitDateAction() {
+        if let datePickerView = txtVisitDate.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let dateString = dateFormatter.string(from: datePickerView.date)
+            txtVisitDate.text = dateString
+            txtVisitDate.resignFirstResponder()
+        }
+    }
+    
+    @objc func doneVisitTimeAction() {
+        if let datePickerView = txtVisitTime.inputView as? UIDatePicker {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh:mm a"
+            let dateString = dateFormatter.string(from: datePickerView.date)
+            txtVisitTime.text = dateString
+            txtVisitTime.resignFirstResponder()
+        }
+    }
 }
 
 // MARK: - UIBUTTON ACTIONS
