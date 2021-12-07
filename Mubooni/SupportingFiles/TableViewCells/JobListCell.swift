@@ -1,10 +1,14 @@
 import UIKit
 
 class JobListCell: UITableViewCell {
-    @IBOutlet weak var detailsBtn: UIButton!
-    @IBOutlet weak var descriptionTxt: UILabel!
-    @IBOutlet weak var propertylbl: UILabel!
-    @IBOutlet weak var issueLbl: UILabel!
+    
+    @IBOutlet weak var imgType: UIImageView!
+    @IBOutlet weak var lblType: UILabel!
+    @IBOutlet weak var lblPropertyName: UILabel!
+    @IBOutlet weak var lblPropertyAddress: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var btnDetails: UIButton!
+    @IBOutlet weak var btnAssignJob: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
