@@ -44,6 +44,8 @@
 		19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE022272187E900BD307F /* AgentDashboardViewController.swift */; };
 		19EBE025272187FD00BD307F /* Agent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EBE024272187FD00BD307F /* Agent.storyboard */; };
 		40124054275DED1C0080FBA7 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124053275DED1C0080FBA7 /* UnitType.swift */; };
+		40124058275F3FCE0080FBA7 /* SearchOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */; };
+		4012405A275F42A30080FBA7 /* InquirySubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */; };
 		40464E3E2758C21100615908 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3D2758C21100615908 /* JobListViewController.swift */; };
 		40464E402758C2FC00615908 /* ShuffleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */; };
 		40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9642754ABA700B9622E /* FiltersViewController.swift */; };
@@ -135,6 +137,8 @@
 		19EBE024272187FD00BD307F /* Agent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Agent.storyboard; sourceTree = "<group>"; };
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
 		40124053275DED1C0080FBA7 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
+		40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOnMapViewController.swift; sourceTree = "<group>"; };
+		40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquirySubmissionViewController.swift; sourceTree = "<group>"; };
 		40464E3D2758C21100615908 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleProfileViewController.swift; sourceTree = "<group>"; };
 		40A4B9642754ABA700B9622E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
@@ -221,12 +225,14 @@
 				198C400D27583F96008866F2 /* FilteredPropertiesViewController.swift */,
 				40A4B9642754ABA700B9622E /* FiltersViewController.swift */,
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
+				40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */,
 				199720BA26D63B9D0044BE8D /* IntroScreensViewController.swift */,
 				40464E3D2758C21100615908 /* JobListViewController.swift */,
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
 				191B481626D4BEC900552A2D /* MainViewController.swift */,
 				8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */,
 				8B1BE166274386C7006D5005 /* ProfileViewController.swift */,
+				40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */,
 				40A4B9722758A6DA00B9622E /* ServiceProviderDetailViewController.swift */,
 				40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */,
 				191B480626D4AC1F00552A2D /* SignInViewController.swift */,
@@ -681,6 +687,7 @@
 				199720BE26D63D330044BE8D /* IntroScreensCell.swift in Sources */,
 				19EBE01727213D5900BD307F /* Specilizations.swift in Sources */,
 				191B481926D4C01500552A2D /* LoginViewController.swift in Sources */,
+				4012405A275F42A30080FBA7 /* InquirySubmissionViewController.swift in Sources */,
 				19A262B32722C72000EDF5CE /* FindServiceProviderViewController.swift in Sources */,
 				199720BB26D63B9D0044BE8D /* IntroScreensViewController.swift in Sources */,
 				8BCA4301273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift in Sources */,
@@ -712,6 +719,7 @@
 				8B9A7907274625CE0020753B /* AddPropertyAmenitiesViewController.swift in Sources */,
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
 				40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */,
+				40124058275F3FCE0080FBA7 /* SearchOnMapViewController.swift in Sources */,
 				40A4B96F27588FC900B9622E /* ServiceProviderCell.swift in Sources */,
 				8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */,
 				40464E3E2758C21100615908 /* JobListViewController.swift in Sources */,

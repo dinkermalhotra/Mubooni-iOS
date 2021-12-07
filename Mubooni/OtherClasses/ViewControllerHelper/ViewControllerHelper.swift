@@ -9,12 +9,14 @@ struct ViewControllerIdentifiers {
     static let FilteredPropertiesViewController     = "FilteredPropertiesViewController"
     static let FiltersViewController                = "FiltersViewController"
     static let FindServiceProviderViewController    = "FindServiceProviderViewController"
+    static let InquirySubmissionViewController      = "InquirySubmissionViewController"
     static let IntroScreensViewController           = "IntroScreensViewController"
     static let JobListViewController                = "JobListViewController"
     static let LoginViewController                  = "LoginViewController"
     static let MainViewController                   = "MainViewController"
     static let MyPropertiesViewController           = "MyPropertiesViewController"
     static let ProfileViewController                = "ProfileViewController"
+    static let SearchOnMapViewController            = "SearchOnMapViewController"
     static let ServiceProviderDetailViewController  = "ServiceProviderDetailViewController"
     static let ShuffleProfileViewController         = "ShuffleProfileViewController"
     static let SignInViewController                 = "SignInViewController"
@@ -33,12 +35,14 @@ enum ViewControllerType {
     case FilteredPropertiesViewController
     case FiltersViewController
     case FindServiceProviderViewController
+    case InquirySubmissionViewController
     case IntroScreensViewController
     case JobListViewController
     case LoginViewController
     case MainViewController
     case MyPropertiesViewController
     case ProfileViewController
+    case SearchOnMapViewController
     case ServiceProviderDetailViewController
     case ShuffleProfileViewController
     case SignInViewController
@@ -107,8 +111,14 @@ class ViewControllerHelper: NSObject {
         else if viewControllerType == .FiltersViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FiltersViewController) as! FiltersViewController
         }
+        else if viewControllerType == .InquirySubmissionViewController {
+            viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.InquirySubmissionViewController) as! InquirySubmissionViewController
+        }
         else if viewControllerType == .ProfileViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ProfileViewController) as! ProfileViewController
+        }
+        else if viewControllerType == .SearchOnMapViewController {
+            viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.SearchOnMapViewController) as! SearchOnMapViewController
         }
         else if viewControllerType == .ShuffleProfileViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ShuffleProfileViewController) as! ShuffleProfileViewController
