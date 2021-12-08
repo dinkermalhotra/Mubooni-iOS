@@ -1,8 +1,10 @@
 import UIKit
+import GoogleMaps
 
 class SearchOnMapViewController: UIViewController {
 
     @IBOutlet weak var viewSearch: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

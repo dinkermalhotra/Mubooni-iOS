@@ -51,6 +51,10 @@ struct CellIds {
     static let ServiceProviderCell      = "ServiceProviderCell"
 }
 
+struct GoogleApiKey {
+    static let API_KEY  = "AIzaSyBWxm8xp__JpBkj51Ubicij_lQs5p_pmA4"
+}
+
 struct Strings {
     static let ALL = "all"
     static let BATH = "Bath"
