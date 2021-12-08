@@ -13,6 +13,6 @@ class AddPropertyAmenitiesViewController: UIViewController {
 // MARK: - UIBUTTON ACTIONS
 extension AddPropertyAmenitiesViewController {
     @IBAction func backClicked(_ sender: UIButton) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
 }

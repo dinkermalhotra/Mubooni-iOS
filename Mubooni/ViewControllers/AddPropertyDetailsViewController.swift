@@ -13,6 +13,6 @@ class AddPropertyDetailsViewController: UIViewController {
 // MARK: - UIBUTTON ACTIONS
 extension AddPropertyDetailsViewController {
     @IBAction func backClicked(_ sender: UIButton) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
 }

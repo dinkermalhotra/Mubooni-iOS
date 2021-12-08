@@ -18,11 +18,11 @@ class AddPropertyMediaViewController: UIViewController {
 // MARK: - UIBUTTON ACTIONS
 extension AddPropertyMediaViewController {
     @IBAction func backClicked(_ sender: UIButton) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func previousClicked(_ sender: UIButton) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {

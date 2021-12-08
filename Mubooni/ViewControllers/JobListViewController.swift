@@ -57,9 +57,11 @@ extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
         
         if segmentControl.selectedSegmentIndex == 0 {
             dict = requests[indexPath.row]
+            cell.btnAssignJob.isHidden = false
         }
         else {
             dict = jobs[indexPath.row]
+            cell.btnAssignJob.isHidden = true
         }
         
         cell.lblPropertyName.text = dict?.estateName ?? ""
@@ -75,7 +77,8 @@ extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - API CALL
 extension JobListViewController {
     func fetchJobs() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject, WSRequestParams.WS_REQS_PARAM_PAGE_TYPE: "" as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_PAGE_TYPE: Strings.JOBS as AnyObject]
         WSManager.wsCallGetAgentJobs(params) { isSuccess, message, jobs in
             self.fetchRequests()
             
@@ -86,7 +89,8 @@ extension JobListViewController {
     }
     
     func fetchRequests() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject, WSRequestParams.WS_REQS_PARAM_PAGE_TYPE: "" as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_PAGE_TYPE: Strings.REQUESTS as AnyObject]
         WSManager.wsCallGetAgentJobs(params) { isSuccess, message, jobs in
             Helper.hideLoader(onVC: self)
             
