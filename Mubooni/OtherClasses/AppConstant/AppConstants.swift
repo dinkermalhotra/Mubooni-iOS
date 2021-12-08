@@ -76,11 +76,14 @@ struct Strings {
     static let ONE = "1"
     static let RENT = "Rent"
     static let SELLING_PRICE = "Selling Price"
+    static let SERVICE_PROVIDER = "SERVICE PROVIDER"
     static let SHORT_STAY = "Short Stay"
     static let TAKE_PHOTO = "Take Photo"
+    static let TENANT = "TENANT"
     static let UNIT_STATUS_SALE = "SALE"
     static let UNVERIFIED = "Unverified"
     static let VERIFIED = "Verified"
+    static let ZERO = "0"
 }
 
 struct Alert {

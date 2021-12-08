@@ -46,6 +46,7 @@
 		40124054275DED1C0080FBA7 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124053275DED1C0080FBA7 /* UnitType.swift */; };
 		40124058275F3FCE0080FBA7 /* SearchOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */; };
 		4012405A275F42A30080FBA7 /* InquirySubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */; };
+		4012405C2760AB3F0080FBA7 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012405B2760AB3F0080FBA7 /* Jobs.swift */; };
 		40464E3E2758C21100615908 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3D2758C21100615908 /* JobListViewController.swift */; };
 		40464E402758C2FC00615908 /* ShuffleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */; };
 		40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9642754ABA700B9622E /* FiltersViewController.swift */; };
@@ -139,6 +140,7 @@
 		40124053275DED1C0080FBA7 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
 		40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOnMapViewController.swift; sourceTree = "<group>"; };
 		40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquirySubmissionViewController.swift; sourceTree = "<group>"; };
+		4012405B2760AB3F0080FBA7 /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
 		40464E3D2758C21100615908 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleProfileViewController.swift; sourceTree = "<group>"; };
 		40A4B9642754ABA700B9622E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 		19EBE01327213A1E00BD307F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4012405B2760AB3F0080FBA7 /* Jobs.swift */,
 				8BCA42F8273BAE29002BC5BD /* Properties.swift */,
 				8B9BE98B2746564900A472AA /* PropertyType.swift */,
 				40A4B96C27588C8A00B9622E /* ServiceProviders.swift */,
@@ -703,6 +706,7 @@
 				40A4B9732758A6DA00B9622E /* ServiceProviderDetailViewController.swift in Sources */,
 				8BCA42FB273BC230002BC5BD /* Units.swift in Sources */,
 				199720BE26D63D330044BE8D /* IntroScreensCell.swift in Sources */,
+				4012405C2760AB3F0080FBA7 /* Jobs.swift in Sources */,
 				19EBE01727213D5900BD307F /* Specilizations.swift in Sources */,
 				191B481926D4C01500552A2D /* LoginViewController.swift in Sources */,
 				4012405A275F42A30080FBA7 /* InquirySubmissionViewController.swift in Sources */,
