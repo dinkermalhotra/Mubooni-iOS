@@ -71,6 +71,7 @@ struct Strings {
     static let LAND = "LAND"
     static let LEASE = "Lease"
     static let LEASEHOLD = "Leasehold"
+    static let LOCAL = "local"
     static let MONTHLY_RENT = "Monthly Rent"
     static let ONE = "1"
     static let RENT = "Rent"
