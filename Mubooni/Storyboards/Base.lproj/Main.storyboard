@@ -65,6 +65,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Y9h-zf-VbX" firstAttribute="leading" secondItem="e1a-YR-oyQ" secondAttribute="leading" constant="8" id="6kd-IF-RUl"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gRY-pL-1cO" secondAttribute="trailing" constant="20" symbolic="YES" id="9gF-hn-0Wh"/>
