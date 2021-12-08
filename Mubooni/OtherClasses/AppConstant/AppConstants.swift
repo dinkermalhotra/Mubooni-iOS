@@ -49,6 +49,7 @@ struct CellIds {
     static let MainFeaturedCell         = "MainFeaturedCell"
     static let MyPropertiesCell         = "MyPropertiesCell"
     static let ServiceProviderCell      = "ServiceProviderCell"
+    static let ServiceReportCell     = "ServiceReportCell"
     static let TenantListCell          = "TenantListCell"
 }
 

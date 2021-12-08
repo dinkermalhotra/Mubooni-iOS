@@ -59,6 +59,8 @@
 		40A665A42750C1D90047674C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A32750C1D90047674C /* LocationManager.swift */; };
 		802DEDD1275F6257008DD8B7 /* TenantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */; };
 		802DEDD3275F6298008DD8B7 /* TenantListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DEDD2275F6298008DD8B7 /* TenantListCell.swift */; };
+		802DEDD5275F7803008DD8B7 /* ServiceReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DEDD4275F7803008DD8B7 /* ServiceReportViewController.swift */; };
+		802DEDD7275F781E008DD8B7 /* ServiceReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DEDD6275F781E008DD8B7 /* ServiceReportCell.swift */; };
 		8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1BE166274386C7006D5005 /* ProfileViewController.swift */; };
 		8B9A78FD2746158E0020753B /* layer46@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B9A78FC2746158E0020753B /* layer46@3x.png */; };
 		8B9A7901274625170020753B /* AddPropertyDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9A7900274625170020753B /* AddPropertyDescriptionViewController.swift */; };
@@ -155,6 +157,8 @@
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
 		802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantListViewController.swift; sourceTree = "<group>"; };
 		802DEDD2275F6298008DD8B7 /* TenantListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantListCell.swift; sourceTree = "<group>"; };
+		802DEDD4275F7803008DD8B7 /* ServiceReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReportViewController.swift; sourceTree = "<group>"; };
+		802DEDD6275F781E008DD8B7 /* ServiceReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceReportCell.swift; sourceTree = "<group>"; };
 		8B1BE166274386C7006D5005 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8B9A78FC2746158E0020753B /* layer46@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layer46@3x.png"; sourceTree = "<group>"; };
 		8B9A7900274625170020753B /* AddPropertyDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
 				40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */,
 				199720BA26D63B9D0044BE8D /* IntroScreensViewController.swift */,
+				802DEDD4275F7803008DD8B7 /* ServiceReportViewController.swift */,
 				40464E3D2758C21100615908 /* JobListViewController.swift */,
 				802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */,
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
@@ -496,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				988F5BD5275F229E008497F0 /* JobListCell.swift */,
+				802DEDD6275F781E008DD8B7 /* ServiceReportCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -708,6 +714,7 @@
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
 				8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
+				802DEDD5275F7803008DD8B7 /* ServiceReportViewController.swift in Sources */,
 				191B480D26D4ACB400552A2D /* ViewControllerHelper.swift in Sources */,
 				199720B726D5F1910044BE8D /* UIColorExtension.swift in Sources */,
 				199720C126D63E360044BE8D /* AppConstants.swift in Sources */,
@@ -715,6 +722,7 @@
 				40A665A02750AA890047674C /* ImagesCell.swift in Sources */,
 				40A665A22750B3D40047674C /* UIPageControl.swift in Sources */,
 				8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */,
+				802DEDD7275F781E008DD8B7 /* ServiceReportCell.swift in Sources */,
 				198C400E27583F96008866F2 /* FilteredPropertiesViewController.swift in Sources */,
 				19EBE02127216A6B00BD307F /* Singleton.swift in Sources */,
 				19AD9E32271E9560007639F1 /* WSManager.swift in Sources */,

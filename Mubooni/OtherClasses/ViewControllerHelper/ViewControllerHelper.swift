@@ -21,6 +21,7 @@ struct ViewControllerIdentifiers {
     static let ShuffleProfileViewController         = "ShuffleProfileViewController"
     static let SignInViewController                 = "SignInViewController"
     static let SignupViewController                 = "SignupViewController"
+    static let ServiceReportViewController          = "ServiceReportViewController"
     static let TenantListViewController              = "TenantListViewController"
 }
 
@@ -48,6 +49,7 @@ enum ViewControllerType {
     case ShuffleProfileViewController
     case SignInViewController
     case SignupViewController
+    case ServiceReportViewController
     case TenantListViewController
 }
 
@@ -106,6 +108,9 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .ServiceProviderDetailViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ServiceProviderDetailViewController) as! ServiceProviderDetailViewController
+        }
+        else if viewControllerType == .ServiceReportViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ServiceReportViewController) as! ServiceReportViewController
         }
         else if viewControllerType == .TenantListViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.TenantListViewController) as! TenantListViewController
