@@ -82,9 +82,7 @@ extension JobListViewController {
         WSManager.wsCallGetAgentJobs(params) { isSuccess, message, jobs in
             self.fetchRequests()
             
-            self.jobs = jobs?.filter({ value in
-                value.jobStatus != Strings.ZERO
-            }) ?? []
+            self.jobs = jobs ?? []
         }
     }
     
