@@ -5,11 +5,15 @@ class TenantListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var userProfile: UserProfile?
+    var tenants = [Tenants]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupCollectionViewLayout()
+        
+        Helper.showLoader(onVC: self)
+        fetchTenants()
     }
     
     func setupCollectionViewLayout() {
@@ -37,11 +41,18 @@ extension TenantListViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return tenants.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.TenantListCell, for: indexPath as IndexPath) as! TenantListCell
+        
+        let dict = tenants[indexPath.row]
+        
+        cell.lblTenantName.text = dict.tenantName
+        cell.lblUnitNumber.text = "Unit No: \(dict.unitNumber)"
+        cell.lblPropertyAddress.text = dict.propertyAddress
+        cell.lblPropertyName.text = dict.email
         
         return cell
     }
@@ -49,5 +60,13 @@ extension TenantListViewController: UICollectionViewDataSource, UICollectionView
 
 // MARK: - API CALL
 extension TenantListViewController {
-    
+    func fetchTenants() {
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject]
+        WSManager.wsCallGetAgentTenants(params) { isSuccess, message, tenants in
+            Helper.hideLoader(onVC: self)
+            
+            self.tenants = tenants ?? []
+            self.collectionView.reloadData()
+        }
+    }
 }

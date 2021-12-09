@@ -43,6 +43,7 @@
 		19EBE02127216A6B00BD307F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE02027216A6A00BD307F /* Singleton.swift */; };
 		19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE022272187E900BD307F /* AgentDashboardViewController.swift */; };
 		19EBE025272187FD00BD307F /* Agent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EBE024272187FD00BD307F /* Agent.storyboard */; };
+		40017FF827621FFD00955022 /* Tenants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40017FF727621FFD00955022 /* Tenants.swift */; };
 		40124054275DED1C0080FBA7 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124053275DED1C0080FBA7 /* UnitType.swift */; };
 		40124058275F3FCE0080FBA7 /* SearchOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */; };
 		4012405A275F42A30080FBA7 /* InquirySubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */; };
@@ -52,6 +53,7 @@
 		40464E3E2758C21100615908 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3D2758C21100615908 /* JobListViewController.swift */; };
 		40464E402758C2FC00615908 /* ShuffleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */; };
 		4084A6A4276211010032AABF /* PaymentReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084A6A3276211010032AABF /* PaymentReports.swift */; };
+		4084A6A6276217EF0032AABF /* BookShortStayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084A6A5276217EF0032AABF /* BookShortStayViewController.swift */; };
 		40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9642754ABA700B9622E /* FiltersViewController.swift */; };
 		40A4B9672754BF6900B9622E /* CheckboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9662754BF6900B9622E /* CheckboxCell.swift */; };
 		40A4B96D27588C8A00B9622E /* ServiceProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B96C27588C8A00B9622E /* ServiceProviders.swift */; };
@@ -145,6 +147,7 @@
 		19EBE022272187E900BD307F /* AgentDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDashboardViewController.swift; sourceTree = "<group>"; };
 		19EBE024272187FD00BD307F /* Agent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Agent.storyboard; sourceTree = "<group>"; };
 		27D2AF2F5FFE53C629BFCC33 /* Pods-Mubooni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.debug.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.debug.xcconfig"; sourceTree = "<group>"; };
+		40017FF727621FFD00955022 /* Tenants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tenants.swift; sourceTree = "<group>"; };
 		40124053275DED1C0080FBA7 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
 		40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOnMapViewController.swift; sourceTree = "<group>"; };
 		40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquirySubmissionViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		40464E3D2758C21100615908 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleProfileViewController.swift; sourceTree = "<group>"; };
 		4084A6A3276211010032AABF /* PaymentReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentReports.swift; sourceTree = "<group>"; };
+		4084A6A5276217EF0032AABF /* BookShortStayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShortStayViewController.swift; sourceTree = "<group>"; };
 		40A4B9642754ABA700B9622E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		40A4B9662754BF6900B9622E /* CheckboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxCell.swift; sourceTree = "<group>"; };
 		40A4B96C27588C8A00B9622E /* ServiceProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviders.swift; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				8B9A7902274625430020753B /* AddPropertyMediaViewController.swift */,
 				19EBE022272187E900BD307F /* AgentDashboardViewController.swift */,
 				8BCA4300273E2CA1002BC5BD /* AgentPropertyDetailViewController.swift */,
+				4084A6A5276217EF0032AABF /* BookShortStayViewController.swift */,
 				198C400D27583F96008866F2 /* FilteredPropertiesViewController.swift */,
 				40A4B9642754ABA700B9622E /* FiltersViewController.swift */,
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
@@ -461,6 +466,7 @@
 				8B9BE98B2746564900A472AA /* PropertyType.swift */,
 				40A4B96C27588C8A00B9622E /* ServiceProviders.swift */,
 				19EBE01627213D5900BD307F /* Specilizations.swift */,
+				40017FF727621FFD00955022 /* Tenants.swift */,
 				8BCA42FA273BC230002BC5BD /* Units.swift */,
 				19A262B02722BDC100EDF5CE /* UserProfile.swift */,
 				19EBE01427213A3100BD307F /* UserRoles.swift */,
@@ -749,6 +755,7 @@
 				8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
 				802DEDD5275F7803008DD8B7 /* ServiceReportViewController.swift in Sources */,
+				4084A6A6276217EF0032AABF /* BookShortStayViewController.swift in Sources */,
 				191B480D26D4ACB400552A2D /* ViewControllerHelper.swift in Sources */,
 				199720B726D5F1910044BE8D /* UIColorExtension.swift in Sources */,
 				199720C126D63E360044BE8D /* AppConstants.swift in Sources */,
@@ -761,6 +768,7 @@
 				40D4CF942761EB6F00942F1B /* AreaType.swift in Sources */,
 				4084A6A4276211010032AABF /* PaymentReports.swift in Sources */,
 				401240602761D3AB0080FBA7 /* AddPropertyUnitCell.swift in Sources */,
+				40017FF827621FFD00955022 /* Tenants.swift in Sources */,
 				19EBE02127216A6B00BD307F /* Singleton.swift in Sources */,
 				19AD9E32271E9560007639F1 /* WSManager.swift in Sources */,
 				40A4B96D27588C8A00B9622E /* ServiceProviders.swift in Sources */,
