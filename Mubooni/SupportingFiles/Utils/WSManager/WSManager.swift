@@ -333,6 +333,35 @@ class WSManager {
         }
     }
     
+    // MARK: AREA TYPE
+    class func wsCallGetAreaType(completion:@escaping (_ isSuccess: Bool, _ message: String, _ areaType: [AreaType]?)->()) {
+        if WSManager.isConnectedToInternet() {
+            AF.request(WebService.getAreaType, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).responseJSON(completionHandler: { (responseData) -> Void in
+                switch responseData.result {
+                case .success(let data):
+                    if let responseValue = data as? [String: AnyObject] {
+                        if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
+                            if let data = responseValue[WSResponseParams.WS_RESP_PARAM_DATA] as? [[String: Any]], let areaTypes = Mapper<AreaType>().mapArray(JSONArray: data) as [AreaType]? {
+                                completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", areaTypes)
+                            }
+                        }
+                        else {
+                            completion(false, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", nil)
+                        }
+                    }
+                    else {
+                        completion(false, responseData.error?.localizedDescription ?? "", nil)
+                    }
+                case .failure(let error):
+                    completion(false, error.localizedDescription, nil)
+                }
+            })
+        }
+        else {
+            
+        }
+    }
+    
     // MARK: SEARCH SERVICE PROVIDERS
     class func wsCallSearchServiceProviders(_ requestParams: [String: AnyObject], completion:@escaping (_ isSuccess: Bool, _ message: String, _ serviceProviders: [ServiceProviders]?)->()) {
         if WSManager.isConnectedToInternet() {

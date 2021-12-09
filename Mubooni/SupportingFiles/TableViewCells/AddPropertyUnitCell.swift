@@ -1,0 +1,172 @@
+import UIKit
+import DropDown
+
+class AddPropertyUnitCell: UITableViewCell {
+
+    @IBOutlet weak var txtPropertyFor: UITextField!
+    @IBOutlet weak var txtUnitNumber: UITextField!
+    @IBOutlet weak var txtPropertyType: UITextField!
+    @IBOutlet weak var txtArea: UITextField!
+    @IBOutlet weak var txtLength: UITextField!
+    @IBOutlet weak var txtPrice: UITextField!
+    
+    @IBOutlet weak var viewPropertyFor: UIView!
+    @IBOutlet weak var viewPropertyType: UIView!
+    @IBOutlet weak var viewLength: UIView!
+    @IBOutlet weak var btnShortStay: UIButton!
+    
+    var propertyForDropDown = DropDown()
+    var propertyTypeDropDown = DropDown()
+    var lengthDropDown = DropDown()
+    
+    var unitTypeBedroom = [UnitType]()
+    var unitTypeLand = [UnitType]()
+    var area = [AreaType]()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        txtPropertyFor.delegate = self
+        txtUnitNumber.delegate = self
+        txtPropertyType.delegate = self
+        txtArea.delegate = self
+        txtLength.delegate = self
+        txtPrice.delegate = self
+        
+        setupPropertyForDropDown()
+        fetchUnitType()
+        fetchAreaType()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+    func setupPropertyForDropDown() {
+        propertyForDropDown.anchorView = viewPropertyFor
+        propertyForDropDown.bottomOffset = CGPoint(x: 0, y: 50)
+        propertyForDropDown.dataSource = [Strings.FOR_RENT, Strings.FOR_SALE, Strings.FOR_SHORT_STAYS]
+        propertyForDropDown.backgroundColor = UIColor.white
+        propertyForDropDown.textColor = UIColor.black
+        propertyForDropDown.selectedTextColor = UIColor.black
+        propertyForDropDown.separatorColor = UIColor.clear
+        propertyForDropDown.textFont = MubooniFonts.FONT_ROBOTO_REGULAR_14 ?? UIFont.systemFont(ofSize: 14)
+        propertyForDropDown.selectionAction = { [weak self] (index, item) in
+            self?.txtPropertyFor.text = item
+        }
+    }
+    
+    func setupPropertyTypeDropDown() {
+        var propertyType = [String]()
+        for unitType in unitTypeBedroom {
+            propertyType.append(unitType.unitName)
+        }
+        
+        propertyTypeDropDown.anchorView = viewPropertyType
+        propertyTypeDropDown.bottomOffset = CGPoint(x: 0, y: 50)
+        propertyTypeDropDown.dataSource = propertyType
+        propertyTypeDropDown.backgroundColor = UIColor.white
+        propertyTypeDropDown.textColor = UIColor.black
+        propertyTypeDropDown.selectedTextColor = UIColor.black
+        propertyTypeDropDown.separatorColor = UIColor.clear
+        propertyTypeDropDown.textFont = MubooniFonts.FONT_ROBOTO_REGULAR_14 ?? UIFont.systemFont(ofSize: 14)
+        propertyTypeDropDown.selectionAction = { [weak self] (index, item) in
+            self?.txtPropertyType.text = item
+        }
+    }
+    
+    func setupLengthDropDown() {
+        var areaType = [String]()
+        for value in area {
+            areaType.append(value.areaSizeName)
+        }
+        
+        lengthDropDown.anchorView = viewLength
+        lengthDropDown.bottomOffset = CGPoint(x: 0, y: 50)
+        lengthDropDown.dataSource = areaType
+        lengthDropDown.backgroundColor = UIColor.white
+        lengthDropDown.textColor = UIColor.black
+        lengthDropDown.selectedTextColor = UIColor.black
+        lengthDropDown.separatorColor = UIColor.clear
+        lengthDropDown.textFont = MubooniFonts.FONT_ROBOTO_REGULAR_14 ?? UIFont.systemFont(ofSize: 14)
+        lengthDropDown.selectionAction = { [weak self] (index, item) in
+            self?.txtLength.text = item
+        }
+    }
+}
+
+// MARK: - UITEXTFLIED DELEGATE
+extension AddPropertyUnitCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == txtPropertyFor {
+            if propertyForDropDown.isHidden == true {
+                propertyForDropDown.show()
+            }
+            else {
+                propertyForDropDown.hide()
+            }
+            
+            return false
+        }
+        else if textField == txtPropertyType {
+            if propertyTypeDropDown.isHidden == true {
+                propertyTypeDropDown.show()
+            }
+            else {
+                propertyTypeDropDown.hide()
+            }
+            
+            return false
+        }
+        else if textField == txtLength {
+            if lengthDropDown.isHidden == true {
+                lengthDropDown.show()
+            }
+            else {
+                lengthDropDown.hide()
+            }
+            
+            return false
+        }
+        else {
+            return true
+        }
+    }
+}
+
+// MARK: - API CALL
+extension AddPropertyUnitCell {
+    func fetchUnitType() {
+        WSManager.wsCallGetUnitType { isSuccess, message, unitType in
+            if isSuccess {
+                self.unitTypeBedroom = unitType?.filter({ value in
+                    value.estateType.lowercased() != Strings.LAND.lowercased()
+                }) ?? []
+                
+                self.unitTypeLand = unitType?.filter({ value in
+                    value.estateType.lowercased() == Strings.LAND.lowercased()
+                }) ?? []
+                
+                self.setupPropertyTypeDropDown()
+            }
+        }
+    }
+    
+    func fetchAreaType() {
+        WSManager.wsCallGetAreaType { isSuccess, message, areaType in
+            if isSuccess {
+                self.area = areaType?.filter({ value in
+                    value.estateSizeType.lowercased() != Strings.LAND.lowercased()
+                }) ?? []
+                
+                self.setupLengthDropDown()
+            }
+        }
+    }
+}
