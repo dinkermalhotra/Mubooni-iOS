@@ -1,12 +1,9 @@
-//
-//  TenantListCell.swift
-//  Mubooni
-//
-//  Created by krishna41 on 07/12/21.
-//
-
 import UIKit
 
 class TenantListCell: UICollectionViewCell {
     
+    @IBOutlet weak var lblTenantName: UILabel!
+    @IBOutlet weak var lblPropertyName: UILabel!
+    @IBOutlet weak var lblUnitNumber: UILabel!
+    @IBOutlet weak var lblPropertyAddress: UILabel!
 }

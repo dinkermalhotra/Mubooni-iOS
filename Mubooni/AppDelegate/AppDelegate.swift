@@ -2,6 +2,8 @@ import UIKit
 import FBSDKCoreKit
 import Firebase
 import FirebaseAuth
+import GoogleMaps
+import GooglePlaces
 import GoogleSignIn
 import IQKeyboardManagerSwift
 
@@ -13,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        // Configure Maps
+        GMSPlacesClient.provideAPIKey(GoogleApiKey.API_KEY)
+        GMSServices.provideAPIKey(GoogleApiKey.API_KEY)
         
         // Manage IQKeyboardManager
         IQKeyboardManager.shared.enable = true

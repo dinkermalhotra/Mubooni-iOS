@@ -1,12 +1,14 @@
 import UIKit
 import DropDown
+import GooglePlaces
 
 class AddPropertyDescriptionViewController: UIViewController {
 
     @IBOutlet weak var txtPropertyType: UITextField!
     @IBOutlet weak var txtBuildingName: UITextField!
     @IBOutlet weak var txtAddress: UITextField!
-    @IBOutlet weak var txtCurrentLocation: UITextField!
+    @IBOutlet weak var txtLatitude: UITextField!
+    @IBOutlet weak var txtLongitude: UITextField!
     @IBOutlet weak var viewProperty: UIView!
     
     var propertyDropDown = DropDown()
@@ -21,10 +23,28 @@ class AddPropertyDescriptionViewController: UIViewController {
         fetchPropertyTypes()
     }
     
+    func searchAddress() {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        autocompleteController.view.tintColor = UIColor.black
+        
+        let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) | UInt(GMSPlaceField.placeID.rawValue))
+        autocompleteController.placeFields = fields
+
+        let filter = GMSAutocompleteFilter()
+        filter.type = .address
+        autocompleteController.autocompleteFilter = filter
+        
+        autocompleteController.modalPresentationStyle = .overFullScreen
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
     func setCurrentLocation() {
         LocationManager.shared.requestLocation()
         LocationManager.shared.onCompletion = { (state, latitude, longitude, address) in
-            self.txtCurrentLocation.text = address
+            self.txtAddress.text = address
+            self.txtLatitude.text = latitude
+            self.txtLongitude.text = longitude
         }
     }
     
@@ -58,7 +78,9 @@ extension AddPropertyDescriptionViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
-        
+        if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyMediaViewController) as? AddPropertyMediaViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -75,9 +97,33 @@ extension AddPropertyDescriptionViewController: UITextFieldDelegate {
             
             return false
         }
+        else if textField == txtAddress {
+            searchAddress()
+            
+            return false
+        }
         else {
             return true
         }
+    }
+}
+
+// MARK: - GOOGLEPLACES AUTOCOMPLETE DELEGATE
+extension AddPropertyDescriptionViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        
+        txtAddress.text = place.name ?? ""
+        txtLatitude.text = "\(place.coordinate.latitude)"
+        txtLongitude.text = "\(place.coordinate.longitude)"
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: ", error.localizedDescription)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

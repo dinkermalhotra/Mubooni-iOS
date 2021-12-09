@@ -1,14 +1,13 @@
-//
-//  ServiceReportCell.swift
-//  Mubooni
-//
-//  Created by krishna41 on 07/12/21.
-//
-
 import UIKit
 
 class ServiceReportCell: UITableViewCell {
 
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblYear: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

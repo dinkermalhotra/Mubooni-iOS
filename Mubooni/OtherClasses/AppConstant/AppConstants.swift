@@ -29,6 +29,7 @@ struct MubooniColors {
     static let blackTransparentColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.5)
     static let darkGreenColor = UIColor.init(hex: "096B30")
     static let greenColor = UIColor.init(hex: "00BF4B")
+    static let placeholderColor = UIColor.init(red: 60/255, green: 60/255, blue: 67/255, alpha: 0.3)
     static let redColor = UIColor.init(hex: "ED1F23")
 }
 
@@ -40,6 +41,8 @@ struct MubooniFonts {
 }
 
 struct CellIds {
+    static let AddPropertyImageCell     = "AddPropertyImageCell"
+    static let AddPropertyUnitCell      = "AddPropertyUnitCell"
     static let BedroomSelectionCell     = "BedroomSelectionCell"
     static let CheckboxCell             = "CheckboxCell"
     static let FindServiceProviderCell  = "FindServiceProviderCell"
@@ -53,6 +56,10 @@ struct CellIds {
     static let TenantListCell          = "TenantListCell"
 }
 
+struct GoogleApiKey {
+    static let API_KEY  = "AIzaSyBWxm8xp__JpBkj51Ubicij_lQs5p_pmA4"
+}
+
 struct Strings {
     static let ALL = "all"
     static let BATH = "Bath"
@@ -63,21 +70,31 @@ struct Strings {
     static let BOOK_YOUR_SLOT = "BOOK YOUR SLOT"
     static let BUY = "Buy"
     static let CHOOSE_PHOTO = "Choose Photo"
+    static let CONTENT_SIZE = "contentSize"
     static let DASHBOARD = "dashboard"
+    static let FOR_RENT = "For rent"
+    static let FOR_SALE = "For sale"
+    static let FOR_SHORT_STAYS = "For short stays"
     static let FREEHOLD = "Freehold"
+    static let JOBS = "jobs"
     static let KES = "KES"
     static let LAND = "LAND"
     static let LEASE = "Lease"
     static let LEASEHOLD = "Leasehold"
+    static let LOCAL = "local"
     static let MONTHLY_RENT = "Monthly Rent"
     static let ONE = "1"
     static let RENT = "Rent"
+    static let REQUESTS = "requests"
     static let SELLING_PRICE = "Selling Price"
+    static let SERVICE_PROVIDER = "SERVICE PROVIDER"
     static let SHORT_STAY = "Short Stay"
     static let TAKE_PHOTO = "Take Photo"
+    static let TENANT = "TENANT"
     static let UNIT_STATUS_SALE = "SALE"
     static let UNVERIFIED = "Unverified"
     static let VERIFIED = "Verified"
+    static let ZERO = "0"
 }
 
 struct Alert {

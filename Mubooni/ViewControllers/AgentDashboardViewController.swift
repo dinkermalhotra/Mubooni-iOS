@@ -61,11 +61,17 @@ extension AgentDashboardViewController {
     }
     
     @IBAction func invoicesClicked(_ sender: UIButton) {
-        
+        if let vc = ViewControllerHelper.getViewController(ofType: .ServiceReportViewController) as? ServiceReportViewController {
+            vc.userProfile = userProfile
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func tenantClicked(_ sender: UIButton) {
-        
+        if let vc = ViewControllerHelper.getViewController(ofType: .TenantListViewController) as? TenantListViewController {
+            vc.userProfile = userProfile
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func shuffleProfileClicked(_ sender: UIButton) {

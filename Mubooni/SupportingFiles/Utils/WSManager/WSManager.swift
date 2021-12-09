@@ -333,6 +333,35 @@ class WSManager {
         }
     }
     
+    // MARK: AREA TYPE
+    class func wsCallGetAreaType(completion:@escaping (_ isSuccess: Bool, _ message: String, _ areaType: [AreaType]?)->()) {
+        if WSManager.isConnectedToInternet() {
+            AF.request(WebService.getAreaType, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).responseJSON(completionHandler: { (responseData) -> Void in
+                switch responseData.result {
+                case .success(let data):
+                    if let responseValue = data as? [String: AnyObject] {
+                        if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
+                            if let data = responseValue[WSResponseParams.WS_RESP_PARAM_DATA] as? [[String: Any]], let areaTypes = Mapper<AreaType>().mapArray(JSONArray: data) as [AreaType]? {
+                                completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", areaTypes)
+                            }
+                        }
+                        else {
+                            completion(false, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", nil)
+                        }
+                    }
+                    else {
+                        completion(false, responseData.error?.localizedDescription ?? "", nil)
+                    }
+                case .failure(let error):
+                    completion(false, error.localizedDescription, nil)
+                }
+            })
+        }
+        else {
+            
+        }
+    }
+    
     // MARK: SEARCH SERVICE PROVIDERS
     class func wsCallSearchServiceProviders(_ requestParams: [String: AnyObject], completion:@escaping (_ isSuccess: Bool, _ message: String, _ serviceProviders: [ServiceProviders]?)->()) {
         if WSManager.isConnectedToInternet() {
@@ -372,6 +401,93 @@ class WSManager {
                         if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
                             if let data = responseValue[WSResponseParams.WS_RESP_PARAM_DATA] as? [[String: Any]], let properties = Mapper<Properties>().mapArray(JSONArray: data) as [Properties]? {
                                 completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", properties)
+                            }
+                        }
+                        else {
+                            completion(false, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", nil)
+                        }
+                    }
+                    else {
+                        completion(false, responseData.error?.localizedDescription ?? "", nil)
+                    }
+                case .failure(let error):
+                    completion(false, error.localizedDescription, nil)
+                }
+            })
+        }
+        else {
+            
+        }
+    }
+    
+    // MARK: PROPERTIES ON MAP
+    class func wsCallGetPropertiesOnMap(_ requestParams: [String: AnyObject], completion:@escaping (_ isSuccess: Bool, _ message: String, _ properties: [Properties]?)->()) {
+        if WSManager.isConnectedToInternet() {
+            AF.request(WebService.getPropertiesOnMap, method: .post, parameters: requestParams, encoding: URLEncoding.default, headers: nil, interceptor: nil).responseJSON(completionHandler: { (responseData) -> Void in
+                switch responseData.result {
+                case .success(let data):
+                    if let responseValue = data as? [String: AnyObject] {
+                        if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
+                            if let data = responseValue[WSResponseParams.WS_RESP_PARAM_DATA] as? [[String: Any]], let properties = Mapper<Properties>().mapArray(JSONArray: data) as [Properties]? {
+                                completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", properties)
+                            }
+                        }
+                        else {
+                            completion(false, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", nil)
+                        }
+                    }
+                    else {
+                        completion(false, responseData.error?.localizedDescription ?? "", nil)
+                    }
+                case .failure(let error):
+                    completion(false, error.localizedDescription, nil)
+                }
+            })
+        }
+        else {
+            
+        }
+    }
+    
+    // MARK: GET AGENTS JOBS & REQUESTS
+    class func wsCallGetAgentJobs(_ requestParams: [String: AnyObject], completion:@escaping (_ isSuccess: Bool, _ message: String, _ jobs: [Jobs]?)->()) {
+        if WSManager.isConnectedToInternet() {
+            AF.request(WebService.getAgentJobs, method: .post, parameters: requestParams, encoding: URLEncoding.default, headers: nil, interceptor: nil).responseJSON(completionHandler: { (responseData) -> Void in
+                switch responseData.result {
+                case .success(let data):
+                    if let responseValue = data as? [String: AnyObject] {
+                        if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
+                            if let data = responseValue[WSResponseParams.WS_RESP_PARAM_DATA] as? [[String: Any]], let jobs = Mapper<Jobs>().mapArray(JSONArray: data) as [Jobs]? {
+                                completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", jobs)
+                            }
+                        }
+                        else {
+                            completion(false, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", nil)
+                        }
+                    }
+                    else {
+                        completion(false, responseData.error?.localizedDescription ?? "", nil)
+                    }
+                case .failure(let error):
+                    completion(false, error.localizedDescription, nil)
+                }
+            })
+        }
+        else {
+            
+        }
+    }
+    
+    // MARK: GET AGENTS PAYMENT REPORTS
+    class func wsCallGetAgentPaymentReports(_ requestParams: [String: AnyObject], completion:@escaping (_ isSuccess: Bool, _ message: String, _ paymentReports: [PaymentReports]?)->()) {
+        if WSManager.isConnectedToInternet() {
+            AF.request(WebService.getAgentReports, method: .post, parameters: requestParams, encoding: URLEncoding.default, headers: nil, interceptor: nil).responseJSON(completionHandler: { (responseData) -> Void in
+                switch responseData.result {
+                case .success(let data):
+                    if let responseValue = data as? [String: AnyObject] {
+                        if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
+                            if let data = responseValue[WSResponseParams.WS_RESP_PARAM_DATA] as? [[String: Any]], let paymentReports = Mapper<PaymentReports>().mapArray(JSONArray: data) as [PaymentReports]? {
+                                completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "", paymentReports)
                             }
                         }
                         else {

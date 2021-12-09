@@ -62,7 +62,7 @@ class MainViewController: UIViewController {
 // MARK: - UIBUTTON ACTIONS
 extension MainViewController {
     @IBAction func userClicked(_ sender: UIButton) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .ServiceReportViewController) as? ServiceReportViewController {
+        if let vc = ViewControllerHelper.getViewController(ofType: .LoginViewController) as? LoginViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

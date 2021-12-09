@@ -1,4 +1,5 @@
 import UIKit
+import GooglePlaces
 
 class FiltersViewController: UIViewController {
 
@@ -52,6 +53,22 @@ class FiltersViewController: UIViewController {
         backView.roundCorners(corners: [.topLeft, .topRight], radius: 5)
     }
     
+    func searchAddress() {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        autocompleteController.view.tintColor = UIColor.black
+        
+        let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) | UInt(GMSPlaceField.placeID.rawValue))
+        autocompleteController.placeFields = fields
+
+        let filter = GMSAutocompleteFilter()
+        filter.type = .address
+        autocompleteController.autocompleteFilter = filter
+        
+        autocompleteController.modalPresentationStyle = .overFullScreen
+        present(autocompleteController, animated: true, completion: nil)
+    }
+    
     func setupCollectionViewLayout() {
         if let collectionViewLayout = typeCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             collectionViewLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -84,6 +101,10 @@ class FiltersViewController: UIViewController {
 extension FiltersViewController {
     @IBAction func cancelClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func changeLocationClicked(_ sender: UIButton) {
+        searchAddress()
     }
     
     @IBAction func resetClicked(_ sender: UIButton) {
@@ -128,6 +149,27 @@ extension FiltersViewController {
     @IBAction func applyClicked(_ sender: UIButton) {
         Helper.showLoader(onVC: self)
         getFilteredProperties()
+    }
+}
+
+// MARK: - GOOGLEPLACES AUTOCOMPLETE DELEGATE
+extension FiltersViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        
+        lblCurrentLocation.text = place.name ?? ""
+        latitude = "\(place.coordinate.latitude)"
+        longitude = "\(place.coordinate.longitude)"
+        state = place.name ?? ""
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: ", error.localizedDescription)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
