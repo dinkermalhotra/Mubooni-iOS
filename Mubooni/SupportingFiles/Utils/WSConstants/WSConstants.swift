@@ -10,6 +10,7 @@ struct WebService {
     static let getFeaturedProperties                 = "\(baseUrl)/get_all_FeaturedProperties/app/"
     static let getFilteredProperties                 = "\(baseUrl)/get_all_properties/app"
     static let getPropertiesOnMap                    = "\(baseUrl)/get_all_localProperties/app/"
+    static let getPropertyLimit                      = "\(baseUrl)/get_properties_Limits/app/"
     static let getPropertyTypes                      = "\(baseUrl)/get_all_property_types/app/"
     static let getServiceProviders                   = "\(baseUrl)/get_all_ServicesProviders/app/"
     static let getUserProfile                        = "\(baseUrl)/get_user_info/app/"
