@@ -11,6 +11,8 @@ class BookShortStayViewController: UIViewController {
     @IBOutlet weak var lblTotalDaysCount: UILabel!
     @IBOutlet weak var lblTotalPrice: UILabel!
     
+    var property: Properties?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +44,8 @@ class BookShortStayViewController: UIViewController {
             dateFormatter.dateFormat = "dd/MM/yyyy"
             let dateString = dateFormatter.string(from: datePickerView.date)
             txtCheckOut.text = dateString
+            lblTotalDaysCount.text = "2"
+            lblTotalPrice.text = "2800"
             txtCheckOut.resignFirstResponder()
         }
     }

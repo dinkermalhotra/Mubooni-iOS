@@ -99,6 +99,7 @@ extension MyPropertiesViewController: UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = ViewControllerHelper.getViewController(ofType: .AgentPropertyDetailViewController) as? AgentPropertyDetailViewController {
             vc.property = properties[indexPath.row]
+            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
