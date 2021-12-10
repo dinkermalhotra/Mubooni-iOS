@@ -52,6 +52,7 @@
 		401240602761D3AB0080FBA7 /* AddPropertyUnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012405F2761D3AB0080FBA7 /* AddPropertyUnitCell.swift */; };
 		40464E3E2758C21100615908 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3D2758C21100615908 /* JobListViewController.swift */; };
 		40464E402758C2FC00615908 /* ShuffleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */; };
+		405671272763236400626314 /* AddProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405671262763236400626314 /* AddProperty.swift */; };
 		4084A6A4276211010032AABF /* PaymentReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084A6A3276211010032AABF /* PaymentReports.swift */; };
 		4084A6A6276217EF0032AABF /* BookShortStayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084A6A5276217EF0032AABF /* BookShortStayViewController.swift */; };
 		40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9642754ABA700B9622E /* FiltersViewController.swift */; };
@@ -61,7 +62,6 @@
 		40A4B9712758A07300B9622E /* FindServiceProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9702758A07300B9622E /* FindServiceProviderCell.swift */; };
 		40A4B9732758A6DA00B9622E /* ServiceProviderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9722758A6DA00B9622E /* ServiceProviderDetailViewController.swift */; };
 		40A665A02750AA890047674C /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A6659F2750AA890047674C /* ImagesCell.swift */; };
-		40A665A22750B3D40047674C /* UIPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A12750B3D40047674C /* UIPageControl.swift */; };
 		40A665A42750C1D90047674C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A32750C1D90047674C /* LocationManager.swift */; };
 		40D4CF942761EB6F00942F1B /* AreaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4CF932761EB6F00942F1B /* AreaType.swift */; };
 		802DEDD1275F6257008DD8B7 /* TenantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */; };
@@ -156,6 +156,7 @@
 		4012405F2761D3AB0080FBA7 /* AddPropertyUnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyUnitCell.swift; sourceTree = "<group>"; };
 		40464E3D2758C21100615908 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleProfileViewController.swift; sourceTree = "<group>"; };
+		405671262763236400626314 /* AddProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProperty.swift; sourceTree = "<group>"; };
 		4084A6A3276211010032AABF /* PaymentReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentReports.swift; sourceTree = "<group>"; };
 		4084A6A5276217EF0032AABF /* BookShortStayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShortStayViewController.swift; sourceTree = "<group>"; };
 		40A4B9642754ABA700B9622E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +166,6 @@
 		40A4B9702758A07300B9622E /* FindServiceProviderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindServiceProviderCell.swift; sourceTree = "<group>"; };
 		40A4B9722758A6DA00B9622E /* ServiceProviderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderDetailViewController.swift; sourceTree = "<group>"; };
 		40A6659F2750AA890047674C /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
-		40A665A12750B3D40047674C /* UIPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageControl.swift; sourceTree = "<group>"; };
 		40A665A32750C1D90047674C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		40D4CF932761EB6F00942F1B /* AreaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaType.swift; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
@@ -391,7 +391,6 @@
 			isa = PBXGroup;
 			children = (
 				199720B626D5F1910044BE8D /* UIColorExtension.swift */,
-				40A665A12750B3D40047674C /* UIPageControl.swift */,
 				8BAE3C6D271FE982007C4400 /* UITextField+Extension.swift */,
 				199720B426D5F11C0044BE8D /* UIView+Extension.swift */,
 			);
@@ -486,6 +485,7 @@
 		19EBE01F27216A5C00BD307F /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
+				405671262763236400626314 /* AddProperty.swift */,
 				40A665A32750C1D90047674C /* LocationManager.swift */,
 				19EBE02027216A6A00BD307F /* Singleton.swift */,
 			);
@@ -761,7 +761,6 @@
 				199720C126D63E360044BE8D /* AppConstants.swift in Sources */,
 				19925B7C26D3E03200FC574F /* AppDelegate.swift in Sources */,
 				40A665A02750AA890047674C /* ImagesCell.swift in Sources */,
-				40A665A22750B3D40047674C /* UIPageControl.swift in Sources */,
 				8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */,
 				802DEDD7275F781E008DD8B7 /* ServiceReportCell.swift in Sources */,
 				198C400E27583F96008866F2 /* FilteredPropertiesViewController.swift in Sources */,
@@ -787,6 +786,7 @@
 				40464E3E2758C21100615908 /* JobListViewController.swift in Sources */,
 				19EBE023272187E900BD307F /* AgentDashboardViewController.swift in Sources */,
 				40A665A42750C1D90047674C /* LocationManager.swift in Sources */,
+				405671272763236400626314 /* AddProperty.swift in Sources */,
 				191B481726D4BEC900552A2D /* MainViewController.swift in Sources */,
 				8BCA42FD273D1346002BC5BD /* MyPropertiesViewController.swift in Sources */,
 				8BCA42F7273BA773002BC5BD /* AlertMessages.swift in Sources */,

@@ -2217,19 +2217,10 @@
                                                     <outlet property="delegate" destination="55B-yM-z6r" id="Cxc-z8-Pi3"/>
                                                 </connections>
                                             </collectionView>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cAp-fy-wUz" customClass="CustomPageControl" customModule="Mubooni" customModuleProvider="target">
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cAp-fy-wUz">
                                                 <rect key="frame" x="16" y="257.5" width="343" height="26"/>
                                                 <color key="pageIndicatorTintColor" red="0.90588235294117647" green="0.058823529411764705" blue="0.062745098039215685" alpha="0.19839498299319727" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="currentPageIndicatorTintColor" red="0.90588235289999997" green="0.058823529409999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="currentPageColor">
-                                                        <color key="value" red="0.90588235289999997" green="0.058823529409999999" blue="0.062745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="otherPagesColor">
-                                                        <color key="value" red="0.90588235289999997" green="0.058823529409999999" blue="0.062745098040000002" alpha="0.198394983" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="currentPageImage" value="ic_page_control_red"/>
-                                                </userDefinedRuntimeAttributes>
                                             </pageControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuj-tN-NnC">
                                                 <rect key="frame" x="16" y="299.5" width="343" height="0.0"/>
@@ -2406,7 +2397,7 @@
                         <outlet property="lblPropertyPrice" destination="0iw-ft-iVe" id="Fif-3v-M7S"/>
                         <outlet property="lblSecond" destination="u7D-Gw-3CR" id="Dh8-yw-5sP"/>
                         <outlet property="lblThird" destination="2h1-Ma-yvM" id="Vqg-Oy-wWp"/>
-                        <outlet property="pageControl" destination="cAp-fy-wUz" id="CP2-UE-ptK"/>
+                        <outlet property="pageControl" destination="cAp-fy-wUz" id="eDg-YK-uNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVG-IY-z8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -5325,7 +5316,6 @@
         <image name="ic_my_properties" width="64.5" height="64.5"/>
         <image name="ic_next" width="12" height="8.5"/>
         <image name="ic_notification" width="15" height="18"/>
-        <image name="ic_page_control_red" width="34.5" height="8"/>
         <image name="ic_selected" width="31.5" height="31.5"/>
         <image name="ic_service_provide_red" width="100.5" height="14.5"/>
         <image name="ic_shuffle_profile" width="68" height="42.5"/>

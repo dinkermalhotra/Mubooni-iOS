@@ -47,8 +47,18 @@ extension AddPropertyMediaViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyDetailsViewController) as? AddPropertyDetailsViewController {
-            self.navigationController?.pushViewController(vc, animated: true)
+        var data = [Data]()
+        
+        for images in propertyImages {
+            data.append(images.jpegData(compressionQuality: 1.0) ?? Data())
+        }
+        
+        DispatchQueue.main.async {
+            AddProperty.imageData = data
+            
+            if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyDetailsViewController) as? AddPropertyDetailsViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
     
