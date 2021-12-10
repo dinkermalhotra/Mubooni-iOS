@@ -7,4 +7,6 @@ class AddProperty: NSObject {
     static var userId: String?
     static var address: String?
     static var geoLocation: String?
+    static var imageData: [Data]?
+    static var unitParams: [String: AnyObject]?
 }
