@@ -19,17 +19,24 @@ struct WebService {
     static let getUserSpecialisations                = "\(baseUrl)/get_user_specialisations/app"
     static let getUnitType                           = "\(baseUrl)/get_all_unit_types/app/"
     static let loginUser                             = "\(baseUrl)/loginMe/app"
+    static let saveProperty                          = "\(baseUrl)/save_property/app/"
     static let searchServiceProviders                = "\(baseUrl)/get_searched_ServicesProviders/app/"
+    static let sendInquiry                           = "\(baseUrl)/save_user_Inquiry/app/"
 }
 
 struct WSRequestParams {
+    static let WS_REQS_PARAM_ADDRESS                 = "address"
     static let WS_REQS_PARAM_AREA                    = "area"
     static let WS_REQS_PARAM_DISTANCE                = "distance"
     static let WS_REQS_PARAM_EMAIL                   = "email"
+    static let WS_REQS_PARAM_EST_ID                  = "est_id"
+    static let WS_REQS_PARAM_ESTATE_NAME             = "estate_name"
     static let WS_REQS_PARAM_ESTATE_TYPE             = "estate_type"
+    static let WS_REQS_PARAM_ESTATE_TYPE_ID          = "estate_type_id"
     static let WS_REQS_PARAM_FACEBOOK_EMAIL          = "facebook_email"
     static let WS_REQS_PARAM_FACEBOOK_ID             = "facebook_id"
     static let WS_REQS_PARAM_FEATURED_STATUS         = "featured_status"
+    static let WS_REQS_PARAM_GEO_LOCATION            = "geo_location"
     static let WS_REQS_PARAM_GOOGLE_EMAIL            = "google_email"
     static let WS_REQS_PARAM_GOOGLE_ID               = "google_id"
     static let WS_REQS_PARAM_INDEX                   = "index"
@@ -37,14 +44,18 @@ struct WSRequestParams {
     static let WS_REQS_PARAM_LNG                     = "lng"
     static let WS_REQS_PARAM_LOCATION_SPEC           = "location_spec"
     static let WS_REQS_PARAM_LOG_USERID              = "log_userId"
+    static let WS_REQS_PARAM_NAME                    = "name"
     static let WS_REQS_PARAM_PAGE_TYPE               = "pageType"
     static let WS_REQS_PARAM_PASSWORD                = "password"
+    static let WS_REQS_PARAM_PHONE                   = "phone"
     static let WS_REQS_PARAM_PRICE                   = "price"
     static let WS_REQS_PARAM_REG_TYPE                = "reg_type"
+    static let WS_REQS_PARAM_SCHEDULE_INFO           = "schedule-info"
     static let WS_REQS_PARAM_SEARCHED                = "searched"
     static let WS_REQS_PARAM_SEARCHED_SPECS          = "searched_spec"
     static let WS_REQS_PARAM_UNIT_STATUS             = "unitStatus"
     static let WS_REQS_PARAM_UNIT_TYPE               = "unit_type"
+    static let WS_REQS_PARAM_USER_ID                 = "user_id"
 }
 
 struct WSResponseParams {

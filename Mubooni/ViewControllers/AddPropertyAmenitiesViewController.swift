@@ -140,3 +140,14 @@ extension AddPropertyAmenitiesViewController: UITextViewDelegate {
         }
     }
 }
+
+// MARK: - API CALL
+extension AddPropertyAmenitiesViewController {
+    func addProperty() {
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE_ID: AddProperty.estateId as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_ESTATE_NAME: AddProperty.estateName as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_USER_ID: AddProperty.userId as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_ADDRESS: AddProperty.address as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_GEO_LOCATION: AddProperty.geoLocation as AnyObject]
+    }
+}

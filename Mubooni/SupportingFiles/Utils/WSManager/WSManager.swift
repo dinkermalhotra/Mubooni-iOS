@@ -564,4 +564,31 @@ class WSManager {
             
         }
     }
+    
+    // MARK: SEND INQUIRY
+    class func wsCallSendInquiry(_ requestParams: [String: AnyObject], completion:@escaping (_ isSuccess: Bool, _ message: String)->()) {
+        if WSManager.isConnectedToInternet() {
+            AF.request(WebService.sendInquiry, method: .post, parameters: requestParams, encoding: URLEncoding.default, headers: nil, interceptor: nil).responseJSON(completionHandler: { (responseData) -> Void in
+                switch responseData.result {
+                case .success(let data):
+                    if let responseValue = data as? [String: AnyObject] {
+                        if responseValue[WSResponseParams.WS_RESP_PARAM_STATUS] as? String == WSResponseParams.WS_RESP_PARAM_TRUE {
+                            completion(true, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "")
+                        }
+                        else {
+                            completion(false, responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String ?? "")
+                        }
+                    }
+                    else {
+                        completion(false, responseData.error?.localizedDescription ?? "")
+                    }
+                case .failure(let error):
+                    completion(false, error.localizedDescription)
+                }
+            })
+        }
+        else {
+            
+        }
+    }
 }

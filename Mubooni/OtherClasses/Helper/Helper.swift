@@ -231,6 +231,15 @@ class Helper: NSObject {
         dateFormatter.dateFormat = "yyyy"
         return dateFormatter.string(from: date ?? Date())
     }
+    
+    class func convertDateAndTime(_ dateString: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm a"
+        let date = dateFormatter.date(from: dateString)
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        return dateFormatter.string(from: date ?? Date())
+    }
 }
 
 
