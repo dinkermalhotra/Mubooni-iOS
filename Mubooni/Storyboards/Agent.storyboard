@@ -39,12 +39,11 @@
                                 <rect key="frame" x="0.0" y="458" width="375" height="209"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQf-C3-0Wc">
-                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <rect key="frame" x="16" y="20" width="205.5" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="3hj-ak-vjD"/>
                                     <constraint firstAttribute="height" constant="40" id="KFB-Lm-hMa"/>
                                 </constraints>
-                                <state key="normal" image="ic_m"/>
+                                <state key="normal" image="ic_logo"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oi-wW-Att">
                                 <rect key="frame" x="319" y="20" width="40" height="40"/>
@@ -1619,6 +1618,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL5-ER-0Jg">
                                 <rect key="frame" x="269" y="24.5" width="42" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="42" id="Fjl-W4-GbS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                 <state key="normal" title="Agent">
                                     <color key="titleColor" red="0.85882352939999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1806,7 +1808,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Find Service Provider" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AO-kX-7qc">
-                                <rect key="frame" x="64" y="26" width="224.5" height="28.5"/>
+                                <rect key="frame" x="64" y="12" width="197" height="56.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1820,6 +1822,7 @@
                             <constraint firstItem="LLA-Qr-HTf" firstAttribute="trailing" secondItem="IGq-mJ-xTV" secondAttribute="trailing" constant="16" id="6bk-d5-taD"/>
                             <constraint firstItem="dFt-yT-QaK" firstAttribute="leading" secondItem="LLA-Qr-HTf" secondAttribute="leading" constant="16" id="BBe-WF-MVB"/>
                             <constraint firstItem="8aD-SJ-LGO" firstAttribute="top" secondItem="IGq-mJ-xTV" secondAttribute="bottom" constant="24" id="E3n-Ea-R5d"/>
+                            <constraint firstItem="CL5-ER-0Jg" firstAttribute="leading" secondItem="6AO-kX-7qc" secondAttribute="trailing" constant="8" symbolic="YES" id="Mlf-cd-Zww"/>
                             <constraint firstAttribute="bottom" secondItem="LHu-ef-U3U" secondAttribute="bottom" id="NHh-B2-s03"/>
                             <constraint firstItem="LHu-ef-U3U" firstAttribute="leading" secondItem="LLA-Qr-HTf" secondAttribute="leading" id="OJf-vp-cct"/>
                             <constraint firstItem="IGq-mJ-xTV" firstAttribute="top" secondItem="tSU-Z3-glo" secondAttribute="bottom" constant="16" id="VqE-Hd-zSm"/>
@@ -5268,7 +5271,7 @@
         <image name="ic_invoices" width="65.5" height="68"/>
         <image name="ic_job_list" width="66.5" height="66.5"/>
         <image name="ic_location" width="32" height="32"/>
-        <image name="ic_m" width="22" height="17"/>
+        <image name="ic_logo" width="205.5" height="41.5"/>
         <image name="ic_my_properties" width="64.5" height="64.5"/>
         <image name="ic_next" width="12" height="8.5"/>
         <image name="ic_notification" width="15" height="18"/>
