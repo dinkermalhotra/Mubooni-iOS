@@ -4,7 +4,7 @@ import SDWebImage
 class AgentPropertyDetailViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: CustomPageControl!
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var imgFirst: UIImageView!
     @IBOutlet weak var imgSecond: UIImageView!
     @IBOutlet weak var imgThird: UIImageView!
@@ -16,8 +16,12 @@ class AgentPropertyDetailViewController: UIViewController {
     @IBOutlet weak var lblPropertyLocation: UILabel!
     @IBOutlet weak var lblPropertyDescription: UILabel!
     
+    @IBOutlet weak var btnBookShortStay: UIButton!
+    @IBOutlet weak var btnInquiry: UIButton!
+    
     var property: Properties?
     var propertyImages = [AppAttachments]()
+    var userProfile: UserProfile?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,17 @@ class AgentPropertyDetailViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         
         setData()
+        
+        if userProfile == nil {
+            btnInquiry.isHidden = false
+            
+            for unit in property?.units ?? [] {
+                if unit.unitStatus == "short stay" {
+                    btnBookShortStay.isHidden = false
+                    break
+                }
+            }
+        }
     }
     
     func setData() {
@@ -71,6 +86,20 @@ class AgentPropertyDetailViewController: UIViewController {
 extension AgentPropertyDetailViewController {
     @IBAction func backClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func bookShortStayClicked(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .BookShortStayViewController) as? BookShortStayViewController {
+            vc.property = property
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @IBAction func sendInquiryClicked(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .InquirySubmissionViewController) as? InquirySubmissionViewController {
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 

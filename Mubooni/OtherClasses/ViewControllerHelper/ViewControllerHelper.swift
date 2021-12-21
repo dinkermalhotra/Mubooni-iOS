@@ -6,6 +6,7 @@ struct ViewControllerIdentifiers {
     static let AddPropertyMediaViewController       = "AddPropertyMediaViewController"
     static let AgentDashboardViewController         = "AgentDashboardViewController"
     static let AgentPropertyDetailViewController    = "AgentPropertyDetailViewController"
+    static let BookShortStayViewController          = "BookShortStayViewController"
     static let FilteredPropertiesViewController     = "FilteredPropertiesViewController"
     static let FiltersViewController                = "FiltersViewController"
     static let FindServiceProviderViewController    = "FindServiceProviderViewController"
@@ -21,6 +22,8 @@ struct ViewControllerIdentifiers {
     static let ShuffleProfileViewController         = "ShuffleProfileViewController"
     static let SignInViewController                 = "SignInViewController"
     static let SignupViewController                 = "SignupViewController"
+    static let ServiceReportViewController          = "ServiceReportViewController"
+    static let TenantListViewController              = "TenantListViewController"
 }
 
 import UIKit
@@ -32,6 +35,7 @@ enum ViewControllerType {
     case AddPropertyMediaViewController
     case AgentDashboardViewController
     case AgentPropertyDetailViewController
+    case BookShortStayViewController
     case FilteredPropertiesViewController
     case FiltersViewController
     case FindServiceProviderViewController
@@ -47,6 +51,8 @@ enum ViewControllerType {
     case ShuffleProfileViewController
     case SignInViewController
     case SignupViewController
+    case ServiceReportViewController
+    case TenantListViewController
 }
 
 class ViewControllerHelper: NSObject {
@@ -104,7 +110,16 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .ServiceProviderDetailViewController {
             viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ServiceProviderDetailViewController) as! ServiceProviderDetailViewController
+        }
+        else if viewControllerType == .ServiceReportViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ServiceReportViewController) as! ServiceReportViewController
+        }
+        else if viewControllerType == .TenantListViewController {
+            viewController = agentStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.TenantListViewController) as! TenantListViewController
         }// Main Storyboard
+        else if viewControllerType == .BookShortStayViewController {
+            viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.BookShortStayViewController) as! BookShortStayViewController
+        }
         else if viewControllerType == .FilteredPropertiesViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.FilteredPropertiesViewController) as! FilteredPropertiesViewController
         }

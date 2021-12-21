@@ -323,7 +323,7 @@ extension FiltersViewController {
         let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_SEARCHED: state as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE: selectedPropertyTypeId as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_UNIT_TYPE: selectedUnitTypeId as AnyObject,
-                                           WSRequestParams.WS_REQS_PARAM_UNIT_STATUS: selectedPropertyFor as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_UNITSTATUS: selectedPropertyFor as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_DISTANCE: distance as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_PRICE: price as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_AREA: area as AnyObject,

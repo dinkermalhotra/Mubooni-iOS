@@ -8,6 +8,7 @@ class AddPropertyDetailsViewController: UIViewController {
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     var numberOfRows = 1
+    var params: [String: AnyObject] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,22 +51,27 @@ extension AddPropertyDetailsViewController {
     
     @IBAction func internetClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        params[WSRequestParams.WS_REQS_PARAM_UTILITY_CHARGES_ARRAY] = sender.isSelected ? Strings.INTERNET as AnyObject : "" as AnyObject
     }
     
     @IBAction func electricityClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        params[WSRequestParams.WS_REQS_PARAM_UTILITY_CHARGES_ARRAY] = sender.isSelected ? Strings.ELECTRICITY as AnyObject : "" as AnyObject
     }
     
     @IBAction func garbageClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        params[WSRequestParams.WS_REQS_PARAM_UTILITY_CHARGES_ARRAY] = sender.isSelected ? Strings.GARBAGE as AnyObject : "" as AnyObject
     }
     
     @IBAction func waterClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        params[WSRequestParams.WS_REQS_PARAM_UTILITY_CHARGES_ARRAY] = sender.isSelected ? Strings.WATER as AnyObject : "" as AnyObject
     }
     
     @IBAction func serviceChargeClicked(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        params[WSRequestParams.WS_REQS_PARAM_UTILITY_CHARGES_ARRAY] = sender.isSelected ? Strings.SERVICE_CHARGE as AnyObject : "" as AnyObject
     }
     
     @IBAction func previousClicked(_ sender: UIButton) {
@@ -73,7 +79,31 @@ extension AddPropertyDetailsViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
+        params[WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE_ID] = AddProperty.estateId as AnyObject
+        params[WSRequestParams.WS_REQS_PARAM_ESTATE_NAME] = AddProperty.estateName as AnyObject
+        params[WSRequestParams.WS_REQS_PARAM_USER_ID] = AddProperty.userId as AnyObject
+        params[WSRequestParams.WS_REQS_PARAM_ADDRESS] = AddProperty.address as AnyObject
+        params[WSRequestParams.WS_REQS_PARAM_GEO_LOCATION] = AddProperty.geoLocation as AnyObject
+        params[WSRequestParams.WS_REQS_PARAM_OWNER_NAME] = txtOwnerName.text as AnyObject
+        params[WSRequestParams.WS_REQS_PARAM_OWNER_NOTES] = txtOwnerNotes.text as AnyObject
+        
+        for i in 0..<numberOfRows {
+            if let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? AddPropertyUnitCell {
+                params[WSRequestParams.WS_REQS_PARAM_UNIT_STATUS_ARRAY] = cell.txtPropertyFor.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_UNIT_NO_ARRAY] = cell.txtUnitNumber.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_UNIT_TYPE_ARRAY] = cell.txtPropertyType.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_AREA_ARRAY] = cell.txtArea.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_AREA_TYPE_ARRAY] = cell.txtLength.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_MONTHLY_RENT_ARRAY] = cell.txtPrice.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_STAY_DAYS_ARRAY] = "" as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_PER_DAY_ARRAY] = "" as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_TOTAL_PLOTS_ARRAY] = "" as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_CHECK_SHORT_STAY_ARRAY] = "" as AnyObject
+            }
+        }
+        
         if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyAmenitiesViewController) as? AddPropertyAmenitiesViewController {
+            vc.finalParam = params
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

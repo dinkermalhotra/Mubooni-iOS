@@ -24,8 +24,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         let userLocation = locations[0] as CLLocation
         
         var address = ""
-        let latitude = "\(userLocation.coordinate.latitude)"
-        let longitude = "\(userLocation.coordinate.longitude)"
+        let latitude = String(format: "%.6f", userLocation.coordinate.latitude)
+        let longitude = String(format: "%.6f", userLocation.coordinate.longitude)
         var state = ""
         
         let geocoder = CLGeocoder()

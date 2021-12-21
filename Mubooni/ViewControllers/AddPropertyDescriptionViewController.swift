@@ -78,6 +78,12 @@ extension AddPropertyDescriptionViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
+        AddProperty.address = txtAddress.text
+        AddProperty.estateId = typeId
+        AddProperty.estateName = txtPropertyType.text
+        AddProperty.geoLocation = "\(txtLatitude.text ?? ""), \(txtLongitude.text ?? "")"
+        AddProperty.userId = userProfile?.userId
+        
         if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyMediaViewController) as? AddPropertyMediaViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }

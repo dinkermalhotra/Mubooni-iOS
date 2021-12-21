@@ -1,6 +1,6 @@
 import ObjectMapper
 
-class Units: Mappable, CustomStringConvertible {
+class Tenants: Mappable, CustomStringConvertible {
     
     required init?(map: Map) {}
     
@@ -9,12 +9,10 @@ class Units: Mappable, CustomStringConvertible {
     }
     
     func mapping(map: Map) {
-        id <- map[WSResponseParams.WS_RESP_PARAM_ID]
-        monthlyRent <- map[WSResponseParams.WS_RESP_PARAM_MONTHLY_RENT]
-        perDay <- map[WSResponseParams.WS_RESP_PARAM_PER_DAY]
-        stayDays <- map[WSResponseParams.WS_RESP_PARAM_STAY_DAYS]
-        unitStatus <- map[WSResponseParams.WS_RESP_PARAM_UNIT_STATUS]
-        unitType <- map[WSResponseParams.WS_RESP_PARAM_UNIT_TYPE]
+        email <- map[WSResponseParams.WS_RESP_PARAM_EMAIL]
+        propertyAddress <- map[WSResponseParams.WS_RESP_PARAM_PROPERTY_ADDRESS]
+        tenantName <- map[WSResponseParams.WS_RESP_PARAM_TENANT_NAME]
+        unitNumber <- map[WSResponseParams.WS_RESP_PARAM_UNIT_NUMBER]
     }
     
     var description: String {
@@ -34,10 +32,9 @@ class Units: Mappable, CustomStringConvertible {
         return nil
     })
     
-    lazy var id = String()
-    lazy var monthlyRent = String()
-    lazy var perDay = String()
-    lazy var stayDays = String()
-    lazy var unitStatus = String()
-    lazy var unitType = String()
+    lazy var email = String()
+    lazy var propertyAddress = String()
+    lazy var tenantName = String()
+    lazy var unitNumber = String()
 }
+

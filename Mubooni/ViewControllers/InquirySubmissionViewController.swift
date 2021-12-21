@@ -51,7 +51,20 @@ extension InquirySubmissionViewController {
     }
     
     @IBAction func submitClicked(_ sender: UIButton) {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         
+        if txtName.text?.isEmpty ?? true || txtEmail.text?.isEmpty ?? true || txtPhone.text?.isEmpty ?? true || txtVisitDate.text?.isEmpty ?? true || txtVisitTime.text?.isEmpty ?? true {
+            Helper.showOKAlert(onVC: self, title: AlertMessages.ALL_FIELDS_ARE_MANDATORY, message: "")
+        }
+        else if (emailTest.evaluate(with: self.txtEmail.text?.lowercased()) == false) {
+            Helper.showOKAlert(onVC: self, title: AlertMessages.ENTER_VALID_EMAIL, message: "")
+        }
+        else {
+            Helper.showLoader(onVC: self)
+            
+            sendInquiry(Helper.convertDateAndTime("\(txtVisitDate.text ?? "") \(txtVisitTime.text ?? "")"))
+        }
     }
 }
 
@@ -75,5 +88,29 @@ extension InquirySubmissionViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+}
+
+// MARK: - API CALL
+extension InquirySubmissionViewController {
+    func sendInquiry(_ date: String) {
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_NAME: txtName.text as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_EMAIL: txtEmail.text as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_PHONE: txtPhone.text as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_SCHEDULE_INFO: date as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_USER_ID: "" as AnyObject,
+                                           WSRequestParams.WS_REQS_PARAM_EST_ID: "2" as AnyObject]
+        WSManager.wsCallSendInquiry(params) { isSuccess, message in
+            Helper.hideLoader(onVC: self)
+            
+            if isSuccess {
+                Helper.showOKAlertWithCompletion(onVC: self, title: message, message: "", btnOkTitle: Strings.OK, onOk: {
+                    self.dismiss(animated: true, completion: nil)
+                })
+            }
+            else {
+                Helper.showOKAlert(onVC: self, title: Alert.ERROR, message: message)
+            }
+        }
     }
 }
