@@ -43,17 +43,6 @@ extension FindServiceProviderViewController {
     @IBAction func backClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func profileClicked(_ sender: UIButton) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
-            vc.userProfile = userProfile
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
-    @IBAction func notificationClicked(_ sender: UIButton) {
-        
-    }
 }
 
 // MARK: - UITEXTFIELD DELEGATE

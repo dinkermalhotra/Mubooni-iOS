@@ -63,6 +63,9 @@
 		40A4B9732758A6DA00B9622E /* ServiceProviderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A4B9722758A6DA00B9622E /* ServiceProviderDetailViewController.swift */; };
 		40A665A02750AA890047674C /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A6659F2750AA890047674C /* ImagesCell.swift */; };
 		40A665A42750C1D90047674C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A665A32750C1D90047674C /* LocationManager.swift */; };
+		40C97FD02771B39700E21538 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C97FCF2771B39700E21538 /* SettingsViewController.swift */; };
+		40C97FD32771D45900E21538 /* UserDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C97FD22771D45900E21538 /* UserDefaultConstants.swift */; };
+		40C97FD52771DAB800E21538 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C97FD42771DAB800E21538 /* NavigationViewController.swift */; };
 		40D4CF942761EB6F00942F1B /* AreaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D4CF932761EB6F00942F1B /* AreaType.swift */; };
 		802DEDD1275F6257008DD8B7 /* TenantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */; };
 		802DEDD3275F6298008DD8B7 /* TenantListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802DEDD2275F6298008DD8B7 /* TenantListCell.swift */; };
@@ -167,6 +170,9 @@
 		40A4B9722758A6DA00B9622E /* ServiceProviderDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderDetailViewController.swift; sourceTree = "<group>"; };
 		40A6659F2750AA890047674C /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
 		40A665A32750C1D90047674C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		40C97FCF2771B39700E21538 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		40C97FD22771D45900E21538 /* UserDefaultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultConstants.swift; sourceTree = "<group>"; };
+		40C97FD42771DAB800E21538 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		40D4CF932761EB6F00942F1B /* AreaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaType.swift; sourceTree = "<group>"; };
 		4DF80F5787A2D7822D28D805 /* Pods-Mubooni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mubooni.release.xcconfig"; path = "Target Support Files/Pods-Mubooni/Pods-Mubooni.release.xcconfig"; sourceTree = "<group>"; };
 		802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantListViewController.swift; sourceTree = "<group>"; };
@@ -256,9 +262,11 @@
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
 				191B481626D4BEC900552A2D /* MainViewController.swift */,
 				8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */,
+				40C97FD42771DAB800E21538 /* NavigationViewController.swift */,
 				8B1BE166274386C7006D5005 /* ProfileViewController.swift */,
 				40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */,
 				40A4B9722758A6DA00B9622E /* ServiceProviderDetailViewController.swift */,
+				40C97FCF2771B39700E21538 /* SettingsViewController.swift */,
 				40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */,
 				191B480626D4AC1F00552A2D /* SignInViewController.swift */,
 				199720B826D617D00044BE8D /* SignupViewController.swift */,
@@ -300,6 +308,7 @@
 				8BCA42F5273BA760002BC5BD /* AlertMessages */,
 				199720BF26D63D410044BE8D /* AppConstant */,
 				19EBE01C27214B8D00BD307F /* Helper */,
+				40C97FD12771D43100E21538 /* UserDefaultConstants */,
 				191B480B26D4AC9D00552A2D /* ViewControllerHelper */,
 			);
 			path = OtherClasses;
@@ -490,6 +499,14 @@
 				19EBE02027216A6A00BD307F /* Singleton.swift */,
 			);
 			path = Singleton;
+			sourceTree = "<group>";
+		};
+		40C97FD12771D43100E21538 /* UserDefaultConstants */ = {
+			isa = PBXGroup;
+			children = (
+				40C97FD22771D45900E21538 /* UserDefaultConstants.swift */,
+			);
+			path = UserDefaultConstants;
 			sourceTree = "<group>";
 		};
 		5858775D1F742423B8EF0FCB /* Frameworks */ = {
@@ -751,7 +768,9 @@
 				8BCA42F9273BAE29002BC5BD /* Properties.swift in Sources */,
 				40124054275DED1C0080FBA7 /* UnitType.swift in Sources */,
 				8B9A7903274625430020753B /* AddPropertyMediaViewController.swift in Sources */,
+				40C97FD32771D45900E21538 /* UserDefaultConstants.swift in Sources */,
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
+				40C97FD02771B39700E21538 /* SettingsViewController.swift in Sources */,
 				8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
 				802DEDD5275F7803008DD8B7 /* ServiceReportViewController.swift in Sources */,
@@ -780,6 +799,7 @@
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
 				802DEDD3275F6298008DD8B7 /* TenantListCell.swift in Sources */,
 				40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */,
+				40C97FD52771DAB800E21538 /* NavigationViewController.swift in Sources */,
 				40124058275F3FCE0080FBA7 /* SearchOnMapViewController.swift in Sources */,
 				40A4B96F27588FC900B9622E /* ServiceProviderCell.swift in Sources */,
 				8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */,

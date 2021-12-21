@@ -19,11 +19,12 @@ struct ViewControllerIdentifiers {
     static let ProfileViewController                = "ProfileViewController"
     static let SearchOnMapViewController            = "SearchOnMapViewController"
     static let ServiceProviderDetailViewController  = "ServiceProviderDetailViewController"
+    static let SettingsViewController               = "SettingsViewController"
     static let ShuffleProfileViewController         = "ShuffleProfileViewController"
     static let SignInViewController                 = "SignInViewController"
     static let SignupViewController                 = "SignupViewController"
     static let ServiceReportViewController          = "ServiceReportViewController"
-    static let TenantListViewController              = "TenantListViewController"
+    static let TenantListViewController             = "TenantListViewController"
 }
 
 import UIKit
@@ -48,6 +49,7 @@ enum ViewControllerType {
     case ProfileViewController
     case SearchOnMapViewController
     case ServiceProviderDetailViewController
+    case SettingsViewController
     case ShuffleProfileViewController
     case SignInViewController
     case SignupViewController
@@ -134,6 +136,9 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .SearchOnMapViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.SearchOnMapViewController) as! SearchOnMapViewController
+        }
+        else if viewControllerType == .SettingsViewController {
+            viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.SettingsViewController) as! SettingsViewController
         }
         else if viewControllerType == .ShuffleProfileViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ShuffleProfileViewController) as! ShuffleProfileViewController

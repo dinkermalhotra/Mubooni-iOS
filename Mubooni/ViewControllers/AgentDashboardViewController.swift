@@ -21,15 +21,11 @@ class AgentDashboardViewController: UIViewController {
 
 // MARK: - UIBUTTON ACTIONS
 extension AgentDashboardViewController {
-    @IBAction func profileClicked(_ sender: UIButton) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
+    @IBAction func settingsClicked(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .SettingsViewController) as? SettingsViewController {
             vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
-    }
-    
-    @IBAction func notificationClicked(_ sender: UIButton) {
-        
     }
     
     @IBAction func findServiceProviderClicked(_ sender: UIButton) {
