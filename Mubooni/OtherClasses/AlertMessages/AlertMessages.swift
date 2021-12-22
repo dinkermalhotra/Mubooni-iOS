@@ -1,6 +1,7 @@
 import Foundation
 
 struct AlertMessages {
+    static let ADD_IMAGES                       = "Please add atleast 1 image to continue"
     static let ALL_FIELDS_ARE_MANDATORY         = "All fields are mandatory"
     static let ENTER_VALID_EMAIL                = "Please enter a valid email"
     static let LOGOUT                           = "Are you sure you want to logout?"

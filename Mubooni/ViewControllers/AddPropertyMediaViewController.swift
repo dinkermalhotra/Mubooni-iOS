@@ -47,18 +47,23 @@ extension AddPropertyMediaViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
-        var data = [Data]()
-        
-        for images in propertyImages {
-            data.append(images.jpegData(compressionQuality: 1.0) ?? Data())
-        }
-        
-        DispatchQueue.main.async {
-            AddProperty.imageData = data
+        if propertyImages.count > 0 {
+            var data = [Data]()
             
-            if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyDetailsViewController) as? AddPropertyDetailsViewController {
-                self.navigationController?.pushViewController(vc, animated: true)
+            for images in propertyImages {
+                data.append(images.jpegData(compressionQuality: 1.0) ?? Data())
             }
+            
+            DispatchQueue.main.async {
+                AddProperty.imageData = data
+                
+                if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyDetailsViewController) as? AddPropertyDetailsViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+        }
+        else {
+            Helper.showOKAlert(onVC: self, title: Alert.ALERT, message: AlertMessages.ADD_IMAGES)
         }
     }
     
