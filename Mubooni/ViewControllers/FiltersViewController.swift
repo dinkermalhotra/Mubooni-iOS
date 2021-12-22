@@ -1,10 +1,9 @@
 import UIKit
-import GooglePlaces
 
 class FiltersViewController: UIViewController {
 
     @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var lblCurrentLocation: UILabel!
+    @IBOutlet weak var txtLocation: UITextField!
     @IBOutlet weak var distanceSlider: UISlider!
     @IBOutlet weak var areaSlider: UISlider!
     @IBOutlet weak var priceSlider: UISlider!
@@ -34,7 +33,6 @@ class FiltersViewController: UIViewController {
     var selectedPropertyFor = ""
     var selectedUnitType = ""
     var selectedUnitTypeId = ""
-    var state = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,22 +51,6 @@ class FiltersViewController: UIViewController {
         backView.roundCorners(corners: [.topLeft, .topRight], radius: 5)
     }
     
-    func searchAddress() {
-        let autocompleteController = GMSAutocompleteViewController()
-        autocompleteController.delegate = self
-        autocompleteController.view.tintColor = UIColor.black
-        
-        let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) | UInt(GMSPlaceField.placeID.rawValue))
-        autocompleteController.placeFields = fields
-
-        let filter = GMSAutocompleteFilter()
-        filter.type = .address
-        autocompleteController.autocompleteFilter = filter
-        
-        autocompleteController.modalPresentationStyle = .overFullScreen
-        present(autocompleteController, animated: true, completion: nil)
-    }
-    
     func setupCollectionViewLayout() {
         if let collectionViewLayout = typeCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             collectionViewLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -77,11 +59,9 @@ class FiltersViewController: UIViewController {
     
     func setupCurrentLocation() {
         LocationManager.shared.requestLocation()
-        LocationManager.shared.onCompletion = { (state, latitude, longitude, address) in
-            self.lblCurrentLocation.text = address
+        LocationManager.shared.onCompletion = { (latitude, longitude, address) in
             self.latitude = latitude
             self.longitude = longitude
-            self.state = state
         }
     }
     
@@ -101,10 +81,6 @@ class FiltersViewController: UIViewController {
 extension FiltersViewController {
     @IBAction func cancelClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func changeLocationClicked(_ sender: UIButton) {
-        searchAddress()
     }
     
     @IBAction func resetClicked(_ sender: UIButton) {
@@ -147,29 +123,19 @@ extension FiltersViewController {
     }
     
     @IBAction func applyClicked(_ sender: UIButton) {
+        txtLocation.resignFirstResponder()
+        
         Helper.showLoader(onVC: self)
         getFilteredProperties()
     }
 }
 
-// MARK: - GOOGLEPLACES AUTOCOMPLETE DELEGATE
-extension FiltersViewController: GMSAutocompleteViewControllerDelegate {
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+// MARK: - UITEXTFIELD DELEGATE
+extension FiltersViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         
-        lblCurrentLocation.text = place.name ?? ""
-        latitude = "\(place.coordinate.latitude)"
-        longitude = "\(place.coordinate.longitude)"
-        state = place.name ?? ""
-        
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        print("Error: ", error.localizedDescription)
-    }
-    
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        dismiss(animated: true, completion: nil)
+        return true
     }
 }
 
@@ -320,7 +286,7 @@ extension FiltersViewController {
     }
     
     func getFilteredProperties() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_SEARCHED: state as AnyObject,
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_SEARCHED: txtLocation.text as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE: selectedPropertyTypeId as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_UNIT_TYPE: selectedUnitTypeId as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_UNITSTATUS: selectedPropertyFor as AnyObject,

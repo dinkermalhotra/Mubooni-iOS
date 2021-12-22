@@ -1,12 +1,14 @@
 import UIKit
 import DropDown
+import GoogleMaps
 import GooglePlaces
 
 class AddPropertyDescriptionViewController: UIViewController {
 
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var txtPropertyType: UITextField!
     @IBOutlet weak var txtBuildingName: UITextField!
-    @IBOutlet weak var txtAddress: UITextField!
+    @IBOutlet weak var txtAddress: UITextView!
     @IBOutlet weak var txtLatitude: UITextField!
     @IBOutlet weak var txtLongitude: UITextField!
     @IBOutlet weak var viewProperty: UIView!
@@ -53,11 +55,26 @@ class AddPropertyDescriptionViewController: UIViewController {
     
     func setCurrentLocation() {
         LocationManager.shared.requestLocation()
-        LocationManager.shared.onCompletion = { (state, latitude, longitude, address) in
+        LocationManager.shared.onCompletion = { (latitude, longitude, address) in
             self.txtAddress.text = address
+            self.txtAddress.textColor = UIColor.black
+            
             self.txtLatitude.text = latitude
             self.txtLongitude.text = longitude
+            
+            let location = CLLocation(latitude: Double(latitude) ?? 0.0, longitude: Double(longitude) ?? 0.0)
+            self.setupMap(location)
         }
+    }
+    
+    func setupMap(_ userLocation: CLLocation) {
+        mapView.isMyLocationEnabled = true
+        mapView.delegate = self
+        mapView.camera = GMSCameraPosition(target: userLocation.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        
+        mapView.clear()
+        let marker = GMSMarker(position: CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude))
+        marker.map = mapView
     }
     
     func setupPropertyDropDown() {
@@ -77,6 +94,13 @@ class AddPropertyDescriptionViewController: UIViewController {
         self.propertyDropDown.separatorColor = UIColor.clear
         self.propertyDropDown.textFont = MubooniFonts.FONT_ROBOTO_REGULAR_14 ?? UIFont.systemFont(ofSize: 14)
         self.propertyDropDown.selectionAction = { [weak self] (index, item) in
+            if item.lowercased() == Strings.LAND.lowercased() {
+                self?.txtBuildingName.placeholder = Strings.PLOT_NUMBER
+            }
+            else {
+                self?.txtBuildingName.placeholder = Strings.BUILDING_NAME
+            }
+            
             self?.txtPropertyType.text = item
             self?.typeId = self?.propertyTypes[index].id ?? ""
         }
@@ -90,15 +114,38 @@ extension AddPropertyDescriptionViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
-        AddProperty.address = txtAddress.text
-        AddProperty.estateId = typeId
-        AddProperty.estateName = txtPropertyType.text
-        AddProperty.geoLocation = "\(txtLatitude.text ?? ""), \(txtLongitude.text ?? "")"
-        AddProperty.userId = settings?.userProfile?.userId
-        
-        if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyMediaViewController) as? AddPropertyMediaViewController {
-            self.navigationController?.pushViewController(vc, animated: true)
+        if txtPropertyType.text?.isEmpty ?? true || txtBuildingName.text?.isEmpty ?? true || txtAddress.text?.isEmpty ?? true || txtLatitude.text?.isEmpty ?? true || txtLongitude.text?.isEmpty ?? true {
+            Helper.showOKAlert(onVC: self, title: Alert.ALERT, message: AlertMessages.ALL_FIELDS_ARE_MANDATORY)
         }
+        else {
+            AddProperty.address = txtAddress.text
+            AddProperty.estateId = typeId
+            AddProperty.estateName = txtPropertyType.text
+            AddProperty.geoLocation = "\(txtLatitude.text ?? ""), \(txtLongitude.text ?? "")"
+            AddProperty.userId = settings?.userProfile?.userId
+            
+            if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyMediaViewController) as? AddPropertyMediaViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+}
+
+// MARK: - GMSMAPVIEW DELEGATE
+extension AddPropertyDescriptionViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        LocationManager.shared.getUserAddress(coordinate)
+        LocationManager.shared.addressCompletion = { (address) in
+            self.txtAddress.text = address
+            self.txtAddress.textColor = UIColor.black
+        }
+        
+        txtLatitude.text = String(format: "%.6f", coordinate.latitude)
+        txtLongitude.text = String(format: "%.6f", coordinate.longitude)
+        
+        mapView.clear()
+        let marker = GMSMarker(position: coordinate)
+        marker.map = mapView
     }
 }
 
@@ -115,13 +162,30 @@ extension AddPropertyDescriptionViewController: UITextFieldDelegate {
             
             return false
         }
-        else if textField == txtAddress {
-            searchAddress()
-            
-            return false
-        }
+//        else if textField == txtAddress {
+//            searchAddress()
+//
+//            return false
+//        }
         else {
             return true
+        }
+    }
+}
+
+// MARK: - UITEXTVIEW DELEGATE
+extension AddPropertyDescriptionViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == Strings.ADDRESS {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = Strings.ADDRESS
+            textView.textColor = MubooniColors.placeholderColor
         }
     }
 }
@@ -129,10 +193,10 @@ extension AddPropertyDescriptionViewController: UITextFieldDelegate {
 // MARK: - GOOGLEPLACES AUTOCOMPLETE DELEGATE
 extension AddPropertyDescriptionViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        
         txtAddress.text = place.name ?? ""
         txtLatitude.text = "\(place.coordinate.latitude)"
         txtLongitude.text = "\(place.coordinate.longitude)"
+        
         dismiss(animated: true, completion: nil)
     }
     

@@ -33,7 +33,7 @@ class FindServiceProviderViewController: UIViewController {
 
     func fetchCurrentLocation() {
         LocationManager.shared.requestLocation()
-        LocationManager.shared.onCompletion = { (state, latitude, longitude, address) in
+        LocationManager.shared.onCompletion = { (latitude, longitude, address) in
             self.latitude = latitude
             self.longitude = longitude
         }

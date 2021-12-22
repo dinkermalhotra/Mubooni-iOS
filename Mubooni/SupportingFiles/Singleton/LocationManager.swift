@@ -1,5 +1,6 @@
 import Foundation
 import CoreLocation
+import GoogleMaps
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
     
@@ -8,7 +9,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private override init() {}
     
     let locationManager = CLLocationManager()
-    var onCompletion: ((_ state: String, _ latitude: String, _ longitude: String, _ address: String) -> Void)?
+    var onCompletion: ((_ latitude: String, _ longitude: String, _ address: String) -> Void)?
+    var addressCompletion: ((_ address: String) -> Void)?
     
     func requestLocation() {
         self.locationManager.requestWhenInUseAuthorization()
@@ -26,28 +28,49 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         var address = ""
         let latitude = String(format: "%.6f", userLocation.coordinate.latitude)
         let longitude = String(format: "%.6f", userLocation.coordinate.longitude)
-        var state = ""
+        let coordinate = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
         
-        let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
+        let geocoder = GMSGeocoder()
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
             if let error = error {
-                print("error in reverseGeocode")
+                print(error.localizedDescription)
                 address = error.localizedDescription
             }
             else {
-                if let placemarks = placemarks, let placemark = placemarks.first {
-                    address = "\(placemark.thoroughfare ?? "") \(placemark.locality ?? ""), \(placemark.administrativeArea ?? ""), \(placemark.country ?? "")"
-                    state = placemark.locality ?? ""
-                } else {
-                    address = "No Matching Addresses Found"
-                    state = "No Matching Addresses Found"
+                if let result = response?.firstResult() {
+                    if let lines = result.lines {
+                        address = lines.joined(separator: ", ")
+                                               
+                        if let block = self.onCompletion {
+                            block(latitude, longitude, address)
+                        }
+                        
+                        self.locationManager.stopUpdatingLocation()
+                    }
                 }
-                
-                if let block = self.onCompletion {
-                    block(state, latitude, longitude, address)
+            }
+        }
+    }
+    
+    func getUserAddress(_ coordinate: CLLocationCoordinate2D) {
+        var address = ""
+        
+        let geocoder = GMSGeocoder()
+        geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                address = error.localizedDescription
+            }
+            else {
+                if let result = response?.firstResult() {
+                    if let lines = result.lines {
+                        address = lines.joined(separator: ", ")
+                        
+                        if let block = self.addressCompletion {
+                            block(address)
+                        }
+                    }
                 }
-                
-                self.locationManager.stopUpdatingLocation()
             }
         }
     }

@@ -62,6 +62,7 @@ struct GoogleApiKey {
 }
 
 struct Strings {
+    static let ADDRESS = "Address"
     static let ALL = "all"
     static let BACK_YARD = "Back yard"
     static let BASKETBALL_COURT = "Basketball court"
@@ -71,6 +72,7 @@ struct Strings {
     static let BEDROOMS = "Bedrooms"
     static let BOOKING_INFO = "BOOKING DETAILS"
     static let BOOK_YOUR_SLOT = "BOOK YOUR SLOT"
+    static let BUILDING_NAME = "Building name"
     static let BUY = "Buy"
     static let CENTRAL_AIR = "Central air"
     static let CHAIR_ACCESSIBLE = "Chair accessible"
@@ -105,6 +107,7 @@ struct Strings {
     static let NO = "No"
     static let OK = "Ok"
     static let ONE = "1"
+    static let PLOT_NUMBER = "Plot number"
     static let POOL = "Pool"
     static let RENT = "Rent"
     static let REQUESTS = "requests"

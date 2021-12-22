@@ -695,7 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="63.418290854572717"/>
+            <point key="canvasLocation" x="132" y="63"/>
         </scene>
         <!--Service Provider Detail View Controller-->
         <scene sceneID="0jR-Of-YH7">
@@ -1192,7 +1192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBm-PX-isg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="814"/>
+            <point key="canvasLocation" x="809" y="814"/>
         </scene>
         <!--Tenant List View Controller-->
         <scene sceneID="21D-UI-vWd">
@@ -1364,7 +1364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prl-Jp-YMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640.8" y="820.83958020989508"/>
+            <point key="canvasLocation" x="1489" y="814"/>
         </scene>
         <!--Service Report View Controller-->
         <scene sceneID="Rqv-gB-rpU">
@@ -1588,7 +1588,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dm1-Cy-BOB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="821"/>
+            <point key="canvasLocation" x="2182" y="814"/>
         </scene>
         <!--Find Service Provider View Controller-->
         <scene sceneID="Lzm-5J-cBn">
@@ -1824,7 +1824,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OB-Qj-z74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="62.518740629685162"/>
+            <point key="canvasLocation" x="810" y="63"/>
         </scene>
         <!--My Properties View Controller-->
         <scene sceneID="dku-Z6-FYa">
@@ -2039,7 +2039,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdf-cn-qMT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629.5999999999999" y="62.518740629685162"/>
+            <point key="canvasLocation" x="1490" y="63"/>
         </scene>
         <!--Agent Property Detail View Controller-->
         <scene sceneID="VP5-gX-BZK">
@@ -2327,7 +2327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVG-IY-z8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="62.518740629685162"/>
+            <point key="canvasLocation" x="2182" y="63"/>
         </scene>
         <!--Add Property Description View Controller-->
         <scene sceneID="gcp-XX-oDE">
@@ -2574,26 +2574,27 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Sb-eK-kr9">
-                                <rect key="frame" x="16" y="295" width="343" height="50"/>
+                                <rect key="frame" x="16" y="295" width="343" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSj-y3-y7E">
-                                        <rect key="frame" x="8" y="0.0" width="327" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="Address" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fd4-01-33h">
+                                        <rect key="frame" x="4" y="0.0" width="335" height="80"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="placeholderTextColor"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
                                         <connections>
-                                            <outlet property="delegate" destination="7Td-Ud-j45" id="riL-NP-E1z"/>
+                                            <outlet property="delegate" destination="7Td-Ud-j45" id="Vfm-8B-4bh"/>
                                         </connections>
-                                    </textField>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="OSj-y3-y7E" firstAttribute="leading" secondItem="2Sb-eK-kr9" secondAttribute="leading" constant="8" id="32U-H9-3Xp"/>
-                                    <constraint firstAttribute="bottom" secondItem="OSj-y3-y7E" secondAttribute="bottom" id="C3x-0k-mKR"/>
-                                    <constraint firstAttribute="trailing" secondItem="OSj-y3-y7E" secondAttribute="trailing" constant="8" id="FZB-AQ-7BU"/>
-                                    <constraint firstItem="OSj-y3-y7E" firstAttribute="top" secondItem="2Sb-eK-kr9" secondAttribute="top" id="Lv7-Ow-EvG"/>
-                                    <constraint firstAttribute="height" constant="50" id="oES-I5-bpT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fd4-01-33h" secondAttribute="bottom" id="1uB-kX-PpR"/>
+                                    <constraint firstItem="Fd4-01-33h" firstAttribute="leading" secondItem="2Sb-eK-kr9" secondAttribute="leading" constant="4" id="HLb-yk-0eI"/>
+                                    <constraint firstItem="Fd4-01-33h" firstAttribute="top" secondItem="2Sb-eK-kr9" secondAttribute="top" id="lI4-Ye-NnR"/>
+                                    <constraint firstAttribute="height" constant="80" id="oES-I5-bpT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fd4-01-33h" secondAttribute="trailing" constant="4" id="vFj-tV-cL5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -2614,7 +2615,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jR7-ex-WSP">
-                                <rect key="frame" x="16" y="361" width="167.5" height="50"/>
+                                <rect key="frame" x="16" y="391" width="167.5" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Latitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JnN-bO-e0o">
                                         <rect key="frame" x="8" y="0.0" width="151.5" height="50"/>
@@ -2654,7 +2655,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-AI-gjT">
-                                <rect key="frame" x="191.5" y="361" width="167.5" height="50"/>
+                                <rect key="frame" x="191.5" y="391" width="167.5" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Longitude" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-Rv-7w5">
                                         <rect key="frame" x="8" y="0.0" width="151.5" height="50"/>
@@ -2693,6 +2694,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-Qj-dfB" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="457" width="343" height="144"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gt0-5M-FL2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2700,6 +2710,7 @@
                             <constraint firstItem="gt0-5M-FL2" firstAttribute="trailing" secondItem="2Sb-eK-kr9" secondAttribute="trailing" constant="16" id="06Z-or-Vsq"/>
                             <constraint firstItem="7DV-Z1-fm4" firstAttribute="trailing" secondItem="gt0-5M-FL2" secondAttribute="trailing" id="90f-4F-Yua"/>
                             <constraint firstItem="gt0-5M-FL2" firstAttribute="trailing" secondItem="Ysi-5B-LJS" secondAttribute="trailing" constant="16" id="BVc-7u-ajY"/>
+                            <constraint firstItem="7DV-Z1-fm4" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" id="C3v-Pf-8vT"/>
                             <constraint firstItem="tB4-HH-58l" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" constant="16" id="EbE-oq-ryP"/>
                             <constraint firstItem="GsB-wW-4J6" firstAttribute="top" secondItem="Ysi-5B-LJS" secondAttribute="bottom" constant="24" id="Ekn-9N-kBD"/>
                             <constraint firstItem="gt0-5M-FL2" firstAttribute="trailing" secondItem="GsB-wW-4J6" secondAttribute="trailing" constant="16" id="ErL-2F-qK5"/>
@@ -2708,11 +2719,13 @@
                             <constraint firstItem="a2H-RL-tO2" firstAttribute="top" secondItem="GsB-wW-4J6" secondAttribute="bottom" constant="16" id="KKM-Pw-lRN"/>
                             <constraint firstItem="yhS-kS-I2f" firstAttribute="leading" secondItem="tB4-HH-58l" secondAttribute="trailing" constant="16" id="NuE-ME-bw0"/>
                             <constraint firstItem="gt0-5M-FL2" firstAttribute="trailing" secondItem="a2H-RL-tO2" secondAttribute="trailing" constant="16" id="O9d-tH-QZY"/>
+                            <constraint firstItem="gt0-5M-FL2" firstAttribute="trailing" secondItem="eGy-Qj-dfB" secondAttribute="trailing" constant="16" id="OIz-D1-bdN"/>
                             <constraint firstItem="fYC-AI-gjT" firstAttribute="width" secondItem="jR7-ex-WSP" secondAttribute="width" id="Odl-mD-NL7"/>
-                            <constraint firstItem="7DV-Z1-fm4" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" id="VXR-mt-Y7p"/>
                             <constraint firstItem="yhS-kS-I2f" firstAttribute="centerY" secondItem="tB4-HH-58l" secondAttribute="centerY" id="WaI-nH-6ty"/>
                             <constraint firstItem="a2H-RL-tO2" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" constant="16" id="bLr-dh-wKa"/>
                             <constraint firstItem="oZ7-4s-aUA" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" id="bn2-rf-fpx"/>
+                            <constraint firstItem="eGy-Qj-dfB" firstAttribute="top" secondItem="jR7-ex-WSP" secondAttribute="bottom" constant="16" id="dtx-O7-cKe"/>
+                            <constraint firstItem="7DV-Z1-fm4" firstAttribute="top" secondItem="eGy-Qj-dfB" secondAttribute="bottom" constant="16" id="eji-Q8-KOo"/>
                             <constraint firstItem="tB4-HH-58l" firstAttribute="top" secondItem="gt0-5M-FL2" secondAttribute="top" constant="20" id="g3h-Gt-dho"/>
                             <constraint firstItem="2Sb-eK-kr9" firstAttribute="top" secondItem="a2H-RL-tO2" secondAttribute="bottom" constant="16" id="gvG-Na-2cK"/>
                             <constraint firstItem="jR7-ex-WSP" firstAttribute="top" secondItem="2Sb-eK-kr9" secondAttribute="bottom" constant="16" id="kwd-Up-7pB"/>
@@ -2722,6 +2735,7 @@
                             <constraint firstItem="GsB-wW-4J6" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" constant="16" id="pOk-nr-lbb"/>
                             <constraint firstItem="Ysi-5B-LJS" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" constant="16" id="qG7-CD-Daj"/>
                             <constraint firstItem="2Sb-eK-kr9" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" constant="16" id="uYB-bQ-CEd"/>
+                            <constraint firstItem="eGy-Qj-dfB" firstAttribute="leading" secondItem="gt0-5M-FL2" secondAttribute="leading" constant="16" id="vDU-rb-yyh"/>
                             <constraint firstItem="oZ7-4s-aUA" firstAttribute="trailing" secondItem="gt0-5M-FL2" secondAttribute="trailing" id="vVF-VN-Db9"/>
                             <constraint firstAttribute="bottom" secondItem="oZ7-4s-aUA" secondAttribute="bottom" id="y8I-vU-Eji"/>
                             <constraint firstAttribute="trailing" secondItem="fYC-AI-gjT" secondAttribute="trailing" constant="16" id="zd1-1W-Y2D"/>
@@ -2744,7 +2758,8 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="txtAddress" destination="OSj-y3-y7E" id="A16-Xz-JAg"/>
+                        <outlet property="mapView" destination="eGy-Qj-dfB" id="q8r-5C-ZQs"/>
+                        <outlet property="txtAddress" destination="Fd4-01-33h" id="stf-cZ-IZc"/>
                         <outlet property="txtBuildingName" destination="pnA-UK-wLl" id="yGX-jw-4q2"/>
                         <outlet property="txtLatitude" destination="JnN-bO-e0o" id="1gy-qM-eW2"/>
                         <outlet property="txtLongitude" destination="xXe-Rv-7w5" id="r6V-Si-7Pe"/>
@@ -2754,7 +2769,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tup-qF-8Eg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3229.5999999999999" y="62.518740629685162"/>
+            <point key="canvasLocation" x="2864.8000000000002" y="62.518740629685162"/>
         </scene>
         <!--Add Property Media View Controller-->
         <scene sceneID="OLc-BH-1wY">
@@ -3094,7 +3109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMR-qV-ckp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4117.6000000000004" y="62.518740629685162"/>
+            <point key="canvasLocation" x="3542" y="63"/>
         </scene>
         <!--Add Property Details View Controller-->
         <scene sceneID="tTu-mv-aqX">
@@ -4024,7 +4039,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8td-4L-rTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4861.6000000000004" y="62.518740629685162"/>
+            <point key="canvasLocation" x="4214" y="63"/>
         </scene>
         <!--Add Property Amenities View Controller-->
         <scene sceneID="xiw-23-KWv">
@@ -5225,7 +5240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4x-N8-Cck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5592.8000000000002" y="62.518740629685162"/>
+            <point key="canvasLocation" x="4881" y="63"/>
         </scene>
     </scenes>
     <resources>

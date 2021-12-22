@@ -19,7 +19,7 @@ class SearchOnMapViewController: UIViewController {
 
     func fetchCurrentLocation() {
         LocationManager.shared.requestLocation()
-        LocationManager.shared.onCompletion = { (state, latitude, longitude, address) in
+        LocationManager.shared.onCompletion = { (latitude, longitude, address) in
             Helper.showLoader(onVC: self)
             self.searchPropertiesOnMap(latitude, longitude)
         }
