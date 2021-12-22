@@ -4,8 +4,20 @@ class TenantListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var userProfile: UserProfile?
     var tenants = [Tenants]()
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +73,7 @@ extension TenantListViewController: UICollectionViewDataSource, UICollectionView
 // MARK: - API CALL
 extension TenantListViewController {
     func fetchTenants() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject]
         WSManager.wsCallGetAgentTenants(params) { isSuccess, message, tenants in
             Helper.hideLoader(onVC: self)
             

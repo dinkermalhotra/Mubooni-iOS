@@ -7,10 +7,22 @@ class FindServiceProviderViewController: UIViewController {
     @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet weak var btnProfile: UIButton!
     
-    var userProfile: UserProfile?
     var serviceProviders = [ServiceProviders]()
     var latitude = ""
     var longitude = ""
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +104,6 @@ extension FindServiceProviderViewController: UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = ViewControllerHelper.getViewController(ofType: .ServiceProviderDetailViewController) as? ServiceProviderDetailViewController {
-            vc.userProfile = userProfile
             vc.serviceProvider = serviceProviders[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -102,7 +113,7 @@ extension FindServiceProviderViewController: UICollectionViewDataSource, UIColle
 // MARK: - API CALL
 extension FindServiceProviderViewController {
     func searchServiceProvider() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject,
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_SEARCHED_SPECS: txtSearch.text as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_LOCATION_SPEC: "" as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_LAT: "30.752800" as AnyObject,

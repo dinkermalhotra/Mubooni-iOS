@@ -4,10 +4,21 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var userProfile: UserProfile?
-    
     var titles = ["Profile", "Notifications", "Logout"]
     var images = [UIImage(named: "ic_profile_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_logout_gray")]
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +26,11 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func performLogout() {
+        settings?.userProfile = nil
+        
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 // MARK: - UIBUTTON ACTIONS
@@ -47,9 +63,14 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.row {
         case 0:
             if let vc = ViewControllerHelper.getViewController(ofType: .ProfileViewController) as? ProfileViewController {
-                vc.userProfile = userProfile
                 self.navigationController?.pushViewController(vc, animated: true)
             }
+        case 1:
+            break
+        case 2:
+            Helper.showOKCancelAlertWithCompletion(onVC: self, title: Alert.LOGOUT, message: AlertMessages.LOGOUT, btnOkTitle: Strings.YES, btnCancelTitle: Strings.NO, onOk: {
+                self.performLogout()
+            })
         default:
             break
         }

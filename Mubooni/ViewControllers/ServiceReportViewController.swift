@@ -5,9 +5,21 @@ class ServiceReportViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblTotalPrice: UILabel!
     
-    var userProfile: UserProfile?
     var reports = [PaymentReports]()
     var totalPaid = 0.0
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +65,7 @@ extension ServiceReportViewController: UITableViewDataSource, UITableViewDelegat
 // MARK: - API CALL
 extension ServiceReportViewController {
     func fetchReports() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject]
         WSManager.wsCallGetAgentPaymentReports(params) { isSuccess, message, paymentReports in
             Helper.hideLoader(onVC: self)
             

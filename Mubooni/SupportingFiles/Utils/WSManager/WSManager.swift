@@ -4,6 +4,19 @@ import ObjectMapper
 
 class WSManager {
     
+    static var _settings: SettingsManager?
+    
+    static var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
+    
     class func isConnectedToInternet() -> Bool {
         return NetworkReachabilityManager()!.isReachable
     }

@@ -21,7 +21,19 @@ class AgentPropertyDetailViewController: UIViewController {
     
     var property: Properties?
     var propertyImages = [AppAttachments]()
-    var userProfile: UserProfile?
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +48,7 @@ class AgentPropertyDetailViewController: UIViewController {
         
         setData()
         
-        if userProfile == nil {
+        if settings?.userProfile == nil {
             btnInquiry.isHidden = false
             
             for unit in property?.units ?? [] {

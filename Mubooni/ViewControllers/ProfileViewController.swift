@@ -23,7 +23,18 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var btnPhoneVerify: UIButton!
     @IBOutlet weak var viewUploadKenyaId: UIView!
     
-    var userProfile: UserProfile?
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +89,7 @@ extension ProfileViewController {
             txtEmail.backgroundColor = UIColor.white
             txtAddress.backgroundColor = UIColor.white
             
-            if userProfile?.kenyaId == "" {
+            if settings?.userProfile?.kenyaId == "" {
                 txtKenyaId.backgroundColor = UIColor.white
                 txtKenyaId.isUserInteractionEnabled = true
                 viewUploadKenyaId.isUserInteractionEnabled = true
@@ -170,12 +181,12 @@ extension ProfileViewController: CountryPickerViewDataSource {
 // MARK: - API CALL
 extension ProfileViewController {
     func fetchUserProfile() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject]
         WSManager.wsCallGetUserProfile(params) { isSuccess, message, userProfile in
             Helper.hideLoader(onVC: self)
             
             if isSuccess {
-                self.userProfile = userProfile
+                self.settings?.userProfile = userProfile
                 self.setData(userProfile)
             }
             else {

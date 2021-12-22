@@ -14,7 +14,19 @@ class AddPropertyDescriptionViewController: UIViewController {
     var propertyDropDown = DropDown()
     var propertyTypes = [PropertyTypes]()
     var typeId = ""
-    var userProfile: UserProfile?
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +94,7 @@ extension AddPropertyDescriptionViewController {
         AddProperty.estateId = typeId
         AddProperty.estateName = txtPropertyType.text
         AddProperty.geoLocation = "\(txtLatitude.text ?? ""), \(txtLongitude.text ?? "")"
-        AddProperty.userId = userProfile?.userId
+        AddProperty.userId = settings?.userProfile?.userId
         
         if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyMediaViewController) as? AddPropertyMediaViewController {
             self.navigationController?.pushViewController(vc, animated: true)

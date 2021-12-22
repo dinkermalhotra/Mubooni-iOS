@@ -5,9 +5,21 @@ class JobListViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    var userProfile: UserProfile?
     var jobs = [Jobs]()
     var requests = [Jobs]()
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +89,7 @@ extension JobListViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - API CALL
 extension JobListViewController {
     func fetchJobs() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject,
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_PAGE_TYPE: Strings.JOBS as AnyObject]
         WSManager.wsCallGetAgentJobs(params) { isSuccess, message, jobs in
             self.fetchRequests()
@@ -87,7 +99,7 @@ extension JobListViewController {
     }
     
     func fetchRequests() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject,
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject,
                                            WSRequestParams.WS_REQS_PARAM_PAGE_TYPE: Strings.REQUESTS as AnyObject]
         WSManager.wsCallGetAgentJobs(params) { isSuccess, message, jobs in
             Helper.hideLoader(onVC: self)

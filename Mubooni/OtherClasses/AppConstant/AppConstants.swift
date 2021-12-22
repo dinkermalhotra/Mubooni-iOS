@@ -102,6 +102,7 @@ struct Strings {
     static let MEDIA_ROOM = "Media room"
     static let MONTHLY_RENT = "Monthly Rent"
     static let NATURAL_GAS = "Natural gas"
+    static let NO = "No"
     static let OK = "Ok"
     static let ONE = "1"
     static let POOL = "Pool"
@@ -121,6 +122,7 @@ struct Strings {
     static let WATER = "Water"
     static let WATER_AND_DRYER = "Water and dryer"
     static let WIFI = "Wifi"
+    static let YES = "Yes"
     static let ZERO = "0"
 }
 
@@ -128,6 +130,7 @@ struct Alert {
     static let ALERT = "Alert"
     static let CHOOSE = "Choose"
     static let ERROR = "Error"
+    static let LOGOUT = "Logout"
     static let THANK_YOU = "Thank You"
     static let SORRY = "SORRY!"
     static let SUCCESS = "SUCCESS"

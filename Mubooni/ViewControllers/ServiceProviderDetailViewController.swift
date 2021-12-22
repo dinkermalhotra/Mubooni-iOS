@@ -10,8 +10,20 @@ class ServiceProviderDetailViewController: UIViewController {
     @IBOutlet weak var lblSuccessfulJobs: UILabel!
     @IBOutlet weak var lblAbout: UILabel!
     
-    var userProfile: UserProfile?
     var serviceProvider: ServiceProviders?
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

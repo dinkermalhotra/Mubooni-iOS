@@ -6,6 +6,19 @@ import GoogleSignIn
 
 class LoginViewController: UIViewController {
 
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -160,8 +173,9 @@ extension LoginViewController {
         WSManager.wsCallLogin(params ?? [:]) { isSuccess, message, userProfile in
             Helper.hideLoader(onVC: self)
             if isSuccess {
+                self.settings?.userProfile = userProfile
+                
                 if let vc = ViewControllerHelper.getViewController(ofType: .AgentDashboardViewController) as? AgentDashboardViewController {
-                    vc.userProfile = userProfile
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }

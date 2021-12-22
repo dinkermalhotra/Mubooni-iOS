@@ -13,6 +13,19 @@ class MainViewController: UIViewController {
     var properties = [Properties]()
     var serviceProviders = [ServiceProviders]()
     
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +37,16 @@ class MainViewController: UIViewController {
         fetchFeaturedProperties()
         fetchProperties()
         fetchServiceProviders()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if settings?.userProfile != nil {
+            if let vc = ViewControllerHelper.getViewController(ofType: .AgentDashboardViewController) as? AgentDashboardViewController {
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 
     func setupCollectionViewLayout() {

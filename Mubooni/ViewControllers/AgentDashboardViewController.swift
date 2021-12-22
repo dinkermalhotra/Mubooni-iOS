@@ -6,7 +6,18 @@ class AgentDashboardViewController: UIViewController {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
     
-    var userProfile: UserProfile?
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +26,7 @@ class AgentDashboardViewController: UIViewController {
     }
 
     func setData() {
-        lblName.text = userProfile?.name ?? ""
+        lblName.text = settings?.userProfile?.name ?? ""
     }
 }
 
@@ -23,14 +34,12 @@ class AgentDashboardViewController: UIViewController {
 extension AgentDashboardViewController {
     @IBAction func settingsClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .SettingsViewController) as? SettingsViewController {
-            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     @IBAction func findServiceProviderClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .FindServiceProviderViewController) as? FindServiceProviderViewController {
-            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -42,28 +51,24 @@ extension AgentDashboardViewController {
     
     @IBAction func myPropertiesClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .MyPropertiesViewController) as? MyPropertiesViewController {
-            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     @IBAction func jobListClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .JobListViewController) as? JobListViewController {
-            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     @IBAction func invoicesClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .ServiceReportViewController) as? ServiceReportViewController {
-            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     @IBAction func tenantClicked(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .TenantListViewController) as? TenantListViewController {
-            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -78,14 +83,14 @@ extension AgentDashboardViewController {
 // MARK: - API CALL
 extension AgentDashboardViewController {
     func fetchMyProperties() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject]
         WSManager.wsCallUserProperties(params) { isSuccess, message, response in
             self.propertyLimit(response?.count ?? 0)
         }
     }
     
     func propertyLimit(_ myPropertiesCount: Int) {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject]
         WSManager.wsCallGetPropertyLimit(params) { isSuccess, message, limit in
             Helper.hideLoader(onVC: self)
             
@@ -94,7 +99,6 @@ extension AgentDashboardViewController {
                 
                 if newLimit > myPropertiesCount {
                     if let vc = ViewControllerHelper.getViewController(ofType: .AddPropertyDescriptionViewController) as? AddPropertyDescriptionViewController {
-                        vc.userProfile = self.userProfile
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }

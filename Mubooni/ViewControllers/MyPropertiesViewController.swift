@@ -7,7 +7,19 @@ class MyPropertiesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var properties = [Properties]()
-    var userProfile: UserProfile?
+    
+    var _settings: SettingsManager?
+    
+    var settings: SettingsManagerProtocol?
+    {
+        if let _ = WSManager._settings {
+        }
+        else {
+            WSManager._settings = SettingsManager()
+        }
+
+        return WSManager._settings
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +100,6 @@ extension MyPropertiesViewController: UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = ViewControllerHelper.getViewController(ofType: .AgentPropertyDetailViewController) as? AgentPropertyDetailViewController {
             vc.property = properties[indexPath.row]
-            vc.userProfile = userProfile
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -97,7 +108,7 @@ extension MyPropertiesViewController: UICollectionViewDataSource, UICollectionVi
 // MARK: - API CALL
 extension MyPropertiesViewController {
     func fetchMyProperties() {
-        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: userProfile?.userId as AnyObject]
+        let params: [String: AnyObject] = [WSRequestParams.WS_REQS_PARAM_LOG_USERID: settings?.userProfile?.userId as AnyObject]
         WSManager.wsCallUserProperties(params) { isSuccess, message, response in
             Helper.hideLoader(onVC: self)
             
