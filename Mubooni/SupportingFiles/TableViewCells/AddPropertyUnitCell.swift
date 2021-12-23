@@ -28,6 +28,7 @@ class AddPropertyUnitCell: UITableViewCell {
     var unitTypeBedroom = [UnitType]()
     var unitTypeLand = [UnitType]()
     var area = [AreaType]()
+    var areaLand = [AreaType]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -83,16 +84,35 @@ class AddPropertyUnitCell: UITableViewCell {
                 self?.checkShortStaysHeightConstraint.constant = 0
             }
             
+            if item.lowercased() == Strings.FOR_RENT.lowercased() {
+                self?.txtPrice.placeholder = Strings.MONTHLY_RENT
+            }
+            else if item.lowercased() == Strings.FOR_SALE.lowercased() {
+                self?.txtPrice.placeholder = Strings.SELLING_PRICE
+            }
+            else if item.lowercased() == Strings.FOR_SHORT_STAYS.lowercased() {
+                
+            }
+            
             addPropertyDetailsViewControllerDelegate?.refreshTableView()
         }
     }
     
     func setupPropertyTypeDropDown() {
         var propertyType = [String]()
-        for unitType in unitTypeBedroom {
-            propertyType.append(unitType.unitName)
+        
+        if AddProperty.estateName?.lowercased() == Strings.LAND.lowercased() {
+            for unitType in unitTypeLand {
+                propertyType.append(unitType.unitName)
+            }
+        }
+        else {
+            for unitType in unitTypeBedroom {
+                propertyType.append(unitType.unitName)
+            }
         }
         
+        txtPropertyType.placeholder = propertyType[0]
         propertyTypeDropDown.anchorView = viewPropertyType
         propertyTypeDropDown.bottomOffset = CGPoint(x: 0, y: 50)
         propertyTypeDropDown.dataSource = propertyType
@@ -108,10 +128,19 @@ class AddPropertyUnitCell: UITableViewCell {
     
     func setupLengthDropDown() {
         var areaType = [String]()
-        for value in area {
-            areaType.append(value.areaSizeName)
+        
+        if AddProperty.estateName?.lowercased() == Strings.LAND.lowercased() {
+            for value in areaLand {
+                areaType.append(value.areaSizeName)
+            }
+        }
+        else {
+            for value in area {
+                areaType.append(value.areaSizeName)
+            }
         }
         
+        txtLength.placeholder = areaType[0]
         lengthDropDown.anchorView = viewLength
         lengthDropDown.bottomOffset = CGPoint(x: 0, y: 50)
         lengthDropDown.dataSource = areaType
@@ -192,6 +221,10 @@ extension AddPropertyUnitCell {
             if isSuccess {
                 self.area = areaType?.filter({ value in
                     value.estateSizeType.lowercased() != Strings.LAND.lowercased()
+                }) ?? []
+                
+                self.areaLand = areaType?.filter({ value in
+                    value.estateSizeType.lowercased() == Strings.LAND.lowercased()
                 }) ?? []
                 
                 self.setupLengthDropDown()
