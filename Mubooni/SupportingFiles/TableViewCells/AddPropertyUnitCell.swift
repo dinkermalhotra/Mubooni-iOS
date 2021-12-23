@@ -11,14 +11,17 @@ class AddPropertyUnitCell: UITableViewCell {
     @IBOutlet weak var txtPrice: UITextField!
     @IBOutlet weak var txtNumberOfDays: UITextField!
     @IBOutlet weak var txtPerDayRent: UITextField!
+    @IBOutlet weak var txtNumberOfPlots: UITextField!
     @IBOutlet weak var shortStaysViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var checkShortStaysHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var numberOfPlotsViewBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var viewPropertyFor: UIView!
     @IBOutlet weak var viewPropertyType: UIView!
     @IBOutlet weak var viewLength: UIView!
     @IBOutlet weak var viewShortStays: UIView!
     @IBOutlet weak var viewCheckShortStays: UIView!
+    @IBOutlet weak var viewNumberOfPlots: UIView!
     @IBOutlet weak var btnShortStay: UIButton!
     
     var propertyForDropDown = DropDown()
@@ -46,6 +49,14 @@ class AddPropertyUnitCell: UITableViewCell {
         txtPrice.delegate = self
         txtNumberOfDays.delegate = self
         txtPerDayRent.delegate = self
+        txtNumberOfPlots.delegate = self
+        
+        if AddProperty.estateName?.lowercased() == Strings.LAND.lowercased() {
+            viewNumberOfPlots.isHidden = false
+        }
+        else {
+            viewNumberOfPlots.isHidden = true
+        }
         
         setupPropertyForDropDown()
         fetchUnitType()
