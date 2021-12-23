@@ -25,7 +25,8 @@ extension AddPropertyAmenitiesViewController {
     }
     
     @IBAction func submitClicked(_ sender: UIButton) {
-        finalParam[WSRequestParams.WS_REQS_PARAM_EXTRA_FEATURES] = txtOtherFeatures.text as AnyObject
+        let otherFeatures = txtOtherFeatures.text != Strings.OTHER_FEATURES ? txtOtherFeatures.text : ""
+        finalParam[WSRequestParams.WS_REQS_PARAM_EXTRA_FEATURES] = otherFeatures as AnyObject
         AddProperty.unitParams = finalParam
         
         Helper.showLoader(onVC: self)
@@ -146,13 +147,15 @@ extension AddPropertyAmenitiesViewController {
 // MARK: - UITEXTVIEW DELEGATE
 extension AddPropertyAmenitiesViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
-        textView.textColor = UIColor.black
+        if textView.text == Strings.OTHER_FEATURES {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
-            textView.text = "Other features (separate with ',')"
+            textView.text = Strings.OTHER_FEATURES
             textView.textColor = MubooniColors.placeholderColor
         }
     }

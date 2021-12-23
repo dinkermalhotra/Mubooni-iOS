@@ -81,10 +81,10 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="i35-Mg-cW0">
-                                <rect key="frame" x="68" y="59.5" width="128" height="41"/>
+                                <rect key="frame" x="68" y="59.5" width="129.5" height="41.5"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Agent  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-GE-kcj">
-                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="16"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="UWP-NK-bnU"/>
@@ -99,7 +99,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinker Malhotra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-7D-t3q">
-                                        <rect key="frame" x="0.0" y="20" width="128" height="21"/>
+                                        <rect key="frame" x="0.0" y="20" width="129.5" height="21.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
                                         <color key="textColor" red="0.12156862745098039" green="0.74117647058823533" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3799,6 +3799,7 @@
                                                                         <constraint firstItem="NBB-Zq-L0n" firstAttribute="leading" secondItem="7Ql-VG-mkM" secondAttribute="leading" constant="16" id="oes-cX-aBk"/>
                                                                         <constraint firstAttribute="trailing" secondItem="4Z9-U8-qRG" secondAttribute="trailing" constant="16" id="rFb-Zl-toj"/>
                                                                         <constraint firstAttribute="bottom" secondItem="NBB-Zq-L0n" secondAttribute="bottom" constant="16" id="rbN-Ez-Bhq"/>
+                                                                        <constraint firstItem="NBB-Zq-L0n" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Uwm-tQ-xQ8" secondAttribute="bottom" constant="30" id="vv1-XI-VSb"/>
                                                                         <constraint firstAttribute="trailing" secondItem="tvV-YC-d6e" secondAttribute="trailing" constant="16" id="wn6-nz-A0V"/>
                                                                         <constraint firstItem="GlZ-Po-I8r" firstAttribute="top" secondItem="7Ql-VG-mkM" secondAttribute="top" constant="16" id="xyq-zB-gDc"/>
                                                                         <constraint firstItem="4Z9-U8-qRG" firstAttribute="top" secondItem="GlZ-Po-I8r" secondAttribute="bottom" constant="16" id="ych-pd-PCT"/>
@@ -3823,6 +3824,7 @@
                                                         <connections>
                                                             <outlet property="btnShortStay" destination="Ifb-ic-Hmx" id="yR0-iu-wfz"/>
                                                             <outlet property="checkShortStaysHeightConstraint" destination="tSs-8C-wY6" id="zBL-sq-EfW"/>
+                                                            <outlet property="numberOfPlotsViewBottomConstraint" destination="vv1-XI-VSb" id="SLt-nt-WPc"/>
                                                             <outlet property="shortStaysViewHeightConstraint" destination="JJP-I0-lu0" id="I7f-hr-wyD"/>
                                                             <outlet property="txtArea" destination="jyP-ih-Dm9" id="gZg-vi-0o9"/>
                                                             <outlet property="txtLength" destination="hxh-h5-xiW" id="6Xh-9k-udd"/>

@@ -107,6 +107,8 @@ struct Strings {
     static let NO = "No"
     static let OK = "Ok"
     static let ONE = "1"
+    static let OTHER_FEATURES = "Other features (separate with ',')"
+    static let OWNER_NOTES = "Owner/Agent Notes"
     static let PLOT_NUMBER = "Plot number"
     static let POOL = "Pool"
     static let RENT = "Rent"

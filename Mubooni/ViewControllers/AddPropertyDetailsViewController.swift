@@ -103,13 +103,14 @@ extension AddPropertyDetailsViewController {
     }
     
     @IBAction func nextClicked(_ sender: UIButton) {
+        let ownerNotes = txtOwnerNotes.text != Strings.OWNER_NOTES ? txtOwnerNotes.text : ""
         params[WSRequestParams.WS_REQS_PARAM_ESTATE_TYPE_ID] = AddProperty.estateId as AnyObject
         params[WSRequestParams.WS_REQS_PARAM_ESTATE_NAME] = AddProperty.estateName as AnyObject
         params[WSRequestParams.WS_REQS_PARAM_USER_ID] = AddProperty.userId as AnyObject
         params[WSRequestParams.WS_REQS_PARAM_ADDRESS] = AddProperty.address as AnyObject
         params[WSRequestParams.WS_REQS_PARAM_GEO_LOCATION] = AddProperty.geoLocation as AnyObject
         params[WSRequestParams.WS_REQS_PARAM_OWNER_NAME] = txtOwnerName.text as AnyObject
-        params[WSRequestParams.WS_REQS_PARAM_OWNER_NOTES] = txtOwnerNotes.text as AnyObject
+        params[WSRequestParams.WS_REQS_PARAM_OWNER_NOTES] = ownerNotes as AnyObject
         
         for i in 0..<numberOfRows {
             if let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? AddPropertyUnitCell {
@@ -121,8 +122,8 @@ extension AddPropertyDetailsViewController {
                 params[WSRequestParams.WS_REQS_PARAM_MONTHLY_RENT_ARRAY] = cell.txtPrice.text as AnyObject
                 params[WSRequestParams.WS_REQS_PARAM_STAY_DAYS_ARRAY] = cell.txtNumberOfDays.text as AnyObject
                 params[WSRequestParams.WS_REQS_PARAM_PER_DAY_ARRAY] = cell.txtPerDayRent.text as AnyObject
-                params[WSRequestParams.WS_REQS_PARAM_TOTAL_PLOTS_ARRAY] = "" as AnyObject
-                params[WSRequestParams.WS_REQS_PARAM_CHECK_SHORT_STAY_ARRAY] = cell.btnShortStay.isSelected as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_TOTAL_PLOTS_ARRAY] = cell.txtNumberOfPlots.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_CHECK_SHORT_STAY_ARRAY] = "\(cell.btnShortStay.isSelected)" as AnyObject
             }
         }
         
@@ -152,7 +153,7 @@ extension AddPropertyDetailsViewController: UITextFieldDelegate {
 // MARK: - UITEXTVIEW DELEGATE
 extension AddPropertyDetailsViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text == "Owner/Agent Notes" {
+        if textView.text == Strings.OWNER_NOTES {
             textView.text = ""
             textView.textColor = UIColor.black
         }
@@ -160,7 +161,7 @@ extension AddPropertyDetailsViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text == "" {
-            textView.text = "Owner/Agent Notes"
+            textView.text = Strings.OWNER_NOTES
             textView.textColor = MubooniColors.placeholderColor
         }
     }

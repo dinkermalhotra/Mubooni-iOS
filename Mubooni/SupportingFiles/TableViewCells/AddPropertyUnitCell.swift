@@ -53,9 +53,11 @@ class AddPropertyUnitCell: UITableViewCell {
         
         if AddProperty.estateName?.lowercased() == Strings.LAND.lowercased() {
             viewNumberOfPlots.isHidden = false
+            numberOfPlotsViewBottomConstraint.isActive = true
         }
         else {
             viewNumberOfPlots.isHidden = true
+            numberOfPlotsViewBottomConstraint.isActive = false
         }
         
         setupPropertyForDropDown()
