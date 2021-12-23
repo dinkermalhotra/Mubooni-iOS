@@ -1,5 +1,11 @@
 import UIKit
 
+protocol AddPropertyDetailsViewControllerDelegate {
+    func refreshTableView()
+}
+
+var addPropertyDetailsViewControllerDelegate: AddPropertyDetailsViewControllerDelegate?
+
 class AddPropertyDetailsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -13,7 +19,7 @@ class AddPropertyDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addPropertyDetailsViewControllerDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +48,24 @@ class AddPropertyDetailsViewController: UIViewController {
 extension AddPropertyDetailsViewController {
     @IBAction func backClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func checkShortStay(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        
+        if let cell = tableView.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as? AddPropertyUnitCell {
+            
+            if cell.btnShortStay.isSelected {
+                cell.viewShortStays.isHidden = false
+                cell.shortStaysViewHeightConstraint.constant = 116
+            }
+            else {
+                cell.viewShortStays.isHidden = true
+                cell.shortStaysViewHeightConstraint.constant = 0
+            }
+        }
+        
+        self.tableView.reloadData()
     }
     
     @IBAction func addMoreUnitClicked(_ sender: UIButton) {
@@ -95,10 +119,10 @@ extension AddPropertyDetailsViewController {
                 params[WSRequestParams.WS_REQS_PARAM_AREA_ARRAY] = cell.txtArea.text as AnyObject
                 params[WSRequestParams.WS_REQS_PARAM_AREA_TYPE_ARRAY] = cell.txtLength.text as AnyObject
                 params[WSRequestParams.WS_REQS_PARAM_MONTHLY_RENT_ARRAY] = cell.txtPrice.text as AnyObject
-                params[WSRequestParams.WS_REQS_PARAM_STAY_DAYS_ARRAY] = "" as AnyObject
-                params[WSRequestParams.WS_REQS_PARAM_PER_DAY_ARRAY] = "" as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_STAY_DAYS_ARRAY] = cell.txtNumberOfDays.text as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_PER_DAY_ARRAY] = cell.txtPerDayRent.text as AnyObject
                 params[WSRequestParams.WS_REQS_PARAM_TOTAL_PLOTS_ARRAY] = "" as AnyObject
-                params[WSRequestParams.WS_REQS_PARAM_CHECK_SHORT_STAY_ARRAY] = "" as AnyObject
+                params[WSRequestParams.WS_REQS_PARAM_CHECK_SHORT_STAY_ARRAY] = cell.btnShortStay.isSelected as AnyObject
             }
         }
         
@@ -106,6 +130,13 @@ extension AddPropertyDetailsViewController {
             vc.finalParam = params
             self.navigationController?.pushViewController(vc, animated: true)
         }
+    }
+}
+
+// MARK: - CUSTOM DELEGATE
+extension AddPropertyDetailsViewController: AddPropertyDetailsViewControllerDelegate {
+    func refreshTableView() {
+        self.tableView.reloadData()
     }
 }
 
@@ -121,8 +152,10 @@ extension AddPropertyDetailsViewController: UITextFieldDelegate {
 // MARK: - UITEXTVIEW DELEGATE
 extension AddPropertyDetailsViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
-        textView.textColor = UIColor.black
+        if textView.text == "Owner/Agent Notes" {
+            textView.text = ""
+            textView.textColor = UIColor.black
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -145,6 +178,9 @@ extension AddPropertyDetailsViewController: UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIds.AddPropertyUnitCell, for: indexPath) as! AddPropertyUnitCell
+        
+        cell.btnShortStay.tag = indexPath.row
+        cell.btnShortStay.addTarget(self, action: #selector(checkShortStay(_:)), for: .touchUpInside)
         
         return cell
     }

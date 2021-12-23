@@ -9,10 +9,16 @@ class AddPropertyUnitCell: UITableViewCell {
     @IBOutlet weak var txtArea: UITextField!
     @IBOutlet weak var txtLength: UITextField!
     @IBOutlet weak var txtPrice: UITextField!
+    @IBOutlet weak var txtNumberOfDays: UITextField!
+    @IBOutlet weak var txtPerDayRent: UITextField!
+    @IBOutlet weak var shortStaysViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var checkShortStaysHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var viewPropertyFor: UIView!
     @IBOutlet weak var viewPropertyType: UIView!
     @IBOutlet weak var viewLength: UIView!
+    @IBOutlet weak var viewShortStays: UIView!
+    @IBOutlet weak var viewCheckShortStays: UIView!
     @IBOutlet weak var btnShortStay: UIButton!
     
     var propertyForDropDown = DropDown()
@@ -26,12 +32,19 @@ class AddPropertyUnitCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        viewShortStays.isHidden = true
+        viewCheckShortStays.isHidden = true
+        shortStaysViewHeightConstraint.constant = 0
+        checkShortStaysHeightConstraint.constant = 0
+        
         txtPropertyFor.delegate = self
         txtUnitNumber.delegate = self
         txtPropertyType.delegate = self
         txtArea.delegate = self
         txtLength.delegate = self
         txtPrice.delegate = self
+        txtNumberOfDays.delegate = self
+        txtPerDayRent.delegate = self
         
         setupPropertyForDropDown()
         fetchUnitType()
@@ -47,7 +60,12 @@ class AddPropertyUnitCell: UITableViewCell {
     func setupPropertyForDropDown() {
         propertyForDropDown.anchorView = viewPropertyFor
         propertyForDropDown.bottomOffset = CGPoint(x: 0, y: 50)
-        propertyForDropDown.dataSource = [Strings.FOR_RENT, Strings.FOR_SALE, Strings.FOR_SHORT_STAYS]
+        if AddProperty.estateName?.lowercased() == Strings.LAND.lowercased() {
+            propertyForDropDown.dataSource = [Strings.FOR_RENT, Strings.FOR_SALE]
+        }
+        else {
+            propertyForDropDown.dataSource = [Strings.FOR_RENT, Strings.FOR_SALE, Strings.FOR_SHORT_STAYS]
+        }
         propertyForDropDown.backgroundColor = UIColor.white
         propertyForDropDown.textColor = UIColor.black
         propertyForDropDown.selectedTextColor = UIColor.black
@@ -55,6 +73,17 @@ class AddPropertyUnitCell: UITableViewCell {
         propertyForDropDown.textFont = MubooniFonts.FONT_ROBOTO_REGULAR_14 ?? UIFont.systemFont(ofSize: 14)
         propertyForDropDown.selectionAction = { [weak self] (index, item) in
             self?.txtPropertyFor.text = item
+            
+            if item.lowercased() == Strings.FOR_RENT.lowercased() && AddProperty.estateName?.lowercased() != Strings.LAND.lowercased() {
+                self?.viewCheckShortStays.isHidden = false
+                self?.checkShortStaysHeightConstraint.constant = 32
+            }
+            else {
+                self?.viewCheckShortStays.isHidden = true
+                self?.checkShortStaysHeightConstraint.constant = 0
+            }
+            
+            addPropertyDetailsViewControllerDelegate?.refreshTableView()
         }
     }
     
