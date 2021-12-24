@@ -4,6 +4,7 @@ import SDWebImage
 class AgentPropertyDetailViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var propertiesCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var imgFirst: UIImageView!
     @IBOutlet weak var imgSecond: UIImageView!
