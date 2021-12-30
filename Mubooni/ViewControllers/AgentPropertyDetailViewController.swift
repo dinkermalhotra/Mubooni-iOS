@@ -39,6 +39,22 @@ class AgentPropertyDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupCollectionViewLayout()
+        setData()
+        
+        if settings?.userProfile == nil {
+            btnInquiry.isHidden = false
+            
+            for unit in property?.units ?? [] {
+                if unit.unitStatus.lowercased() == Strings.SHORT_STAY.lowercased() {
+                    btnBookShortStay.isHidden = false
+                    break
+                }
+            }
+        }
+    }
+    
+    func setupCollectionViewLayout() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: AppConstants.PORTRAIT_SCREEN_WIDTH - 32, height: collectionView.frame.size.height)
@@ -47,18 +63,13 @@ class AgentPropertyDetailViewController: UIViewController {
         layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
         
-        setData()
-        
-        if settings?.userProfile == nil {
-            btnInquiry.isHidden = false
-            
-            for unit in property?.units ?? [] {
-                if unit.unitStatus == "short stay" {
-                    btnBookShortStay.isHidden = false
-                    break
-                }
-            }
-        }
+        let propertiesLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        propertiesLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        propertiesLayout.itemSize = CGSize(width: 70, height: propertiesCollectionView.frame.size.height)
+        propertiesLayout.minimumInteritemSpacing = 0
+        propertiesLayout.minimumLineSpacing = 0
+        propertiesLayout.scrollDirection = .horizontal
+        propertiesCollectionView.collectionViewLayout = propertiesLayout
     }
     
     func setData() {
@@ -123,26 +134,49 @@ extension AgentPropertyDetailViewController: UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return propertyImages.count
+        if collectionView == propertiesCollectionView {
+            return property?.units.count ?? 0
+        }
+        else {
+            return propertyImages.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.ImagesCell, for: indexPath) as! ImagesCell
-        
-        let dict = propertyImages[indexPath.row]
-        
-        let block: SDExternalCompletionBlock? = {(image: UIImage?, error: Error?, cacheType: SDImageCacheType, imageURL: URL?) -> Void in
-            //print(image)
-            if (image == nil) {
-                return
+        if collectionView == propertiesCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.PropertyUnitsCell, for: indexPath) as! PropertyUnitsCell
+            
+            let dict = property?.units[indexPath.row]
+            
+            cell.lblBedroom.text = dict?.unitType ?? ""
+            cell.lblUnitNumber.text = dict?.unitNumber ?? ""
+            cell.lblPropertyFor.text = dict?.unitStatus ?? ""
+            cell.lblArea.text = dict?.area ?? ""
+            cell.lblAreaType.text = dict?.areaType ?? ""
+            cell.imgShortStay.image = (dict?.checkShortStay ?? "") == Strings.ONE ? UIImage(named: "ic_verified") : UIImage(named: "ic_unverified")
+            cell.lblPrice.text = dict?.monthlyRent ?? ""
+            cell.lblShortStayPrice.text = (dict?.checkShortStay ?? "") == Strings.ONE ? "\(dict?.perDay ?? "")/\(Strings.PER_DAY)" : ""
+            
+            return cell
+        }
+        else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.ImagesCell, for: indexPath) as! ImagesCell
+            
+            let dict = propertyImages[indexPath.row]
+            
+            let block: SDExternalCompletionBlock? = {(image: UIImage?, error: Error?, cacheType: SDImageCacheType, imageURL: URL?) -> Void in
+                //print(image)
+                if (image == nil) {
+                    return
+                }
             }
+            
+            if let url = URL(string: "\(WebService.baseImageUrl)\(dict.img)") {
+                cell.imgProperty.sd_setImage(with: url, completed: block)
+            }
+            
+            return cell
         }
-        
-        if let url = URL(string: "\(WebService.baseImageUrl)\(dict.img)") {
-            cell.imgProperty.sd_setImage(with: url, completed: block)
-        }
-        
-        return cell
     }
 }
 

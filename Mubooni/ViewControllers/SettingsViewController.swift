@@ -5,7 +5,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var titles = ["Profile", "Inquiries", "Lease/Sale agreements", "SMS campaign" ,"Notifications", "Logout"]
-    var images = [UIImage(named: "ic_profile_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_logout_gray")]
+    var images = [UIImage(named: "ic_profile_gray"), UIImage(named: "ic_inquiries"), UIImage(named: "ic_agreement"), UIImage(named: "ic_sms_campaign"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_logout_gray")]
     
     var _settings: SettingsManager?
     

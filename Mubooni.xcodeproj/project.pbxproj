@@ -50,6 +50,7 @@
 		4012405C2760AB3F0080FBA7 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012405B2760AB3F0080FBA7 /* Jobs.swift */; };
 		4012405E2761C2CA0080FBA7 /* AddPropertyImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012405D2761C2CA0080FBA7 /* AddPropertyImageCell.swift */; };
 		401240602761D3AB0080FBA7 /* AddPropertyUnitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012405F2761D3AB0080FBA7 /* AddPropertyUnitCell.swift */; };
+		40415E9F277DAE05009B58CA /* PropertyUnitsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40415E9E277DAE05009B58CA /* PropertyUnitsCell.swift */; };
 		40464E3E2758C21100615908 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3D2758C21100615908 /* JobListViewController.swift */; };
 		40464E402758C2FC00615908 /* ShuffleProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */; };
 		405671272763236400626314 /* AddProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405671262763236400626314 /* AddProperty.swift */; };
@@ -158,6 +159,7 @@
 		4012405B2760AB3F0080FBA7 /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
 		4012405D2761C2CA0080FBA7 /* AddPropertyImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyImageCell.swift; sourceTree = "<group>"; };
 		4012405F2761D3AB0080FBA7 /* AddPropertyUnitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPropertyUnitCell.swift; sourceTree = "<group>"; };
+		40415E9E277DAE05009B58CA /* PropertyUnitsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyUnitsCell.swift; sourceTree = "<group>"; };
 		40464E3D2758C21100615908 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
 		40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleProfileViewController.swift; sourceTree = "<group>"; };
 		405671262763236400626314 /* AddProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProperty.swift; sourceTree = "<group>"; };
@@ -415,12 +417,13 @@
 				4012405D2761C2CA0080FBA7 /* AddPropertyImageCell.swift */,
 				40A4B9662754BF6900B9622E /* CheckboxCell.swift */,
 				40A4B9702758A07300B9622E /* FindServiceProviderCell.swift */,
-				802DEDD2275F6298008DD8B7 /* TenantListCell.swift */,
 				40A6659F2750AA890047674C /* ImagesCell.swift */,
 				199720BD26D63D330044BE8D /* IntroScreensCell.swift */,
 				8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */,
 				8BCA42FE273D16EB002BC5BD /* MyPropertiesCell.swift */,
+				40415E9E277DAE05009B58CA /* PropertyUnitsCell.swift */,
 				40A4B96E27588FC900B9622E /* ServiceProviderCell.swift */,
+				802DEDD2275F6298008DD8B7 /* TenantListCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -813,6 +816,7 @@
 				40A4B9652754ABA700B9622E /* FiltersViewController.swift in Sources */,
 				40C97FD52771DAB800E21538 /* NavigationViewController.swift in Sources */,
 				40124058275F3FCE0080FBA7 /* SearchOnMapViewController.swift in Sources */,
+				40415E9F277DAE05009B58CA /* PropertyUnitsCell.swift in Sources */,
 				40A4B96F27588FC900B9622E /* ServiceProviderCell.swift in Sources */,
 				8B9BE98C2746564900A472AA /* PropertyType.swift in Sources */,
 				40464E3E2758C21100615908 /* JobListViewController.swift in Sources */,
