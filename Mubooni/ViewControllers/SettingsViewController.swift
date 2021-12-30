@@ -4,8 +4,8 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var titles = ["Profile", "Notifications", "Logout"]
-    var images = [UIImage(named: "ic_profile_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_logout_gray")]
+    var titles = ["Profile", "Inquiries", "Lease/Sale agreements", "SMS campaign" ,"Notifications", "Logout"]
+    var images = [UIImage(named: "ic_profile_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_notification_gray"), UIImage(named: "ic_logout_gray")]
     
     var _settings: SettingsManager?
     
@@ -67,7 +67,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case 1:
             break
-        case 2:
+        case 5:
             Helper.showOKCancelAlertWithCompletion(onVC: self, title: Alert.LOGOUT, message: AlertMessages.LOGOUT, btnOkTitle: Strings.YES, btnCancelTitle: Strings.NO, onOk: {
                 self.performLogout()
             })
