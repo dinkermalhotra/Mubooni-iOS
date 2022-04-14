@@ -1,10 +1,16 @@
 import UIKit
 import SDWebImage
 
+struct FilteredListings {
+    var propertyImage: UIImage?
+    var propertyName: String?
+}
+
 class MainViewController: UIViewController {
 
     @IBOutlet weak var btnUser: UIButton!
     @IBOutlet weak var featuredPropertiesCollectionView: UICollectionView!
+    @IBOutlet weak var filterCollectionView: UICollectionView!
     @IBOutlet weak var propertiesCollectionView: UICollectionView!
     @IBOutlet weak var serviceProviderCollectionView: UICollectionView!
     @IBOutlet weak var viewSearch: UIView!
@@ -12,6 +18,7 @@ class MainViewController: UIViewController {
     var featuredProperties = [Properties]()
     var properties = [Properties]()
     var serviceProviders = [ServiceProviders]()
+    var filter = [FilteredListings(propertyImage: UIImage(named: "ic_property_for_green"), propertyName: Strings.LAND), FilteredListings(propertyImage: UIImage(named: "ic_bedroom_green"), propertyName: Strings.RESIDENTIAL), FilteredListings(propertyImage: UIImage(named: "ic_property_price_green"), propertyName: Strings.COMMERCIAL), FilteredListings(propertyImage: UIImage(named: "ic_short_stay_green"), propertyName: Strings.HOLIDAY_HOME)]
     
     var _settings: SettingsManager?
     
@@ -43,8 +50,20 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if settings?.userProfile != nil {
-            if let vc = ViewControllerHelper.getViewController(ofType: .AgentDashboardViewController) as? AgentDashboardViewController {
-                self.navigationController?.pushViewController(vc, animated: true)
+            if settings?.userProfile?.roleId == Strings.ROLE_ID_SERVICE_PROVIDER {
+                if let vc = ViewControllerHelper.getViewController(ofType: .ServiceProviderDashboardViewController) as? ServiceProviderDashboardViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+            else if settings?.userProfile?.roleId == Strings.ROLE_ID_TENANT {
+                if let vc = ViewControllerHelper.getViewController(ofType: .TenantDashboardViewController) as? TenantDashboardViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
+            else {
+                if let vc = ViewControllerHelper.getViewController(ofType: .AgentDashboardViewController) as? AgentDashboardViewController {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             }
         }
     }
@@ -57,6 +76,14 @@ class MainViewController: UIViewController {
         featuredPropertiesLayout.minimumLineSpacing = 0
         featuredPropertiesLayout.scrollDirection = .horizontal
         featuredPropertiesCollectionView.collectionViewLayout = featuredPropertiesLayout
+        
+        let filterLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        filterLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        filterLayout.itemSize = CGSize(width: filterCollectionView.frame.size.width / 2.8, height: filterCollectionView.frame.size.height)
+        filterLayout.minimumInteritemSpacing = 0
+        filterLayout.minimumLineSpacing = 8
+        filterLayout.scrollDirection = .horizontal
+        filterCollectionView.collectionViewLayout = filterLayout
         
         let propertiesLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         propertiesLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -107,6 +134,9 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         if collectionView == featuredPropertiesCollectionView {
             return featuredProperties.count
         }
+        else if collectionView == filterCollectionView {
+            return filter.count
+        }
         else if collectionView == propertiesCollectionView {
             return properties.count
         }
@@ -136,6 +166,16 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             let unit = dict.units.count > 0 ? dict.units[0] : nil
             cell.lblPrice.text = unit?.unitStatus.lowercased() == Strings.UNIT_STATUS_SALE.lowercased() ? "\(Strings.SELLING_PRICE): \(Strings.KES)\(unit?.monthlyRent ?? "")" : "\(Strings.MONTHLY_RENT): \(Strings.KES)\(unit?.monthlyRent ?? "")"
+            
+            return cell
+        }
+        else if collectionView == filterCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIds.HomeFilterCell, for: indexPath) as! HomeFilterCell
+            
+            let dict = filter[indexPath.row]
+            
+            cell.imgPropertyType.image = dict.propertyImage ?? UIImage()
+            cell.lblPropertyName.text = dict.propertyName ?? ""
             
             return cell
         }
@@ -177,6 +217,9 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                 vc.property = featuredProperties[indexPath.row]
                 self.navigationController?.pushViewController(vc, animated: true)
             }
+        }
+        else if collectionView == filterCollectionView {
+            
         }
         else if collectionView == propertiesCollectionView {
             if let vc = ViewControllerHelper.getViewController(ofType: .AgentPropertyDetailViewController) as? AgentPropertyDetailViewController {

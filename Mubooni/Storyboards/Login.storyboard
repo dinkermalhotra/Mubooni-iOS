@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B3V-62-92l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B3V-62-92l">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -240,7 +240,7 @@
                                 <rect key="frame" x="0.0" y="58" width="375" height="609"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcV-nR-bEe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1068"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1144"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find affordable residential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfK-3Q-adv">
                                                 <rect key="frame" x="16" y="8" width="343" height="28"/>
@@ -308,13 +308,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featured Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="031-Q4-nYR">
-                                                <rect key="frame" x="16" y="199" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="275" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PQG-cJ-zRi">
-                                                <rect key="frame" x="0.0" y="226" width="375" height="240"/>
+                                                <rect key="frame" x="0.0" y="302" width="375" height="240"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="Caq-XM-JYf"/>
@@ -398,13 +398,13 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-QQ-WZW">
-                                                <rect key="frame" x="16" y="490" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="566" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Qt-VE-K5A">
-                                                <rect key="frame" x="0.0" y="517" width="375" height="240"/>
+                                                <rect key="frame" x="0.0" y="593" width="375" height="240"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="Yq0-ex-PoH"/>
@@ -488,13 +488,13 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Providers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-aT-frr">
-                                                <rect key="frame" x="16" y="781" width="343" height="19"/>
+                                                <rect key="frame" x="16" y="857" width="343" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-aF-iPP">
-                                                <rect key="frame" x="0.0" y="808" width="375" height="240"/>
+                                                <rect key="frame" x="0.0" y="884" width="375" height="240"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="fHz-00-vQM"/>
@@ -588,10 +588,81 @@
                                                     <action selector="searchOnMapClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eDH-rl-S8x"/>
                                                 </connections>
                                             </button>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="arp-iA-MKz">
+                                                <rect key="frame" x="16" y="199" width="343" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="930-kO-qOz"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h2m-1M-ubk">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeFilterCell" id="7e0-Du-x8h" customClass="HomeFilterCell" customModule="Mubooni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sm4-np-SXf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbg-8f-adR">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add_property" translatesAutoresizingMaskIntoConstraints="NO" id="03y-wC-Z0j">
+                                                                            <rect key="frame" x="37" y="8" width="26" height="26"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="26" id="4RA-eI-Oef"/>
+                                                                                <constraint firstAttribute="height" constant="26" id="Hp0-bZ-9Rw"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW3-ve-srg">
+                                                                            <rect key="frame" x="8" y="38" width="84" height="14"/>
+                                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.91764705879999997" green="1" blue="1" alpha="0.69583015699999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="03y-wC-Z0j" firstAttribute="top" secondItem="qbg-8f-adR" secondAttribute="top" constant="8" id="0wL-9g-NUC"/>
+                                                                        <constraint firstItem="hW3-ve-srg" firstAttribute="top" secondItem="03y-wC-Z0j" secondAttribute="bottom" constant="4" id="TbX-hF-md6"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="hW3-ve-srg" secondAttribute="trailing" constant="8" id="UVf-b6-Ej4"/>
+                                                                        <constraint firstItem="03y-wC-Z0j" firstAttribute="centerX" secondItem="qbg-8f-adR" secondAttribute="centerX" id="Vd0-7b-L5D"/>
+                                                                        <constraint firstItem="hW3-ve-srg" firstAttribute="leading" secondItem="qbg-8f-adR" secondAttribute="leading" constant="8" id="awf-je-gIq"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="hW3-ve-srg" secondAttribute="bottom" constant="8" id="lMh-JG-YrM"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="qbg-8f-adR" secondAttribute="bottom" id="JX5-qe-WJg"/>
+                                                                <constraint firstItem="qbg-8f-adR" firstAttribute="leading" secondItem="sm4-np-SXf" secondAttribute="leading" id="KLo-Jr-jDb"/>
+                                                                <constraint firstAttribute="trailing" secondItem="qbg-8f-adR" secondAttribute="trailing" id="OOX-q5-fsw"/>
+                                                                <constraint firstItem="qbg-8f-adR" firstAttribute="top" secondItem="sm4-np-SXf" secondAttribute="top" id="gLZ-B7-SEC"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="100" height="60"/>
+                                                        <connections>
+                                                            <outlet property="imgPropertyType" destination="03y-wC-Z0j" id="3ez-8m-NbQ"/>
+                                                            <outlet property="lblPropertyName" destination="hW3-ve-srg" id="HZF-Ox-061"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="nfP-kH-nsU"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="yM8-Io-ddG"/>
+                                                </connections>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="031-Q4-nYR" firstAttribute="top" secondItem="05t-zU-qEq" secondAttribute="bottom" constant="16" id="04n-t7-EWI"/>
                                             <constraint firstItem="mfK-3Q-adv" firstAttribute="top" secondItem="HcV-nR-bEe" secondAttribute="top" constant="8" id="0JM-iR-P7p"/>
                                             <constraint firstAttribute="trailing" secondItem="5J2-aT-frr" secondAttribute="trailing" constant="16" id="0pl-T1-LeA"/>
                                             <constraint firstItem="5J2-aT-frr" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="1XF-lN-4Ys"/>
@@ -607,6 +678,7 @@
                                             <constraint firstAttribute="trailing" secondItem="C4Y-Dd-oNJ" secondAttribute="trailing" constant="16" id="Frl-Hg-tdj"/>
                                             <constraint firstItem="C4Y-Dd-oNJ" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="GuY-Ly-xqM"/>
                                             <constraint firstAttribute="trailing" secondItem="PQG-cJ-zRi" secondAttribute="trailing" id="Ju7-YE-a85"/>
+                                            <constraint firstItem="031-Q4-nYR" firstAttribute="top" secondItem="arp-iA-MKz" secondAttribute="bottom" constant="16" id="KVu-Qr-M1l"/>
                                             <constraint firstAttribute="trailing" secondItem="C3e-aF-iPP" secondAttribute="trailing" id="Kg4-1k-idH"/>
                                             <constraint firstItem="4Qt-VE-K5A" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" id="Lkd-lA-iOL"/>
                                             <constraint firstItem="npZ-QQ-WZW" firstAttribute="top" secondItem="PQG-cJ-zRi" secondAttribute="bottom" constant="24" id="Q1v-kX-X2g"/>
@@ -615,10 +687,13 @@
                                             <constraint firstItem="mfK-3Q-adv" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="fOb-zi-N3O"/>
                                             <constraint firstItem="4Qt-VE-K5A" firstAttribute="top" secondItem="npZ-QQ-WZW" secondAttribute="bottom" constant="8" symbolic="YES" id="fRM-tQ-jFu"/>
                                             <constraint firstAttribute="trailing" secondItem="031-Q4-nYR" secondAttribute="trailing" constant="16" id="g2f-u3-G3X"/>
+                                            <constraint firstAttribute="trailing" secondItem="arp-iA-MKz" secondAttribute="trailing" constant="16" id="iPO-lR-qUK"/>
                                             <constraint firstItem="c8C-B6-GaX" firstAttribute="top" secondItem="C4Y-Dd-oNJ" secondAttribute="bottom" constant="24" id="l0C-ru-bzM"/>
                                             <constraint firstItem="C3e-aF-iPP" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" id="nC2-7f-9Sk"/>
+                                            <constraint firstItem="arp-iA-MKz" firstAttribute="top" secondItem="05t-zU-qEq" secondAttribute="bottom" constant="16" id="nw0-tH-HcU"/>
                                             <constraint firstItem="5J2-aT-frr" firstAttribute="top" secondItem="4Qt-VE-K5A" secondAttribute="bottom" constant="24" id="oQs-An-lxE"/>
                                             <constraint firstAttribute="trailing" secondItem="c8C-B6-GaX" secondAttribute="trailing" constant="16" id="pd6-DL-DYu"/>
+                                            <constraint firstItem="arp-iA-MKz" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="pv6-Yl-Dfq"/>
                                             <constraint firstItem="npZ-QQ-WZW" firstAttribute="leading" secondItem="HcV-nR-bEe" secondAttribute="leading" constant="16" id="vyA-GU-7pU"/>
                                             <constraint firstItem="C3e-aF-iPP" firstAttribute="top" secondItem="5J2-aT-frr" secondAttribute="bottom" constant="8" symbolic="YES" id="wuw-Y5-UGx"/>
                                         </constraints>
@@ -667,6 +742,7 @@
                     <connections>
                         <outlet property="btnUser" destination="PYO-Xh-g6A" id="rIQ-Ab-oig"/>
                         <outlet property="featuredPropertiesCollectionView" destination="PQG-cJ-zRi" id="G8c-VZ-6c5"/>
+                        <outlet property="filterCollectionView" destination="arp-iA-MKz" id="Zxg-bg-4rC"/>
                         <outlet property="propertiesCollectionView" destination="4Qt-VE-K5A" id="9nY-Xm-VO8"/>
                         <outlet property="serviceProviderCollectionView" destination="C3e-aF-iPP" id="FDJ-3M-A2S"/>
                         <outlet property="viewSearch" destination="c8C-B6-GaX" id="abx-JE-V62"/>
@@ -1003,7 +1079,7 @@ home/rental accomodation Journey</string>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OE2-YZ-d2w">
-                                        <rect key="frame" x="40" y="8" width="263" height="34"/>
+                                        <rect key="frame" x="40" y="8" width="221" height="34"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
@@ -1017,15 +1093,30 @@ home/rental accomodation Journey</string>
                                             <outlet property="delegate" destination="Wbv-e2-HYZ" id="cnv-6I-90l"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyR-fQ-EoY">
+                                        <rect key="frame" x="269" y="8" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="jJt-On-Nia"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="ic_show_password"/>
+                                        <state key="selected" image="ic_hide_password"/>
+                                        <connections>
+                                            <action selector="showHidePasswordClicked:" destination="Wbv-e2-HYZ" eventType="touchUpInside" id="npO-NV-xis"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="fyR-fQ-EoY" firstAttribute="leading" secondItem="OE2-YZ-d2w" secondAttribute="trailing" constant="8" id="3ZP-7P-dgN"/>
                                     <constraint firstItem="Dl7-S9-wPh" firstAttribute="centerY" secondItem="Ikw-tI-mAB" secondAttribute="centerY" id="M2F-5N-UBD"/>
                                     <constraint firstItem="OE2-YZ-d2w" firstAttribute="top" secondItem="Ikw-tI-mAB" secondAttribute="top" constant="8" id="RpP-rz-Ovd"/>
                                     <constraint firstAttribute="height" constant="50" id="Vah-MK-JQK"/>
                                     <constraint firstAttribute="bottom" secondItem="OE2-YZ-d2w" secondAttribute="bottom" constant="8" id="aYj-yn-rSi"/>
+                                    <constraint firstAttribute="bottom" secondItem="fyR-fQ-EoY" secondAttribute="bottom" constant="8" id="ajv-Lv-BaC"/>
+                                    <constraint firstItem="fyR-fQ-EoY" firstAttribute="top" secondItem="Ikw-tI-mAB" secondAttribute="top" constant="8" id="av2-d4-RHs"/>
+                                    <constraint firstAttribute="trailing" secondItem="fyR-fQ-EoY" secondAttribute="trailing" constant="8" id="bwQ-LZ-LJw"/>
                                     <constraint firstItem="Dl7-S9-wPh" firstAttribute="leading" secondItem="Ikw-tI-mAB" secondAttribute="leading" constant="8" id="dfX-7k-3WB"/>
-                                    <constraint firstAttribute="trailing" secondItem="OE2-YZ-d2w" secondAttribute="trailing" constant="8" id="rjw-vW-3ht"/>
                                     <constraint firstItem="OE2-YZ-d2w" firstAttribute="leading" secondItem="Dl7-S9-wPh" secondAttribute="trailing" constant="8" symbolic="YES" id="uBE-KQ-bSn"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -1322,6 +1413,13 @@ home/rental accomodation Journey</string>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check" translatesAutoresizingMaskIntoConstraints="NO" id="Dc7-x5-6iq">
+                                                                <rect key="frame" x="123.5" y="4" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="1sG-u1-NbY"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="Y6V-Uo-Mz0"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZw-Db-mEW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
                                                                 <connections>
@@ -1331,11 +1429,13 @@ home/rental accomodation Journey</string>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
+                                                            <constraint firstItem="Dc7-x5-6iq" firstAttribute="top" secondItem="RtR-wV-OBP" secondAttribute="top" constant="4" id="0eG-Uh-7cp"/>
                                                             <constraint firstItem="Eo3-f8-Y9z" firstAttribute="centerX" secondItem="RtR-wV-OBP" secondAttribute="centerX" id="0vV-TZ-bjQ"/>
                                                             <constraint firstItem="LKm-A8-Zx8" firstAttribute="leading" secondItem="RtR-wV-OBP" secondAttribute="leading" constant="8" id="1EO-dK-qjF"/>
                                                             <constraint firstAttribute="bottom" secondItem="LKm-A8-Zx8" secondAttribute="bottom" constant="16" id="7Er-gF-WsK"/>
                                                             <constraint firstAttribute="height" constant="80" id="Kti-8g-Dcb"/>
                                                             <constraint firstItem="jZw-Db-mEW" firstAttribute="leading" secondItem="RtR-wV-OBP" secondAttribute="leading" id="OtY-Z9-K7c"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Dc7-x5-6iq" secondAttribute="trailing" constant="4" id="Q7n-vj-3CR"/>
                                                             <constraint firstAttribute="bottom" secondItem="jZw-Db-mEW" secondAttribute="bottom" id="VsA-k7-8gV"/>
                                                             <constraint firstItem="Eo3-f8-Y9z" firstAttribute="top" secondItem="RtR-wV-OBP" secondAttribute="top" constant="16" id="XhK-JU-Rpd"/>
                                                             <constraint firstItem="jZw-Db-mEW" firstAttribute="top" secondItem="RtR-wV-OBP" secondAttribute="top" id="YNJ-rT-rxT"/>
@@ -1382,6 +1482,13 @@ home/rental accomodation Journey</string>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check" translatesAutoresizingMaskIntoConstraints="NO" id="07l-32-j13">
+                                                                <rect key="frame" x="123.5" y="4" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="2GY-dd-Dzi"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="kww-by-h8b"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKt-Rv-9Rg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
                                                                 <connections>
@@ -1399,7 +1506,9 @@ home/rental accomodation Journey</string>
                                                             <constraint firstAttribute="bottom" secondItem="Jxg-nB-hZq" secondAttribute="bottom" constant="16" id="eQG-wn-6oa"/>
                                                             <constraint firstItem="zx6-vX-8Vh" firstAttribute="top" secondItem="42g-Gb-DyD" secondAttribute="top" constant="16" id="nWa-6o-QHa"/>
                                                             <constraint firstItem="lKt-Rv-9Rg" firstAttribute="top" secondItem="42g-Gb-DyD" secondAttribute="top" id="pk1-c6-0pY"/>
+                                                            <constraint firstItem="07l-32-j13" firstAttribute="top" secondItem="42g-Gb-DyD" secondAttribute="top" constant="4" id="rz0-rt-c1x"/>
                                                             <constraint firstItem="lKt-Rv-9Rg" firstAttribute="leading" secondItem="42g-Gb-DyD" secondAttribute="leading" id="sRq-Hy-Gth"/>
+                                                            <constraint firstAttribute="trailing" secondItem="07l-32-j13" secondAttribute="trailing" constant="4" id="yXJ-dA-0jA"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1446,6 +1555,13 @@ home/rental accomodation Journey</string>
                                                                     <constraint firstAttribute="height" constant="24" id="hXd-bN-iSI"/>
                                                                 </constraints>
                                                             </imageView>
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check" translatesAutoresizingMaskIntoConstraints="NO" id="U15-Vn-Gb5">
+                                                                <rect key="frame" x="123.5" y="4" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="0X4-19-pvk"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="kxN-bl-zzM"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0i-bT-2uf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
                                                                 <connections>
@@ -1461,8 +1577,10 @@ home/rental accomodation Journey</string>
                                                             <constraint firstAttribute="bottom" secondItem="Ot0-Nm-ceM" secondAttribute="bottom" constant="16" id="JqZ-4H-hO4"/>
                                                             <constraint firstItem="aGa-eu-Ery" firstAttribute="centerX" secondItem="Asm-iZ-Rsf" secondAttribute="centerX" id="dYF-WC-ief"/>
                                                             <constraint firstAttribute="height" constant="80" id="hAL-M7-LiZ"/>
+                                                            <constraint firstItem="U15-Vn-Gb5" firstAttribute="top" secondItem="Asm-iZ-Rsf" secondAttribute="top" constant="4" id="lrE-Rg-ZFa"/>
                                                             <constraint firstItem="D0i-bT-2uf" firstAttribute="leading" secondItem="Asm-iZ-Rsf" secondAttribute="leading" id="o33-HH-jYS"/>
                                                             <constraint firstItem="D0i-bT-2uf" firstAttribute="top" secondItem="Asm-iZ-Rsf" secondAttribute="top" id="rqE-7I-wlC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="U15-Vn-Gb5" secondAttribute="trailing" constant="4" id="sHs-3Q-sNR"/>
                                                             <constraint firstItem="Ot0-Nm-ceM" firstAttribute="leading" secondItem="Asm-iZ-Rsf" secondAttribute="leading" constant="8" id="yJc-9Y-AId"/>
                                                             <constraint firstItem="aGa-eu-Ery" firstAttribute="top" secondItem="Asm-iZ-Rsf" secondAttribute="top" constant="16" id="zen-NS-Ec6"/>
                                                         </constraints>
@@ -1506,6 +1624,13 @@ home/rental accomodation Journey</string>
                                                                     <constraint firstAttribute="width" constant="24" id="dg3-ZZ-IY5"/>
                                                                 </constraints>
                                                             </imageView>
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check" translatesAutoresizingMaskIntoConstraints="NO" id="yWx-n5-g8X">
+                                                                <rect key="frame" x="123.5" y="4" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="bs8-2I-2un"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="mpa-hc-tVs"/>
+                                                                </constraints>
+                                                            </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vh9-cz-jfY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147.5" height="80"/>
                                                                 <connections>
@@ -1516,6 +1641,8 @@ home/rental accomodation Journey</string>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstItem="7GT-ek-ARk" firstAttribute="centerX" secondItem="HYv-sW-o4N" secondAttribute="centerX" id="5tl-Hf-tMK"/>
+                                                            <constraint firstAttribute="trailing" secondItem="yWx-n5-g8X" secondAttribute="trailing" constant="4" id="Jkl-ay-DFR"/>
+                                                            <constraint firstItem="yWx-n5-g8X" firstAttribute="top" secondItem="HYv-sW-o4N" secondAttribute="top" constant="4" id="Ktw-DL-zlD"/>
                                                             <constraint firstItem="vh9-cz-jfY" firstAttribute="leading" secondItem="HYv-sW-o4N" secondAttribute="leading" id="TFc-1K-Yiv"/>
                                                             <constraint firstItem="7GT-ek-ARk" firstAttribute="top" secondItem="HYv-sW-o4N" secondAttribute="top" constant="16" id="Zpr-2F-PsJ"/>
                                                             <constraint firstItem="vh9-cz-jfY" firstAttribute="top" secondItem="HYv-sW-o4N" secondAttribute="top" id="ZqB-mU-jH2"/>
@@ -1588,7 +1715,7 @@ home/rental accomodation Journey</string>
                                                 <rect key="frame" x="32" y="669.5" width="311" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZe-AX-aCC">
-                                                        <rect key="frame" x="8" y="8" width="295" height="34"/>
+                                                        <rect key="frame" x="8" y="8" width="253" height="34"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
@@ -1602,14 +1729,29 @@ home/rental accomodation Journey</string>
                                                             <outlet property="delegate" destination="YBJ-l5-3bv" id="mIk-MM-Lzd"/>
                                                         </connections>
                                                     </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppa-6e-bdF">
+                                                        <rect key="frame" x="269" y="8" width="34" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="mTw-BK-5dc"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="ic_show_password"/>
+                                                        <state key="selected" image="ic_hide_password"/>
+                                                        <connections>
+                                                            <action selector="showHidePasswordClicked:" destination="YBJ-l5-3bv" eventType="touchUpInside" id="cTP-GB-NIJ"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="tZe-AX-aCC" firstAttribute="leading" secondItem="H2x-b8-k17" secondAttribute="leading" constant="8" id="AfZ-Lf-GBG"/>
+                                                    <constraint firstItem="ppa-6e-bdF" firstAttribute="leading" secondItem="tZe-AX-aCC" secondAttribute="trailing" constant="8" id="OZQ-EB-DMW"/>
                                                     <constraint firstAttribute="bottom" secondItem="tZe-AX-aCC" secondAttribute="bottom" constant="8" id="WXz-UN-6mK"/>
                                                     <constraint firstAttribute="height" constant="50" id="X6M-iO-Gt5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ppa-6e-bdF" secondAttribute="bottom" constant="8" id="dSF-S9-DOP"/>
                                                     <constraint firstItem="tZe-AX-aCC" firstAttribute="top" secondItem="H2x-b8-k17" secondAttribute="top" constant="8" id="f0v-dv-HFm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="tZe-AX-aCC" secondAttribute="trailing" constant="8" id="jqR-uQ-443"/>
+                                                    <constraint firstItem="ppa-6e-bdF" firstAttribute="top" secondItem="H2x-b8-k17" secondAttribute="top" constant="8" id="qV0-sq-88c"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ppa-6e-bdF" secondAttribute="trailing" constant="8" id="rXd-NT-CFO"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1621,7 +1763,7 @@ home/rental accomodation Journey</string>
                                                 <rect key="frame" x="32" y="735.5" width="311" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G70-0N-trX">
-                                                        <rect key="frame" x="8" y="8" width="295" height="34"/>
+                                                        <rect key="frame" x="8" y="8" width="253" height="34"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
@@ -1635,12 +1777,27 @@ home/rental accomodation Journey</string>
                                                             <outlet property="delegate" destination="YBJ-l5-3bv" id="CHa-Eg-n2A"/>
                                                         </connections>
                                                     </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZO-nM-fxl">
+                                                        <rect key="frame" x="269" y="8" width="34" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="34" id="V8x-4Q-YOj"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="ic_show_password"/>
+                                                        <state key="selected" image="ic_hide_password"/>
+                                                        <connections>
+                                                            <action selector="showHideConfirmPasswordClicked:" destination="YBJ-l5-3bv" eventType="touchUpInside" id="WSX-cP-Zmf"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.8862745098" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="lZO-nM-fxl" secondAttribute="bottom" constant="8" id="37B-1K-682"/>
                                                     <constraint firstItem="G70-0N-trX" firstAttribute="leading" secondItem="xbV-in-Hk3" secondAttribute="leading" constant="8" id="Ax3-kD-Xwk"/>
+                                                    <constraint firstItem="lZO-nM-fxl" firstAttribute="top" secondItem="xbV-in-Hk3" secondAttribute="top" constant="8" id="BMm-ty-jmM"/>
+                                                    <constraint firstItem="lZO-nM-fxl" firstAttribute="leading" secondItem="G70-0N-trX" secondAttribute="trailing" constant="8" id="Ddg-TW-nPJ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lZO-nM-fxl" secondAttribute="trailing" constant="8" id="LpL-6R-vWP"/>
                                                     <constraint firstAttribute="height" constant="50" id="Ov2-V9-Uo4"/>
-                                                    <constraint firstAttribute="trailing" secondItem="G70-0N-trX" secondAttribute="trailing" constant="8" id="mvo-F1-t94"/>
                                                     <constraint firstItem="G70-0N-trX" firstAttribute="top" secondItem="xbV-in-Hk3" secondAttribute="top" constant="8" id="wWi-Ef-RUY"/>
                                                     <constraint firstAttribute="bottom" secondItem="G70-0N-trX" secondAttribute="bottom" constant="8" id="zTZ-se-1S7"/>
                                                 </constraints>
@@ -1750,6 +1907,10 @@ home/rental accomodation Journey</string>
                     </view>
                     <connections>
                         <outlet property="btnRegisterTopConstraint" destination="Zbo-g9-1zf" id="jmT-0x-9Fe"/>
+                        <outlet property="imgAgent" destination="07l-32-j13" id="pOI-6g-eit"/>
+                        <outlet property="imgLandlord" destination="U15-Vn-Gb5" id="OTb-35-ocT"/>
+                        <outlet property="imgServiceProvider" destination="yWx-n5-g8X" id="rjA-OW-Ek0"/>
+                        <outlet property="imgTenant" destination="Dc7-x5-6iq" id="b1Q-bb-uN6"/>
                         <outlet property="txtConfirmPassword" destination="G70-0N-trX" id="eS8-UG-M06"/>
                         <outlet property="txtEmail" destination="6Lg-Wh-mio" id="axU-Y8-Lq6"/>
                         <outlet property="txtName" destination="0fB-ya-rbY" id="DdT-9D-NRq"/>
@@ -1782,19 +1943,23 @@ home/rental accomodation Journey</string>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_add_property" width="69.5" height="71"/>
         <image name="ic_agent" width="17.5" height="23"/>
         <image name="ic_apple" width="35.5" height="43.5"/>
         <image name="ic_back" width="20" height="20"/>
+        <image name="ic_check" width="16" height="16"/>
         <image name="ic_email" width="17.5" height="15"/>
         <image name="ic_facebook" width="21.5" height="42.5"/>
         <image name="ic_filter" width="28" height="28"/>
         <image name="ic_google" width="40.5" height="40.5"/>
+        <image name="ic_hide_password" width="16" height="16"/>
         <image name="ic_landlord" width="23.5" height="23.5"/>
         <image name="ic_login" width="265.5" height="164"/>
         <image name="ic_logo" width="205.5" height="41.5"/>
         <image name="ic_password" width="17.5" height="17.5"/>
         <image name="ic_search" width="16" height="16"/>
         <image name="ic_service_provider" width="24.5" height="24.5"/>
+        <image name="ic_show_password" width="16" height="16"/>
         <image name="ic_sliding_image1" width="350.5" height="279"/>
         <image name="ic_tenant" width="20.5" height="24"/>
         <systemColor name="systemBackgroundColor">

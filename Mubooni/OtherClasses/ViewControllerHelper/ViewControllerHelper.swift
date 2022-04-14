@@ -19,11 +19,13 @@ struct ViewControllerIdentifiers {
     static let ProfileViewController                = "ProfileViewController"
     static let SearchOnMapViewController            = "SearchOnMapViewController"
     static let ServiceProviderDetailViewController  = "ServiceProviderDetailViewController"
+    static let ServiceProviderDashboardViewController = "ServiceProviderDashboardViewController"
+    static let ServiceReportViewController          = "ServiceReportViewController"
     static let SettingsViewController               = "SettingsViewController"
     static let ShuffleProfileViewController         = "ShuffleProfileViewController"
     static let SignInViewController                 = "SignInViewController"
     static let SignupViewController                 = "SignupViewController"
-    static let ServiceReportViewController          = "ServiceReportViewController"
+    static let TenantDashboardViewController        = "TenantDashboardViewController"
     static let TenantListViewController             = "TenantListViewController"
 }
 
@@ -49,11 +51,13 @@ enum ViewControllerType {
     case ProfileViewController
     case SearchOnMapViewController
     case ServiceProviderDetailViewController
+    case ServiceProviderDashboardViewController
+    case ServiceReportViewController
     case SettingsViewController
     case ShuffleProfileViewController
     case SignInViewController
     case SignupViewController
-    case ServiceReportViewController
+    case TenantDashboardViewController
     case TenantListViewController
 }
 
@@ -66,6 +70,8 @@ class ViewControllerHelper: NSObject {
         let agentStoryboard = UIStoryboard(name: "Agent", bundle: nil)
         let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let serviceProvider = UIStoryboard(name: "ServiceProvider", bundle: nil)
+        let tenant = UIStoryboard(name: "Tenant", bundle: nil)
         
         // Login Storyboard
         if viewControllerType == .IntroScreensViewController {
@@ -142,6 +148,12 @@ class ViewControllerHelper: NSObject {
         }
         else if viewControllerType == .ShuffleProfileViewController {
             viewController = mainStoryboard.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ShuffleProfileViewController) as! ShuffleProfileViewController
+        } // Service Provider
+        else if viewControllerType == .ServiceProviderDashboardViewController {
+            viewController = serviceProvider.instantiateViewController(withIdentifier: ViewControllerIdentifiers.ServiceProviderDashboardViewController) as! ServiceProviderDashboardViewController
+        } // Tenant
+        else if viewControllerType == .TenantDashboardViewController {
+            viewController = tenant.instantiateViewController(withIdentifier: ViewControllerIdentifiers.TenantDashboardViewController) as! TenantDashboardViewController
         }
         else {
             print("Unknown view controller type")

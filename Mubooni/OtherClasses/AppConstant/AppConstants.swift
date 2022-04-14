@@ -31,6 +31,7 @@ struct MubooniColors {
     static let greenColor = UIColor.init(hex: "00BF4B")
     static let placeholderColor = UIColor.init(red: 60/255, green: 60/255, blue: 67/255, alpha: 0.3)
     static let redColor = UIColor.init(hex: "ED1F23")
+    static let joinRedColor = UIColor.init(hex: "E70F10")
 }
 
 struct MubooniFonts {
@@ -46,6 +47,7 @@ struct CellIds {
     static let BedroomSelectionCell     = "BedroomSelectionCell"
     static let CheckboxCell             = "CheckboxCell"
     static let FindServiceProviderCell  = "FindServiceProviderCell"
+    static let HomeFilterCell           = "HomeFilterCell"
     static let ImagesCell               = "ImagesCell"
     static let IntroScreensCell         = "IntroScreensCell"
     static let JobListCell              = "JobListCell"
@@ -64,6 +66,7 @@ struct GoogleApiKey {
 
 struct Strings {
     static let ADDRESS = "Address"
+    static let AGENT = "AGENT"
     static let ALL = "all"
     static let BACK_YARD = "Back yard"
     static let BASKETBALL_COURT = "Basketball court"
@@ -78,6 +81,7 @@ struct Strings {
     static let CENTRAL_AIR = "Central air"
     static let CHAIR_ACCESSIBLE = "Chair accessible"
     static let CHOOSE_PHOTO = "Choose Photo"
+    static let COMMERCIAL = "COMMERCIAL"
     static let CONTENT_SIZE = "contentSize"
     static let DASHBOARD = "dashboard"
     static let ELECTRICITY = "Electricity"
@@ -93,11 +97,13 @@ struct Strings {
     static let GARBAGE = "Garbage"
     static let GYM = "Gym"
     static let HEATING = "Heating"
+    static let HOLIDAY_HOME = "HOLIDAY HOME"
     static let HOT_BATH = "Hot bath"
     static let INTERNET = "Internet"
     static let JOBS = "jobs"
     static let KES = "KES"
     static let LAND = "LAND"
+    static let LANDLORD = "LANDLORD"
     static let LAUNDRY = "Laundry"
     static let LEASE = "Lease"
     static let LEASEHOLD = "Leasehold"
@@ -115,6 +121,11 @@ struct Strings {
     static let POOL = "Pool"
     static let RENT = "Rent"
     static let REQUESTS = "requests"
+    static let RESIDENTIAL = "RESIDENTIAL"
+    static let ROLE_ID_AGENT = "3"
+    static let ROLE_ID_LANDLORD = "4"
+    static let ROLE_ID_SERVICE_PROVIDER = "5"
+    static let ROLE_ID_TENANT = "2"
     static let SELLING_PRICE = "Selling Price"
     static let SERVICE_CHARGE = "Service charge"
     static let SERVICE_PROVIDER = "SERVICE PROVIDER"

@@ -37,6 +37,11 @@
 		19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E2F271E94E0007639F1 /* WSConstants.swift */; };
 		19AD9E32271E9560007639F1 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AD9E31271E9560007639F1 /* WSManager.swift */; };
 		19AD9E34271E98EF007639F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19AD9E33271E98EF007639F1 /* GoogleService-Info.plist */; };
+		19C23BA82808128000A332B9 /* TenantDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23BA72808128000A332B9 /* TenantDashboardViewController.swift */; };
+		19C23BAA2808129900A332B9 /* ServiceProviderDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C23BA92808129900A332B9 /* ServiceProviderDashboardViewController.swift */; };
+		19C23BAC280812B700A332B9 /* Tenant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23BAB280812B700A332B9 /* Tenant.storyboard */; };
+		19C23BAE280812C700A332B9 /* ServiceProvider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C23BAD280812C700A332B9 /* ServiceProvider.storyboard */; };
+		19D1C4832807F811003580F8 /* HomeFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D1C4822807F811003580F8 /* HomeFilterCell.swift */; };
 		19EBE01527213A3100BD307F /* UserRoles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE01427213A3100BD307F /* UserRoles.swift */; };
 		19EBE01727213D5900BD307F /* Specilizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE01627213D5900BD307F /* Specilizations.swift */; };
 		19EBE01E27214BE900BD307F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBE01D27214BE900BD307F /* Helper.swift */; };
@@ -145,6 +150,11 @@
 		19AD9E2F271E94E0007639F1 /* WSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSConstants.swift; sourceTree = "<group>"; };
 		19AD9E31271E9560007639F1 /* WSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
 		19AD9E33271E98EF007639F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19C23BA72808128000A332B9 /* TenantDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantDashboardViewController.swift; sourceTree = "<group>"; };
+		19C23BA92808129900A332B9 /* ServiceProviderDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderDashboardViewController.swift; sourceTree = "<group>"; };
+		19C23BAB280812B700A332B9 /* Tenant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tenant.storyboard; sourceTree = "<group>"; };
+		19C23BAD280812C700A332B9 /* ServiceProvider.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceProvider.storyboard; sourceTree = "<group>"; };
+		19D1C4822807F811003580F8 /* HomeFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterCell.swift; sourceTree = "<group>"; };
 		19EBE01427213A3100BD307F /* UserRoles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoles.swift; sourceTree = "<group>"; };
 		19EBE01627213D5900BD307F /* Specilizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specilizations.swift; sourceTree = "<group>"; };
 		19EBE01D27214BE900BD307F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -260,20 +270,22 @@
 				19A262B22722C72000EDF5CE /* FindServiceProviderViewController.swift */,
 				40124059275F42A30080FBA7 /* InquirySubmissionViewController.swift */,
 				199720BA26D63B9D0044BE8D /* IntroScreensViewController.swift */,
-				802DEDD4275F7803008DD8B7 /* ServiceReportViewController.swift */,
 				40464E3D2758C21100615908 /* JobListViewController.swift */,
-				802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */,
 				191B481826D4C01500552A2D /* LoginViewController.swift */,
 				191B481626D4BEC900552A2D /* MainViewController.swift */,
 				8BCA42FC273D1346002BC5BD /* MyPropertiesViewController.swift */,
 				40C97FD42771DAB800E21538 /* NavigationViewController.swift */,
 				8B1BE166274386C7006D5005 /* ProfileViewController.swift */,
 				40124057275F3FCE0080FBA7 /* SearchOnMapViewController.swift */,
+				19C23BA92808129900A332B9 /* ServiceProviderDashboardViewController.swift */,
 				40A4B9722758A6DA00B9622E /* ServiceProviderDetailViewController.swift */,
+				802DEDD4275F7803008DD8B7 /* ServiceReportViewController.swift */,
 				40C97FCF2771B39700E21538 /* SettingsViewController.swift */,
 				40464E3F2758C2FC00615908 /* ShuffleProfileViewController.swift */,
 				191B480626D4AC1F00552A2D /* SignInViewController.swift */,
 				199720B826D617D00044BE8D /* SignupViewController.swift */,
+				19C23BA72808128000A332B9 /* TenantDashboardViewController.swift */,
+				802DEDD0275F6257008DD8B7 /* TenantListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -285,6 +297,8 @@
 				19925B8626D3E03300FC574F /* LaunchScreen.storyboard */,
 				191B480826D4AC3400552A2D /* Login.storyboard */,
 				19925B8126D3E03200FC574F /* Main.storyboard */,
+				19C23BAD280812C700A332B9 /* ServiceProvider.storyboard */,
+				19C23BAB280812B700A332B9 /* Tenant.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -417,6 +431,7 @@
 				4012405D2761C2CA0080FBA7 /* AddPropertyImageCell.swift */,
 				40A4B9662754BF6900B9622E /* CheckboxCell.swift */,
 				40A4B9702758A07300B9622E /* FindServiceProviderCell.swift */,
+				19D1C4822807F811003580F8 /* HomeFilterCell.swift */,
 				40A6659F2750AA890047674C /* ImagesCell.swift */,
 				199720BD26D63D330044BE8D /* IntroScreensCell.swift */,
 				8BBA3ADA26D7B572000E1F6F /* MainFeaturedCell.swift */,
@@ -666,6 +681,7 @@
 			files = (
 				8B9A7909274628FD0020753B /* Roboto-Medium.ttf in Resources */,
 				19AD9E34271E98EF007639F1 /* GoogleService-Info.plist in Resources */,
+				19C23BAE280812C700A332B9 /* ServiceProvider.storyboard in Resources */,
 				191B481526D4BE5900552A2D /* Roboto-Bold.ttf in Resources */,
 				199720C626D640D30044BE8D /* Poppins-Bold.ttf in Resources */,
 				8B9A78FD2746158E0020753B /* layer46@3x.png in Resources */,
@@ -674,6 +690,7 @@
 				19EBE025272187FD00BD307F /* Agent.storyboard in Resources */,
 				19925B8826D3E03300FC574F /* LaunchScreen.storyboard in Resources */,
 				191B481326D4BE5900552A2D /* Roboto-Regular.ttf in Resources */,
+				19C23BAC280812B700A332B9 /* Tenant.storyboard in Resources */,
 				19925B8526D3E03300FC574F /* Assets.xcassets in Resources */,
 				19925B8326D3E03200FC574F /* Main.storyboard in Resources */,
 				199720C526D640D30044BE8D /* Poppins-Regular.ttf in Resources */,
@@ -786,6 +803,7 @@
 				40C97FD32771D45900E21538 /* UserDefaultConstants.swift in Sources */,
 				19AD9E30271E94E0007639F1 /* WSConstants.swift in Sources */,
 				40C97FD02771B39700E21538 /* SettingsViewController.swift in Sources */,
+				19C23BA82808128000A332B9 /* TenantDashboardViewController.swift in Sources */,
 				8B1BE167274386C7006D5005 /* ProfileViewController.swift in Sources */,
 				19EBE01E27214BE900BD307F /* Helper.swift in Sources */,
 				802DEDD5275F7803008DD8B7 /* ServiceReportViewController.swift in Sources */,
@@ -795,6 +813,7 @@
 				199720C126D63E360044BE8D /* AppConstants.swift in Sources */,
 				19925B7C26D3E03200FC574F /* AppDelegate.swift in Sources */,
 				40A665A02750AA890047674C /* ImagesCell.swift in Sources */,
+				19C23BAA2808129900A332B9 /* ServiceProviderDashboardViewController.swift in Sources */,
 				8BCA42FF273D16EB002BC5BD /* MyPropertiesCell.swift in Sources */,
 				802DEDD7275F781E008DD8B7 /* ServiceReportCell.swift in Sources */,
 				198C400E27583F96008866F2 /* FilteredPropertiesViewController.swift in Sources */,
@@ -810,6 +829,7 @@
 				8BBA3ADB26D7B572000E1F6F /* MainFeaturedCell.swift in Sources */,
 				19A262B12722BDC100EDF5CE /* UserProfile.swift in Sources */,
 				19925B7E26D3E03200FC574F /* SceneDelegate.swift in Sources */,
+				19D1C4832807F811003580F8 /* HomeFilterCell.swift in Sources */,
 				8B9A7907274625CE0020753B /* AddPropertyAmenitiesViewController.swift in Sources */,
 				191B480726D4AC1F00552A2D /* SignInViewController.swift in Sources */,
 				802DEDD3275F6298008DD8B7 /* TenantListCell.swift in Sources */,

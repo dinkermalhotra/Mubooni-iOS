@@ -36,6 +36,17 @@ extension SignInViewController {
         
     }
     
+    @IBAction func showHidePasswordClicked(_ sender: UIButton) {
+        if sender.isSelected {
+            txtPassword.isSecureTextEntry = true
+            sender.isSelected = false
+        }
+        else {
+            txtPassword.isSecureTextEntry = false
+            sender.isSelected = true
+        }
+    }
+    
     @IBAction func LoginClicked(_ sender: UIButton) {
         if txtEmail.text?.isEmpty ?? true || txtPassword.text?.isEmpty ?? true {
             Helper.showOKAlert(onVC: self, title: Alert.ERROR, message: AlertMessages.WRONG_EMAIL_PASSWORD)
@@ -77,8 +88,20 @@ extension SignInViewController {
             if isSuccess {
                 self.settings?.userProfile = userProfile
                 
-                if let vc = ViewControllerHelper.getViewController(ofType: .AgentDashboardViewController) as? AgentDashboardViewController {
-                    self.navigationController?.pushViewController(vc, animated: true)
+                if userProfile?.roleId == Strings.ROLE_ID_SERVICE_PROVIDER {
+                    if let vc = ViewControllerHelper.getViewController(ofType: .ServiceProviderDashboardViewController) as? ServiceProviderDashboardViewController {
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+                else if userProfile?.roleId == Strings.ROLE_ID_TENANT {
+                    if let vc = ViewControllerHelper.getViewController(ofType: .TenantDashboardViewController) as? TenantDashboardViewController {
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+                else {
+                    if let vc = ViewControllerHelper.getViewController(ofType: .AgentDashboardViewController) as? AgentDashboardViewController {
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
                 }
             }
             else {
